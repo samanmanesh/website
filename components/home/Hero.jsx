@@ -6,7 +6,7 @@ export default function Hero() {
     <Container>
       <Title larger>Hello I'm Saman</Title>
       <br /><br />
-      <ColumnLayout columns={3}>
+      {/* <ColumnLayout columns={3}>
         <div>
           hello
         </div>
@@ -16,7 +16,7 @@ export default function Hero() {
         <div>
           hello 2
         </div>
-      </ColumnLayout>
+      </ColumnLayout> */}
     </Container>
   );
 }

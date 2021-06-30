@@ -1,3 +1,5 @@
+//For running and importing Styled Components in NextJS
+
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 

@@ -52,7 +52,7 @@ export const Description = styled.p`
 
 export const Container = styled.section`
   min-height: 100vh;
-  max-width: 1000px;
+  max-width: 1320px;
   width: 100%;
   position: relative;
   z-index: 0;
@@ -64,6 +64,7 @@ export const Container = styled.section`
   @media (min-height: 800px) {
     min-height: 800px;
   }
+  border:1px solid rgb(51, 136, 255);
 `;
 
 export const ColumnLayout = styled.div`
