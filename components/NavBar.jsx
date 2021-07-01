@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-
+import {mobile} from './styles/design'
 const Nav = styled.nav`
   background: red;
   width: 100%;
   /* max-width: 1330px; */
   padding-top: 1rem;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   font-weight: lighter;
   font-size: 0.9rem;
 
   .section-1 {
+      @media (min-width: ${mobile}){
+        background: yellow;
+        /* display: none; */
+      }
       background: #440707;
       margin-right: auto;
   }
@@ -25,9 +29,9 @@ const Nav = styled.nav`
   .menu-options {
     /* max-width: 1330px; */
     /* background: blue; */
-    display: flex;
+    /* display: flex; */
     width: 23rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* margin-right: 20rem; */
   }
 

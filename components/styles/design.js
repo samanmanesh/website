@@ -1,3 +1,7 @@
+export const mobile = '780px';
+export const tablet = '1000px';
+export const desktop = '1200px';
+
 const colors = {
   background: "rgb(23, 24, 28)",
   fontColor: {
