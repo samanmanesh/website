@@ -6,10 +6,10 @@ import styled from "styled-components";
 import colors from "./styles/design";
 
 const PageBaseWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 1rem; */
   background: ${colors.background};
   color: ${colors.fontColor.fontColor1};
 `;
