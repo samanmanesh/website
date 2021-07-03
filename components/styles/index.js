@@ -1,9 +1,15 @@
 import styled, { css } from "styled-components";
-import { mobile, tablet, desktop } from "./design";
+import { mobile, tablet, desktop, fonts } from "./design";
 
 // #region -- Typography --
 
 export const Title1 = styled.h1`
+font-size: ${fonts.title1.size}em;
+margin: 0;
+padding: 0;
+
+
+
   /* font-size: ${(props) => (props.larger ? 2.5 : 2)}rem;
   font-weight: Bold;
   letter-spacing: -0.1rem;
