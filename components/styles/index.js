@@ -4,6 +4,7 @@ import { mobile, tablet, desktop, fonts } from "./design";
 // #region -- Typography --
 
 export const Title1 = styled.h1`
+/* font-size: clamp(1vw, 5.1875em, 5.1875em); */
 font-size: ${fonts.title1.size}em;
 margin: 0;
 padding: 0;
@@ -58,20 +59,21 @@ export const Description = styled.p`
 // #region -- Layout --
 
 export const Container = styled.section`
-  /* min-height: 100vh;
-  max-width: 1320px;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-  overflow-y: overflow;
-  margin-top: 4rem;
-  @media (max-width: 800px) {
+  min-height: 100vh;
+  width: clamp(80%, 100%, 1330px);
+  /* max-width: 1320px; */
+  /* width: 100%; */
+  /* position: relative; */
+  /* z-index: 0; */
+  /* overflow-y: overflow; */
+  /* margin-top: 4rem; */
+  /* @media (max-width: 800px) {
     margin-top: 0rem;
-  }
-  @media (min-height: 800px) {
+  } */
+  /* @media (min-height: 800px) {
     min-height: 800px;
-  }
-  border: 1px solid rgb(51, 136, 255); */
+  } */
+  border: 1px solid rgb(51, 136, 255);
 `;
 
 export const ColumnLayout = styled.div`

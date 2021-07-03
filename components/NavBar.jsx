@@ -4,25 +4,24 @@ import { mobile, tablet } from "./styles/design";
 
 //#region -styling-
 const Nav = styled.nav`
-  background: red;
+  /* background: red; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-weight: 100;
-  font-size: clamp(.7em, 1.4vw , .9em  );
+  font-size: clamp(.7em, 1.4vw , .9em );
   > * {
     padding: 1em;
   }
   .anime-function-container {
-    background: #3737a4;
-    /* width: 100%; */
+    /* background: #3737a4; */
   }
 
   
 
   .nav-items-container {
     display: flex;
-    background: #167b16;
+    /* background: #167b16; */
     justify-content: space-between;
     margin-right: 10%;
     margin-left: auto;
@@ -36,7 +35,7 @@ const Nav = styled.nav`
   @media (max-width: ${mobile}) {
     .anime-function-container {
       display: none;
-      background: #1f4d77;
+      /* background: #1f4d77; */
     }
     .nav-items-container {
       flex-grow: 1;
@@ -46,7 +45,7 @@ const Nav = styled.nav`
   
   @media (max-width: ${tablet}) {
     .anime-function-container {
-      background: #5e771f;
+      /* background: #5e771f; */
     }
     .nav-items-container {
         margin: 0;
