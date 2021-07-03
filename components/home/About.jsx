@@ -1,5 +1,8 @@
 import React from "react";
 import { Container, Title3 } from "../styles";
+import styled from "styled-components";
+
+const AboutGrid = styled.section``;
 
 export default function About() {
   return (

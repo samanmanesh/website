@@ -1,5 +1,10 @@
 import React from "react";
 import { Container, Title3 } from "./styles";
+import styled from "styled-components";
+
+const ContactGrid = styled.section``;
+const LinkCard = styled.div``;
+
 export default function Footer() {
   return (
     <Container>
@@ -59,7 +64,7 @@ export default function Footer() {
         </div>
       </ContactGrid>
       <div className="footer-note-container">
-          <p className="footer-note">design &amp; built by me</p>
+        <p className="footer-note">design &amp; built by me</p>
       </div>
     </Container>
   );
