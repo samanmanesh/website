@@ -5,6 +5,9 @@ import styled from "styled-components";
 const EducationGrid = styled.section``;
 const ResumeCard = styled.div``;
 const Skills = styled.section``;
+const Tools = styled.section`
+  
+`;
 
 export default function Resume() {
   return (
@@ -86,7 +89,7 @@ export default function Resume() {
           <div className="element">Framer</div>
           <div className="element">Figma</div>
         </div>
-      <Title2>Tools {"}"}</Title2>
+      <Title2>{"}"}</Title2>
       </Tools>
       <button className="download-resume">
         <span>Download Reśumé</span>
