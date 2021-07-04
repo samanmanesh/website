@@ -4,34 +4,39 @@ import styled from "styled-components";
 import fonts from '../styles/design'
 
 const HeroWrapper = styled.section`
-  padding-block: 8rem;
+  /* padding-block: 8rem; */
   padding-left: 1rem;
-  background: blue;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  height: 100vh;
 
   .title-container{
-    display: grid;
+    /* display: grid; */
     /* max-width: 80%; */
-    background: #802929;
-    grid-template-columns:  14% 1fr;
-    grid-template-rows:  1fr  1fr  1fr;
+ 
 
     .title1{
-      grid-column: 1;
-      grid-row: 1;
+      
     }
 
     .title2{
+      margin-left: 2.7em;
       grid-column: 2;
       grid-row: 2;
     }
 
     .subtitle{
-      grid-column:1 / span2;
-      grid-row: 3;
+      font-size: 1.8rem;
+      font-weight: lighter;
     }
   }
 
+  .hero-paragraph{
+    max-width: 23em;
+    font-size: 1.75rem;
+
+  }
 
 
 `;

@@ -9,7 +9,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   font-weight: 100;
-  font-size: clamp(.7em, 1.4vw , .9em );
+  font-size: clamp(.9em, 1.1vw , 1.3em );
   > * {
     padding: 1em;
   }

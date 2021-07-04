@@ -9,7 +9,7 @@ const PageBaseWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 352px;
+  min-width: 413px;
   background: ${colors.background};
   color: ${colors.fontColor.fontColor1};
 `;
