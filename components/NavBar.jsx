@@ -11,7 +11,7 @@ const Nav = styled.nav`
   font-weight: 100;
   font-size: clamp(.9em, 1.1vw , 1.3em );
   > * {
-    padding: 1em;
+    padding: 1.5em;
   }
   .anime-function-container {
     /* background: #3737a4; */

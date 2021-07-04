@@ -2,7 +2,7 @@ export const mobile = '768px';
 export const tablet = '1000px';
 export const desktop = '1200px';
 
-const colors = {
+export const colors = {
   background: "rgb(23, 24, 28)",
   fontColor: {
     fontColor1: "rgb(255, 255, 255)",
@@ -14,7 +14,7 @@ const colors = {
     title1: {
       description: "sizes are in Em",
       size: '5.1875',
-      font: 'inter',
+      fontFamily: 'inter',
       style: 'Extra Bold',
       line: '1.2',
       letterSpacing: '-2.6',
@@ -22,24 +22,31 @@ const colors = {
     title2: {
       description: "sizes are in Em",
       size: '3.125',
-      font: 'inter',
+      fontFamily: 'inter',
       style: 'Medium',
       line: '1.2'
     },
     title3: {
-      description: "sizes are in Em",
+      description: "sizes are in rem",
       size: '1.75',
-      font: 'inter',
+      fontFamily: 'inter',
       style: 'Regular',
       line: '1.2'
     },
     title4: {
-      description: "sizes are in Em",
+      description: "sizes are in rem",
       size: '2.375',
-      font: 'inter',
+      fontFamily: 'inter',
       style: 'thin',
       line: '1.2'
     },
+    codes: {
+      description: "sizes are in rem, the size for code styles",
+      size: '1.25',
+      fontFamily: 'IBM Plex Mono , monospace',
+      style:'regular',
+      line: '1.2'
+    }
 
  }
 

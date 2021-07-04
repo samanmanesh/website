@@ -59,7 +59,7 @@ export const Description = styled.p`
 
 export const Container = styled.section`
   min-height: 100vh;
-  width: clamp(80%, 100%, 1330px);
+  width: clamp(75%, 100%, 1330px);
   /* max-width: 1320px; */
   /* width: 100%; */
   /* position: relative; */
