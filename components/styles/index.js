@@ -4,11 +4,10 @@ import { mobile, tablet, desktop, fonts } from "./design";
 // #region -- Typography --
 
 export const Title1 = styled.h1`
-/* font-size: clamp(1vw, 5.1875em, 5.1875em); */
-font-size: ${fonts.title1.size}em;
 margin: 0;
 padding: 0;
-
+font-size: ${fonts.title1.size}rem;
+letter-spacing: ${fonts.title1.letterSpacing}px;
 
 
   /* font-size: ${(props) => (props.larger ? 2.5 : 2)}rem;
@@ -41,9 +40,9 @@ padding: 0;
   } */
 `;
 
-export const Title2 = styled.h3` `;
+export const Title2 = styled.h3``;
 
-export const Title3 = styled.h4 ``;
+export const Title3 = styled.h4``;
 
 export const Description = styled.p`
   font-size: ${(props) => (props.smaller ? 1 : 1.2)}rem;

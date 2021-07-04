@@ -7,21 +7,28 @@ const HeroWrapper = styled.section`
   padding-block: 8rem;
   padding-left: 1rem;
   background: blue;
+  
 
   .title-container{
     display: grid;
-    grid-template-columns: 
-    16em 1fr;
-    grid-template-rows:
-    1fr 1fr 1fr;
+    /* max-width: 80%; */
+    background: #802929;
+    grid-template-columns:  14% 1fr;
+    grid-template-rows:  1fr  1fr  1fr;
+
     .title1{
-      grid-column: 1/2;
-      grid-row: 1/2;
+      grid-column: 1;
+      grid-row: 1;
     }
 
     .title2{
-      grid-column: 1/2;
-      grid-row:2/2;
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .subtitle{
+      grid-column:1 / span2;
+      grid-row: 3;
     }
   }
 
@@ -37,7 +44,7 @@ export default function Hero() {
       <HeroWrapper>
         <div className="title-container">
           <Title1 className="title1">Hi! I'm </Title1>
-          <Title1>Saman,</Title1>
+          <Title1 className="title2">Saman,</Title1>
           <div className="subtitle">
             {" "}
             <strong> Full Stack Developer </strong> Based in Toronto

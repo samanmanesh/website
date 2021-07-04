@@ -16,7 +16,8 @@ const colors = {
       size: '5.1875',
       font: 'inter',
       style: 'Extra Bold',
-      line: '1.2'
+      line: '1.2',
+      letterSpacing: '-2.6',
     },
     title2: {
       description: "sizes are in Em",
