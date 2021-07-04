@@ -13,7 +13,7 @@ export const colors = {
  export const fonts = {
     title1: {
       description: "sizes are in Em",
-      size: '5.1875',
+      size: '4.1875',
       fontFamily: 'inter',
       style: 'Extra Bold',
       line: '1.2',
@@ -42,7 +42,7 @@ export const colors = {
     },
     codes: {
       description: "sizes are in rem, the size for code styles",
-      size: '1.25',
+      size: '1',
       fontFamily: 'IBM Plex Mono , monospace',
       style:'regular',
       line: '1.2'

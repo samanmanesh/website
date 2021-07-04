@@ -14,6 +14,8 @@ const Nav = styled.nav`
     padding: 1.5em;
   }
   .anime-function-container {
+      font-size:clamp(.7em, .7vw, 1em);
+      align-self: center;
     /* background: #3737a4; */
   }
 
@@ -69,7 +71,7 @@ export default function NavBar() {
   return (
     <Nav>
       <div className="anime-function-container">
-        const ${}= ( ) ={">"} {"{display Sam's work}"}
+        const {'hero'} = ( ) ={">"} {"{display hero}"}
       </div>
 
       <div className="nav-items-container">

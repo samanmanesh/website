@@ -59,7 +59,7 @@ export const Description = styled.p`
 
 export const Container = styled.section`
   min-height: 100vh;
-  width: clamp(75%, 100%, 1330px);
+  width: 70%;
   /* max-width: 1320px; */
   /* width: 100%; */
   /* position: relative; */
@@ -72,7 +72,7 @@ export const Container = styled.section`
   /* @media (min-height: 800px) {
     min-height: 800px;
   } */
-  border: 1px solid rgb(51, 136, 255);
+  /* border: 1px solid rgb(51, 136, 255); */
 `;
 
 export const ColumnLayout = styled.div`

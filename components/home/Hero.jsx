@@ -35,30 +35,36 @@ const HeroWrapper = styled.section`
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
         /* margin-left: 1rem; */
-        position: relative;
-        left: 35rem;
-        bottom: 3rem;
+        position: absolute;
+        left: 28rem;
+        bottom: 2.6rem;
       }
     }
     .title1 {
     }
 
     .title2 {
-      margin-left: 3em;
-      grid-column: 2;
-      grid-row: 2;
+      @media(min-width: 429px){
+        margin-left: 3em;
+      }
+      /* grid-column: 2; */
+      /* grid-row: 2; */
     }
 
     .subtitle {
-      font-size: 1.8rem;
+      
+      font-size: 1.4rem;
       font-weight: lighter;
     }
   }
 
   .hero-paragraph {
-    max-width: 23em;
-    font-size: 1.75rem;
-    margin-bottom: 10rem;
+    /* background: #982727; */
+    max-width: 22em;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    padding-block: 4rem;
+    /* margin-block: 5rem; */
     position: relative;
     ::before {
       position: absolute;
@@ -66,7 +72,7 @@ const HeroWrapper = styled.section`
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
-      bottom: 5rem;
+      bottom: 2rem;
     }
     ::after {
         content: "<p>";
@@ -74,7 +80,7 @@ const HeroWrapper = styled.section`
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
         position: absolute;
-        top: 5.5rem;
+        top: 2rem;
         left: 0rem;
       }
 
