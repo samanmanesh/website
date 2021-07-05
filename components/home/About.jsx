@@ -11,7 +11,7 @@ export default function About() {
         <div className="left-side">
           <div className="titles-container">
             <Title3>Me, Myself &amp; I</Title3>
-            <img src="" alt="" className="arrow-type3" />
+            <img src="arrow3-down-right.svg" alt="" className="arrow-type3" />
           </div>
           <p className="introduction">
             My name is Saman Manesh and I am a full stack developer focused on

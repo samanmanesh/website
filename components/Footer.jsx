@@ -10,7 +10,7 @@ export default function Footer() {
     <Container>
       <div className="titles-container">
         <Title3>Contact</Title3>
-        <img src="" alt="arrow type 3" className="arrow-type3" />
+        <img src="arrow3-down-right.svg" alt="arrow type 3" className="arrow-type3" />
       </div>
       <ContactGrid>
         <div className="left-side">

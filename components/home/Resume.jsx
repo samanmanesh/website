@@ -14,7 +14,7 @@ export default function Resume() {
     <Container>
       <section className="titles-container">
       <Title3>Resume</Title3>
-        <img src="" alt="arrow type3" className="arrow-type3" />
+        <img src="arrow3-down-right.svg" alt="arrow type3" className="arrow-type3" />
       </section>
 
       <EducationGrid>
