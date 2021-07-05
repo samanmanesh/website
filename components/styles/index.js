@@ -46,12 +46,12 @@ export const Title2 = styled.h2`
   font-size: ${fonts.title2.size}rem;
   font-weight: medium;
   max-width: 15rem;
-  /* background: blue; */
 `;
 
 export const Title3 = styled.h3`
   margin: 0;
-  /* font-size: ${fonts.title3.size}rem; */
+  font-size: ${fonts.title3.size}rem;
+  font-weight: ${fonts.title3.style};
 `;
 
 export const Description = styled.p`
@@ -95,7 +95,7 @@ export const Container = styled.section`
     ::before{
       position:absolute;
       content:"<h3>";
-      bottom: 2rem;
+      bottom: 3rem;
       font-family:${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
       color: ${colors.fontColor.fontColor2};
@@ -103,7 +103,7 @@ export const Container = styled.section`
     ::after{
       position:absolute;
       content:"</h3>";
-      top: 2rem;
+      top: 3rem;
       font-family:${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
       color: ${colors.fontColor.fontColor2};
