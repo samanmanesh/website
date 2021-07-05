@@ -13,7 +13,7 @@ export default function Resume() {
   return (
     <Container>
       <section className="titles-container">
-      <Title3>Resume</Title3>
+      <Title3>Reśumé</Title3>
         <img src="arrow3-down-right.svg" alt="arrow type3" className="arrow-type3" />
       </section>
 

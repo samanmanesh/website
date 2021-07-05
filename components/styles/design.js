@@ -42,7 +42,7 @@ export const colors = {
     },
     codes: {
       description: "sizes are in rem, the size for code styles",
-      size: '1',
+      size: '.9',
       fontFamily: 'IBM Plex Mono , monospace',
       style:'regular',
       line: '1.2'

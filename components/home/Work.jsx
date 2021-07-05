@@ -5,30 +5,37 @@ import { mobile, tablet, desktop } from "../styles/design";
 
 // #region -styling-
 const ProjectCard = styled.div`
-  /* background: red;
-  width: 100%;
-  min-height: 25rem; */
+  .card-container {
+    background: #4a0e59;
+    max-width: 33.5rem;
+    height: 16.875rem;
+  }
 `;
 
 const ProjectGrid = styled.section`
-  /* gap: 1rem;
-
-  .left-side {
-    grid-area: left-side;
-  }
-  .right-side {
-    grid-area: right-side;
-  }
-
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 1.5fr;
-  grid-template-areas:
-    "left-side ."
-    "left-side right-side";
-
+  background: #146a64;
+  margin-bottom: 5rem;
   @media (min-width: ${tablet}) {
     display: grid;
-  } */
+    gap: 2rem;
+
+    .left-side {
+      grid-area: left-side;
+    }
+    .right-side {
+      grid-area: right-side;
+    }
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-areas:
+      "left-side ."
+      "left-side right-side";
+  }
+
+
+
+  
 `;
 //#endregion
 
@@ -37,7 +44,11 @@ export default function Work() {
     <Container>
       <section className="titles-container">
         <Title3>Selected Works</Title3>
-        <img src="arrow3-down-right.svg" alt="arrow type3" className="arrow-type3" />
+        <img
+          src="arrow3-down-right.svg"
+          alt="arrow type3"
+          className="arrow-type3"
+        />
       </section>
 
       <ProjectGrid>

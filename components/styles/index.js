@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { mobile, tablet, desktop, fonts } from "./design";
+import { mobile, tablet, desktop, fonts ,colors} from "./design";
 
 // #region -- Typography --
 
@@ -79,10 +79,28 @@ export const Container = styled.section`
   border: 1px solid rgb(51, 136, 255);
 
   .titles-container {
+    position:relative;
     margin-block: 13rem;
     display: flex;
     .arrow-type3{
       margin-left: .5rem;  
+    }
+
+    ::before{
+      position:absolute;
+      content:"<h3>";
+      bottom: 2rem;
+      font-family:${fonts.codes.fontFamily};
+      font-size: ${fonts.codes.size}rem;
+      color: ${colors.fontColor.fontColor2};
+    }
+    ::after{
+      position:absolute;
+      content:"</h3>";
+      top: 2rem;
+      font-family:${fonts.codes.fontFamily};
+      font-size: ${fonts.codes.size}rem;
+      color: ${colors.fontColor.fontColor2};
     }
 
   }

@@ -21,7 +21,7 @@ const HeroWrapper = styled.section`
 
     .title1-title2-wrapper {
       ::after {
-        content: "<h1>";
+        content: "</h1>";
         color: ${colors.fontColor.fontColor2};
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
@@ -58,15 +58,15 @@ const HeroWrapper = styled.section`
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
-      bottom: 2rem;
+      top: 2rem;
     }
     ::after {
-        content: "<p>";
+        content: "</p>";
         color: ${colors.fontColor.fontColor2};
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
         position: absolute;
-        top: 2rem;
+        bottom: 2rem;
         left: 0rem;
       }
 
