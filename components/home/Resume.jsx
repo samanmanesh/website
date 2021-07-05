@@ -1,24 +1,54 @@
 import React from "react";
 import { Container, Title1, Title2, Title3 } from "../styles";
+import { tablet } from "../styles/design";
 import styled from "styled-components";
 
-const EducationGrid = styled.section``;
-const ResumeCard = styled.div``;
-const Skills = styled.section``;
-const Tools = styled.section`
-  
+const EducationGrid = styled.section`
+  @media (min-width: ${tablet}) {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "left-side ."
+      " left-side right-side"
+      "left-side .";
+
+    .left-side {
+      grid-area: left-side;
+    }
+    .right-side {
+      grid-area: right-side;
+    }
+  }
 `;
+const ResumeCard = styled.div`
+background: #235eb1;
+font-size: 1.1rem;
+.card-row{
+  border: 1px solid white;
+  padding-block: 1rem;
+  
+}
+
+`;
+const Skills = styled.section``;
+const Tools = styled.section``;
 
 export default function Resume() {
   return (
     <Container>
       <section className="titles-container">
-      <Title3>Reśumé</Title3>
-        <img src="arrow3-down-right.svg" alt="arrow type3" className="arrow-type3" />
+        <Title3>Reśumé</Title3>
+        <img
+          src="arrow3-down-right.svg"
+          alt="arrow type3"
+          className="arrow-type3"
+        />
       </section>
 
+      <Title2>Education {"{"} </Title2>
       <EducationGrid>
-        <Title2>Education {"{"} </Title2>
         <div className="left-side">
           <ResumeCard>
             <div className="card-row">
@@ -59,8 +89,8 @@ export default function Resume() {
             </div>
           </ResumeCard>
         </div>
-        <Title2>{"}"} </Title2>
       </EducationGrid>
+      <Title2>{"}"} </Title2>
 
       <Skills>
         <Title2>Skills {"{"}</Title2>
@@ -91,13 +121,12 @@ export default function Resume() {
           <div className="element">Framer</div>
           <div className="element">Figma</div>
         </div>
-      <Title2>{"}"}</Title2>
+        <Title2>{"}"}</Title2>
       </Tools>
       <button className="download-resume">
         <span>Download Reśumé</span>
         <img src="" alt="array type 4" className="arrow-type4" />
       </button>
-
     </Container>
   );
 }
