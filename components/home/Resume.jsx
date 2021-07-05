@@ -4,36 +4,51 @@ import { tablet } from "../styles/design";
 import styled from "styled-components";
 
 const EducationGrid = styled.section`
+  background: #5e1d84;
+  margin-block: 3rem;
   @media (min-width: ${tablet}) {
     display: grid;
     gap: 3rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
-      "left-side ."
-      " left-side right-side"
-      "left-side .";
+      "leftA ."
+      ". right"
+      "leftB .";
 
-    .left-side {
-      grid-area: left-side;
+    .left-side1 {
+      grid-area: leftA;
+    }
+    .left-side2 {
+      grid-area: leftB;
     }
     .right-side {
-      grid-area: right-side;
+      grid-area: right;
     }
+    align-items: center;
   }
 `;
 const ResumeCard = styled.div`
-background: #235eb1;
-font-size: 1.1rem;
-.card-row{
-  border: 1px solid white;
-  padding-block: 1rem;
-  
-}
+  background: #235eb1;
+  font-size: 1.1rem;
 
+  .card-row {
+    display: flex;
+    border: 1px solid white;
+    padding-block: 1rem;
+    span:nth-child(2) {
+      color: blue;
+      margin-left: auto;
+    }
+  }
 `;
-const Skills = styled.section``;
-const Tools = styled.section``;
+
+const Skills = styled.section`
+  margin-top: 5rem;
+`;
+const Tools = styled.section`
+  margin-top: 5rem;
+`;
 
 export default function Resume() {
   return (
@@ -62,6 +77,8 @@ export default function Resume() {
               <span>Toronto, Canada</span>
             </div>
           </ResumeCard>
+        </div>
+        <div className="left-side2">
           <ResumeCard>
             <div className="card-row">
               <span>Civil Engineering</span>
