@@ -7,17 +7,26 @@ import { mobile, tablet, desktop } from "../styles/design";
 const ProjectCard = styled.div`
   .card-container {
     background: #4a0e59;
-    max-width: 33.5rem;
+    max-width: 35.5rem;
     height: 16.875rem;
   }
-`;
+  .subtitle-arrow-container{
+    /* background: #7e1414; */
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .arrow-type2{
+    background: blue;
+
+  }`;
 
 const ProjectGrid = styled.section`
   background: #146a64;
   margin-bottom: 5rem;
   @media (min-width: ${tablet}) {
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
 
     .left-side {
       grid-area: left-side;
@@ -32,10 +41,6 @@ const ProjectGrid = styled.section`
       "left-side ."
       "left-side right-side";
   }
-
-
-
-  
 `;
 //#endregion
 
@@ -55,16 +60,20 @@ export default function Work() {
         <div class="left-side">
           <ProjectCard>
             <Title2>Samitone</Title2>
-            <p className="subtitle">let Design &amp; Development = 2021;</p>
-            <img src="" alt="arrow of type 2" className="arrow-type2" />
+            <div className="subtitle-arrow-container">
+              <p className="subtitle">let Design &amp; Development = 2021;</p>
+              <img src="arrow2-down-left.svg" alt="arrow of type 2" className="arrow-type2" />
+            </div>
             <div className="card-container">
               <img src="#" alt="image of Samitone" />
             </div>
           </ProjectCard>
           <ProjectCard>
             <Title2> What's up Coins</Title2>
+            <div className="subtitle-arrow-container">
             <p className="subtitle">let Design &amp; Development = 2021;</p>
             <img src="" alt="arrow of type 2" className="arrow-type2" />
+            </div>
             <div className="card-container">
               <img src="#" alt="image of What's up Coins" />
             </div>
@@ -73,8 +82,10 @@ export default function Work() {
         <div class="right-side">
           <ProjectCard>
             <Title2>Saman's Website</Title2>
-            <p className="subtitle">let Design &amp; Development = 2021;</p>
-            <img src="" alt="arrow of type 2" className="arrow-type2" />
+            <div className="subtitle-arrow-container">
+              <p className="subtitle">let Design &amp; Development = 2021;</p>
+              <img src="" alt="arrow of type 2" className="arrow-type2" />
+            </div>
             <div className="card-container">
               <img src="#" alt="image of Saman's Website" />
             </div>

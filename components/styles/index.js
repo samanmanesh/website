@@ -41,7 +41,13 @@ export const Title1 = styled.h1`
 
 
 
-export const Title2 = styled.h2``;
+export const Title2 = styled.h2`
+  margin: 0;
+  font-size: ${fonts.title2.size}rem;
+  font-weight: medium;
+  max-width: 15rem;
+  /* background: blue; */
+`;
 
 export const Title3 = styled.h3`
   margin: 0;

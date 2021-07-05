@@ -21,10 +21,10 @@ export const colors = {
     },
     title2: {
       description: "sizes are in Em",
-      size: '3.125',
+      size: '2.5',
       fontFamily: 'inter',
       style: 'Medium',
-      line: '1.2'
+      line: '1.4'
     },
     title3: {
       description: "sizes are in rem",
