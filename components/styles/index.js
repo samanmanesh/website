@@ -72,7 +72,12 @@ export const Container = styled.section`
   /* @media (min-height: 800px) {
     min-height: 800px;
   } */
-  /* border: 1px solid rgb(51, 136, 255); */
+  border: 1px solid rgb(51, 136, 255);
+
+  .title-container{
+    background: blue;
+    margin-block: 5rem;
+  }
 `;
 
 export const ColumnLayout = styled.div`

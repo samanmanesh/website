@@ -35,10 +35,10 @@ const ProjectGrid = styled.section`
 export default function Work() {
   return (
     <Container>
-      <div className="title-container">
+      <section className="title-container">
         <Title3>Selected Works</Title3>
         <img src="" alt="arrow type3" className="arrow-type3" />
-      </div>
+      </section>
 
       <ProjectGrid>
         <div class="left-side">

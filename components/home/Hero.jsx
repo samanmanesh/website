@@ -3,21 +3,14 @@ import { Title1, Description, Container, ColumnLayout } from "../styles";
 import styled from "styled-components";
 import { fonts, colors } from "../styles/design";
 
-const CodeDesign = styled.section`
-  color: ${colors.fontColor.fontColor2};
-  font-family: ${fonts.codes.fontFamily};
-  font-size: ${fonts.codes.size}rem;
-  /* padding-top: 5rem; */
-  div:nth-child(2) {
-    padding-left: 1rem;
-  }
-`;
+
 
 const HeroWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
+  background: #2e9f11;
+  /* height: 100vh; */
   .title-container {
     /* margin-top: 4rem; */
     position: relative;
@@ -84,6 +77,16 @@ const HeroWrapper = styled.section`
         left: 0rem;
       }
 
+  }
+`;
+
+const CodeDesign = styled.section`
+  color: ${colors.fontColor.fontColor2};
+  font-family: ${fonts.codes.fontFamily};
+  font-size: ${fonts.codes.size}rem;
+  padding-top: 4rem;
+  div:nth-child(2) {
+    padding-left: 1rem;
   }
 `;
 
