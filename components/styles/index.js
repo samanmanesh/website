@@ -4,11 +4,10 @@ import { mobile, tablet, desktop, fonts } from "./design";
 // #region -- Typography --
 
 export const Title1 = styled.h1`
-margin: 0;
-padding: 0;
-font-size: ${fonts.title1.size}rem;
-letter-spacing: ${fonts.title1.letterSpacing}px;
-
+  margin: 0;
+  padding: 0;
+  font-size: ${fonts.title1.size}rem;
+  letter-spacing: ${fonts.title1.letterSpacing}px;
 
   /* font-size: ${(props) => (props.larger ? 2.5 : 2)}rem;
   font-weight: Bold;
@@ -40,9 +39,14 @@ letter-spacing: ${fonts.title1.letterSpacing}px;
   } */
 `;
 
-export const Title2 = styled.h3``;
 
-export const Title3 = styled.h4``;
+
+export const Title2 = styled.h2``;
+
+export const Title3 = styled.h3`
+  margin: 0;
+  /* font-size: ${fonts.title3.size}rem; */
+`;
 
 export const Description = styled.p`
   font-size: ${(props) => (props.smaller ? 1 : 1.2)}rem;
@@ -74,9 +78,13 @@ export const Container = styled.section`
   } */
   border: 1px solid rgb(51, 136, 255);
 
-  .title-container{
-    background: blue;
+  .titles-container {
     margin-block: 13rem;
+    display: flex;
+    .arrow-type3{
+      margin-left: .5rem;  
+    }
+
   }
 `;
 

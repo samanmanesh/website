@@ -8,7 +8,7 @@ const LinkCard = styled.div``;
 export default function Footer() {
   return (
     <Container>
-      <div className="title-container">
+      <div className="titles-container">
         <Title3>Contact</Title3>
         <img src="" alt="arrow type 3" className="arrow-type3" />
       </div>

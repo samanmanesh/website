@@ -9,7 +9,7 @@ export default function About() {
     <Container>
       <AboutGrid>
         <div className="left-side">
-          <div className="title-container">
+          <div className="titles-container">
             <Title3>Me, Myself &amp; I</Title3>
             <img src="" alt="" className="arrow-type3" />
           </div>

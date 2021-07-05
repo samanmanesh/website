@@ -28,7 +28,7 @@ export const colors = {
     },
     title3: {
       description: "sizes are in rem",
-      size: '1.75',
+      size: '1.4',
       fontFamily: 'inter',
       style: 'Regular',
       line: '1.2'

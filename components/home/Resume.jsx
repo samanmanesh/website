@@ -12,7 +12,7 @@ const Tools = styled.section`
 export default function Resume() {
   return (
     <Container>
-      <section className="title-container">
+      <section className="titles-container">
       <Title3>Resume</Title3>
         <img src="" alt="arrow type3" className="arrow-type3" />
       </section>
