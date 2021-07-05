@@ -9,10 +9,8 @@ const HeroWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: #2e9f11;
-  /* height: 100vh; */
-  .title-container {
-    /* margin-top: 4rem; */
+  .hero-title-container {
+    margin-block: 5rem;
     position: relative;
     ::before {
       content: "<h1>";
@@ -27,7 +25,6 @@ const HeroWrapper = styled.section`
         color: ${colors.fontColor.fontColor2};
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
-        /* margin-left: 1rem; */
         position: absolute;
         left: 28rem;
         bottom: 2.6rem;
@@ -40,8 +37,6 @@ const HeroWrapper = styled.section`
       @media(min-width: 429px){
         margin-left: 3em;
       }
-      /* grid-column: 2; */
-      /* grid-row: 2; */
     }
 
     .subtitle {
@@ -52,12 +47,10 @@ const HeroWrapper = styled.section`
   }
 
   .hero-paragraph {
-    /* background: #982727; */
     max-width: 22em;
     font-size: 1.4rem;
     font-weight: lighter;
     padding-block: 4rem;
-    /* margin-block: 5rem; */
     position: relative;
     ::before {
       position: absolute;
@@ -98,7 +91,7 @@ export default function Hero() {
           <div> {"<htm>"}</div>
           <div> {"<body>"}</div>
         </CodeDesign>
-        <div className="title-container">
+        <div className="hero-title-container">
           <section className="title1-title2-wrapper">
             <Title1 className="title1">Hi! &nbsp; I'm </Title1>
             <Title1 className="title2">Saman,</Title1>

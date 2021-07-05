@@ -76,7 +76,7 @@ export const Container = styled.section`
 
   .title-container{
     background: blue;
-    margin-block: 5rem;
+    margin-block: 13rem;
   }
 `;
 
