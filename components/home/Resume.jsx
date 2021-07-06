@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Title1, Title2, Title3 } from "../styles";
-import { tablet, colors, mobile, fonts} from "../styles/design";
+import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled from "styled-components";
 
 const Codes = styled.section`
@@ -19,12 +19,11 @@ const Codes = styled.section`
     color: ${colors.fontColor.fontColor2};
     font-family: ${fonts.codes.fontFamily};
     font-size: ${fonts.codes.size}rem;
-    bottom:-2rem;
+    bottom: -2rem;
   }
 `;
 
 const EducationGrid = styled.section`
-  /* background: #5e1d84; */
   margin-block: 3rem;
   @media (min-width: ${tablet}) {
     display: grid;
@@ -45,11 +44,9 @@ const EducationGrid = styled.section`
     .right-side {
       grid-area: right;
     }
-    /* align-items: center; */
   }
 `;
 const ResumeCard = styled.div`
-  /* background: #235eb1; */
   font-size: 1.1rem;
 
   @media (max-width: ${tablet}) {
@@ -70,7 +67,6 @@ const ResumeCard = styled.div`
     }
 
     .arrow-type4 {
-      /* background: #600e0e; */
       align-self: start;
     }
   }
@@ -78,9 +74,36 @@ const ResumeCard = styled.div`
 
 const Skills = styled.section`
   margin-top: 8rem;
+  .skill-container {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-inline: auto;
+
+    .element {
+      padding: 1rem;
+      margin: 1rem 1.5rem;
+      font-size: 1.6rem;
+    }
+  }
 `;
 const Tools = styled.section`
   margin-block: 8rem;
+
+  .tools-container {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-inline: auto;
+
+    .element {
+      padding: 1rem;
+      margin: 1rem 1.5rem;
+      font-size: 1.6rem;
+    }
+  }
 `;
 
 export default function Resume() {
@@ -157,39 +180,39 @@ export default function Resume() {
         <Title2>{"}"} </Title2>
       </Codes>
       <Codes>
-      <Skills>
-        <Title2>Skills {"{"}</Title2>
-        <div className="skill-container-grid">
-          <div className="element">HTML 5</div>
-          <div className="element">CSS 3</div>
-          <div className="element">SASS</div>
-          <div className="element">TailWind</div>
-          <div className="element">JavaScript</div>
-          <div className="element">ReactJS</div>
-          <div className="element">VueJS</div>
-          <div className="element">NextJS</div>
-          <div className="element">UI / UX Design</div>
-          <div className="element">C</div>
-          <div className="element">Linux 7&amp; Unix</div>
-          <div className="element">C#</div>
-          <div className="element">Styled Components</div>
-        </div>
-        <Title2> {"}"}</Title2>
-      </Skills>
+        <Skills>
+          <Title2>Skills {"{"}</Title2>
+          <div className="skill-container">
+            <div className="element">HTML 5</div>
+            <div className="element">CSS 3</div>
+            <div className="element">SASS</div>
+            <div className="element">TailWind</div>
+            <div className="element">JavaScript</div>
+            <div className="element">ReactJS</div>
+            <div className="element">VueJS</div>
+            <div className="element">NextJS</div>
+            <div className="element">UI / UX Design</div>
+            <div className="element">C</div>
+            <div className="element">Linux &amp; Unix</div>
+            <div className="element">C#</div>
+            <div className="element">Styled Components</div>
+          </div>
+          <Title2> {"}"}</Title2>
+        </Skills>
       </Codes>
       <Codes>
-      <Tools>
-        <Title2>Tools {"{"}</Title2>
-        <div className="tools-container-grid">
-          <div className="element">Visual Studio Code</div>
-          <div className="element">Rider</div>
-          <div className="element">Unity</div>
-          <div className="element">Vi Editor</div>
-          <div className="element">Framer</div>
-          <div className="element">Figma</div>
-        </div>
-        <Title2>{"}"}</Title2>
-      </Tools>
+        <Tools>
+          <Title2>Tools {"{"}</Title2>
+          <div className="tools-container">
+            <div className="element">Visual Studio Code</div>
+            <div className="element">Rider</div>
+            <div className="element">Unity</div>
+            <div className="element">Vi Editor</div>
+            <div className="element">Framer</div>
+            <div className="element">Figma</div>
+          </div>
+          <Title2>{"}"}</Title2>
+        </Tools>
       </Codes>
       <button className="download-resume">
         <span>Download Reśumé</span>
