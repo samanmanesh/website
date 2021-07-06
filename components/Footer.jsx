@@ -2,7 +2,41 @@ import React from "react";
 import { Container, Title3 } from "./styles";
 import styled from "styled-components";
 
-const ContactGrid = styled.section``;
+const ContactGrid = styled.section`
+  background: #27276a;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "left ."
+    ". right";
+
+    .left-side{
+        grid-area: left
+    }
+
+    .right-side{
+        grid-area: right;
+    }
+
+  .carryout-text-img-container {
+    /* background: #340101; */
+    display: flex;
+    align-items: flex-end;
+
+    .carryout-text {
+      /* background: #056450; */
+      font-size: 2rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+    .arrow-type2 {
+        margin-left: auto;
+      background: #c08913;
+    }
+  }
+`;
 const LinkCard = styled.div``;
 
 export default function Footer() {
@@ -18,7 +52,7 @@ export default function Footer() {
       </div>
       <ContactGrid>
         <div className="left-side">
-          <div className="carryout-text-container">
+          <div className="carryout-text-img-container">
             <p className="carryout-text">
               Want to work together?
               <br />
@@ -26,7 +60,11 @@ export default function Footer() {
               <br />
               Drop me a line here
             </p>
-            <img src="" alt="arrow type 2" className="arrow-type2" />
+            <img
+              src="arrow2-down-left.svg"
+              alt="arrow type 2"
+              className="arrow-type2"
+            />
           </div>
           <form action="">
             <input
@@ -44,9 +82,9 @@ export default function Footer() {
           </button>
         </div>
         <div className="right-side">
-          <div className="carryout-text-container">
+          <div className="carryout-text-img-container">
             <p className="carryout-text">You can also find me heres</p>
-            <img src="" alt="arrow type 2" className="arrow-type2" />
+            <img src="arrow2-down-left.svg" alt="arrow type 2" className="arrow-type2" />
           </div>
           <LinkCard>
             <div className="link-row">
