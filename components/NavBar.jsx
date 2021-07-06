@@ -9,17 +9,15 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   font-weight: 100;
-  font-size: clamp(.9em, 1.1vw , 1.3em );
+  font-size: clamp(0.9em, 1.1vw, 1.3em);
   > * {
     padding: 1.5em;
   }
   .anime-function-container {
-      font-size:clamp(.7em, .7vw, 1em);
-      align-self: center;
+    font-size: clamp(0.7em, 0.7vw, 1em);
+    align-self: center;
     /* background: #3737a4; */
   }
-
-  
 
   .nav-items-container {
     display: flex;
@@ -32,8 +30,6 @@ const Nav = styled.nav`
     }
   }
 
-  
-
   @media (max-width: ${mobile}) {
     .anime-function-container {
       display: none;
@@ -44,20 +40,15 @@ const Nav = styled.nav`
       margin: 0;
     }
   }
-  
+
   @media (max-width: ${tablet}) {
     .anime-function-container {
       /* background: #5e771f; */
     }
     .nav-items-container {
-        margin: 0;
+      margin: 0;
     }
   }
-
-
-
-
-
 
   //     &:first-child {
   //       margin-right: auto;
@@ -71,7 +62,7 @@ export default function NavBar() {
   return (
     <Nav>
       <div className="anime-function-container">
-        const {'hero'} = ( ) ={">"} {"{display hero}"}
+        const {"hero"} = ( ) ={">"} {"{display hero}"}
       </div>
 
       <div className="nav-items-container">

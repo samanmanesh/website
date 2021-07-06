@@ -3,8 +3,6 @@ import { Title1, Description, Container, ColumnLayout } from "../styles";
 import styled from "styled-components";
 import { fonts, colors } from "../styles/design";
 
-
-
 const HeroWrapper = styled.section`
   display: flex;
   flex-direction: column;
@@ -34,13 +32,12 @@ const HeroWrapper = styled.section`
     }
 
     .title2 {
-      @media(min-width: 429px){
+      @media (min-width: 429px) {
         margin-left: 3em;
       }
     }
 
     .subtitle {
-      
       font-size: 1.4rem;
       font-weight: lighter;
     }
@@ -61,15 +58,14 @@ const HeroWrapper = styled.section`
       top: 2rem;
     }
     ::after {
-        content: "</p>";
-        color: ${colors.fontColor.fontColor2};
-        font-family: ${fonts.codes.fontFamily};
-        font-size: ${fonts.codes.size}rem;
-        position: absolute;
-        bottom: 2rem;
-        left: 0rem;
-      }
-
+      content: "</p>";
+      color: ${colors.fontColor.fontColor2};
+      font-family: ${fonts.codes.fontFamily};
+      font-size: ${fonts.codes.size}rem;
+      position: absolute;
+      bottom: 2rem;
+      left: 0rem;
+    }
   }
 `;
 

@@ -10,7 +10,11 @@ export default function Footer() {
     <Container>
       <div className="titles-container">
         <Title3>Contact</Title3>
-        <img src="arrow3-down-right.svg" alt="arrow type 3" className="arrow-type3" />
+        <img
+          src="arrow3-down-right.svg"
+          alt="arrow type 3"
+          className="arrow-type3"
+        />
       </div>
       <ContactGrid>
         <div className="left-side">
@@ -25,7 +29,12 @@ export default function Footer() {
             <img src="" alt="arrow type 2" className="arrow-type2" />
           </div>
           <form action="">
-            <input type="text" value="Your Name" className="" />
+            <input
+              type="text"
+              value="Your Name"
+              onChange={(e) => console.log(e.target.value)}
+              className=""
+            />
             <input type="text" />
             <input type="text" />
           </form>

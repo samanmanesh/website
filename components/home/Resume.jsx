@@ -1,7 +1,38 @@
 import React from "react";
 import { Container, Title1, Title2, Title3 } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const Tag = styled.div`
+  padding: 0.5rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  ::before {
+    content: "| ";
+    color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+  }
+  ::after {
+    content: " ";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+    mix-blend-mode: difference;
+    transition: all 0.2s ease;
+  }
+  &:hover {
+    
+    color: #a2a2a2;
+    ::after {
+      height: 100%;
+    }
+  }
+`;
 
 const Codes = styled.section`
   position: relative;
@@ -20,6 +51,18 @@ const Codes = styled.section`
     font-family: ${fonts.codes.fontFamily};
     font-size: ${fonts.codes.size}rem;
     bottom: -2rem;
+  }
+`;
+
+const arrowBounce = keyframes`
+  0% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(3px,-3px);
+  }
+  100% {
+    transform: translate(0,0);
   }
 `;
 
@@ -66,6 +109,32 @@ const ResumeCard = styled.div`
       padding-inline: 0.2rem;
     }
 
+    .arrow {
+      transition: all 0.1s ease;
+      animation: ${arrowBounce} linear infinite 0.5s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    .link-wrapper {
+      display: flex;
+      align-items: center;
+      transition: all 0.1s ease;
+      cursor: pointer;
+      &:hover {
+        color: white;
+        .link {
+          color: white;
+          transition: all 0.1s ease;
+        }
+
+        .arrow {
+          color: white;
+          animation-play-state: running;
+        }
+      }
+    }
+
     .arrow-type4 {
       align-self: start;
     }
@@ -81,7 +150,7 @@ const Skills = styled.section`
     flex-wrap: wrap;
     margin-inline: auto;
 
-    .element {
+    & > * {
       padding: 1rem;
       margin: 1rem 1.5rem;
       font-size: 1.6rem;
@@ -98,12 +167,16 @@ const Tools = styled.section`
     flex-wrap: wrap;
     margin-inline: auto;
 
-    .element {
+    & > * {
       padding: 1rem;
       margin: 1rem 1.5rem;
       font-size: 1.6rem;
     }
   }
+`;
+
+const DownloadResume = styled.button`
+  background: #562222;
 `;
 
 export default function Resume() {
@@ -114,7 +187,7 @@ export default function Resume() {
         <img
           src="arrow3-down-right.svg"
           alt="arrow type3"
-          className="arrow-type3"
+          className="arrow arrow-type3"
         />
       </section>
 
@@ -126,12 +199,14 @@ export default function Resume() {
             <ResumeCard>
               <div className="card-row">
                 <span>Computer Programming &amp; Analysis</span>
-                <span className="link">Link</span>
-                <img
-                  src="arrow4-up-right.svg"
-                  alt="arrow type 4"
-                  className="arrow-type4"
-                />
+                <span className="link-wrapper">
+                  <span className="link">Link</span>
+                  <img
+                    src="arrow4-up-right.svg"
+                    alt="arrow type 4"
+                    className="arrow arrow-type4"
+                  />
+                </span>
               </div>
               <div className="card-row">Seneca College</div>
               <div className="card-row">
@@ -148,7 +223,7 @@ export default function Resume() {
                 <img
                   src="arrow4-up-right.svg"
                   alt="arrow type 4"
-                  className="arrow-type4"
+                  className="arrow arrow-type4"
                 />
               </div>
               <div className="card-row">University of Shiraz</div>
@@ -166,7 +241,7 @@ export default function Resume() {
                 <img
                   src="arrow4-up-right.svg"
                   alt="arrow type 4"
-                  className="arrow-type4"
+                  className="arrow arrow-type4"
                 />
               </div>
               <div className="card-row">Akdeniz University</div>
@@ -183,19 +258,19 @@ export default function Resume() {
         <Skills>
           <Title2>Skills {"{"}</Title2>
           <div className="skill-container">
-            <div className="element">HTML 5</div>
-            <div className="element">CSS 3</div>
-            <div className="element">SASS</div>
-            <div className="element">TailWind</div>
-            <div className="element">JavaScript</div>
-            <div className="element">ReactJS</div>
-            <div className="element">VueJS</div>
-            <div className="element">NextJS</div>
-            <div className="element">UI / UX Design</div>
-            <div className="element">C</div>
-            <div className="element">Linux &amp; Unix</div>
-            <div className="element">C#</div>
-            <div className="element">Styled Components</div>
+            <Tag color="#FA6705">HTML5</Tag>
+            <Tag color="lightblue">CSS3</Tag>
+            <Tag color="pink">SASS / SCSS</Tag>
+            <Tag color="turquoise">TailwindCSS</Tag>
+            <Tag color="rgb(255,202,40)">JavaScript</Tag>
+            <Tag color="rgb(0,188,212)">ReactJS</Tag>
+            <Tag color="forestgreen">VueJS</Tag>
+            <Tag color="whitesmoke">NextJS</Tag>
+            <Tag color="#2BE3AC">UI / UX Design</Tag>
+            <Tag color="rgb(2,119,189)">C</Tag>
+            <Tag color="orange">Linux &amp; Unix</Tag>
+            <Tag color="#0AFF33">C#</Tag>
+            <Tag color="#DE05FF">Styled Components</Tag>
           </div>
           <Title2> {"}"}</Title2>
         </Skills>
@@ -204,20 +279,20 @@ export default function Resume() {
         <Tools>
           <Title2>Tools {"{"}</Title2>
           <div className="tools-container">
-            <div className="element">Visual Studio Code</div>
-            <div className="element">Rider</div>
-            <div className="element">Unity</div>
-            <div className="element">Vi Editor</div>
-            <div className="element">Framer</div>
-            <div className="element">Figma</div>
+            <div>Visual Studio Code</div>
+            <div>Rider</div>
+            <div>Unity</div>
+            <div>Vi Editor</div>
+            <div>Framer</div>
+            <div>Figma</div>
           </div>
           <Title2>{"}"}</Title2>
         </Tools>
       </Codes>
-      <button className="download-resume">
+      <DownloadResume>
         <span>Download Reśumé</span>
-        <img src="" alt="array type 4" className="arrow-type4" />
-      </button>
+        <img src="" alt="array type 4" className="arrow arrow arrow-type4" />
+      </DownloadResume>
     </Container>
   );
 }

@@ -8,7 +8,7 @@ const ProjectCard = styled.div`
   margin-top: 3rem;
   margin-bottom: 5rem;
   .card-container {
-    border:1px solid #5145FC;
+    border: 1px solid #5145fc;
     max-width: 35rem;
     height: 16.875rem;
     margin-top: 1rem;
@@ -81,7 +81,7 @@ export default function Work() {
               <img src="#" alt="image of Samitone" />
             </div>
           </ProjectCard>
-          {/* <ProjectCard>
+          <ProjectCard>
             <Title2> What's up Coins</Title2>
             <div className="subtitle-arrow-container">
               <p className="subtitle">let Design &amp; Development = 2021;</p>
@@ -94,7 +94,7 @@ export default function Work() {
             <div className="card-container">
               <img src="#" alt="image of What's up Coins" />
             </div>
-          </ProjectCard> */}
+          </ProjectCard>
         </div>
         <div class="right-side">
           <ProjectCard>
