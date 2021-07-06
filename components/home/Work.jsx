@@ -9,8 +9,9 @@ const ProjectCard = styled.div`
   margin-bottom: 5rem;
   .card-container {
     border:1px solid #5145FC;
-    max-width: 35.5rem;
+    max-width: 35rem;
     height: 16.875rem;
+    margin-top: 1rem;
   }
   .subtitle-arrow-container {
     display: flex;

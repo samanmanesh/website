@@ -8,6 +8,10 @@ export const colors = {
     fontColor1: "rgb(255, 255, 255)",
     fontColor2: "rgba(255, 255, 255, 0.25)",
   },
+  button: {
+    primary: "rgb(255, 255, 255)",
+    secondary: "rgb(179, 179, 179)"
+  }
 };
 
  export const fonts = {

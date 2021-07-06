@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Title1, Title2, Title3 } from "../styles";
-import { tablet } from "../styles/design";
+import { tablet, colors, mobile } from "../styles/design";
 import styled from "styled-components";
 
 const EducationGrid = styled.section`
-  background: #5e1d84;
+  /* background: #5e1d84; */
   margin-block: 3rem;
   @media (min-width: ${tablet}) {
     display: grid;
@@ -25,20 +25,36 @@ const EducationGrid = styled.section`
     .right-side {
       grid-area: right;
     }
-    align-items: center;
+    /* align-items: center; */
+
   }
 `;
 const ResumeCard = styled.div`
-  background: #235eb1;
+  /* background: #235eb1; */
   font-size: 1.1rem;
+  
+  @media (max-width:${tablet}){
+    margin-block: 5rem;
 
+  }
   .card-row {
     display: flex;
-    border: 1px solid white;
+    border-bottom: 2px solid white;
     padding-block: 1rem;
+   
     span:nth-child(2) {
-      color: blue;
       margin-left: auto;
+      /* padding-block: 1rem; */
+    }
+
+    .link{
+      color: ${colors.button.secondary};
+      padding-inline: .2rem;
+    }
+
+    .arrow-type4{
+      /* background: #600e0e; */
+      align-self: start;
     }
   }
 `;
@@ -68,8 +84,8 @@ export default function Resume() {
           <ResumeCard>
             <div className="card-row">
               <span>Computer Programming &amp; Analysis</span>
-              <span>Link</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              <span className="link">Link</span>
+              <img src="arrow4-up-right.svg" alt="arrow type 4" className="arrow-type4" />
             </div>
             <div className="card-row">Seneca College</div>
             <div className="card-row">
@@ -82,8 +98,8 @@ export default function Resume() {
           <ResumeCard>
             <div className="card-row">
               <span>Civil Engineering</span>
-              <span>Link</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              <span className="link">Link</span>
+              <img src="arrow4-up-right.svg" alt="arrow type 4" className="arrow-type4" />
             </div>
             <div className="card-row">University of Shiraz</div>
             <div className="card-row">
@@ -96,8 +112,8 @@ export default function Resume() {
           <ResumeCard>
             <div className="card-row">
               <span>Tömer, Turkish Language Program</span>
-              <span>Link</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              <span className="link">Link</span>
+              <img src="arrow4-up-right.svg" alt="arrow type 4" className="arrow-type4" />
             </div>
             <div className="card-row">Akdeniz University</div>
             <div className="card-row">
