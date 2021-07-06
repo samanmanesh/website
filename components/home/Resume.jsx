@@ -4,8 +4,8 @@ import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
 
 const Tag = styled.div`
-  padding: 0.5rem 1rem;
-  border-bottom-left-radius: 1rem;
+  /* padding: 0.5rem .5rem; */
+  border-bottom-left-radius: .3rem;
   border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
   position: relative;
   overflow: hidden;
@@ -23,12 +23,11 @@ const Tag = styled.div`
     height: 2px;
     background-color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
     mix-blend-mode: difference;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
   }
   &:hover {
-    
-    color: #a2a2a2;
     ::after {
+      /* color: #000000; */
       height: 100%;
     }
   }
@@ -110,8 +109,8 @@ const ResumeCard = styled.div`
     }
 
     .arrow {
-      transition: all 0.1s ease;
-      animation: ${arrowBounce} linear infinite 0.5s;
+      /* transition: all 0.1s ease; */
+      animation: ${arrowBounce} linear infinite .6s;
       animation-direction: alternate;
       animation-fill-mode: forwards;
       animation-play-state: paused;
@@ -119,10 +118,10 @@ const ResumeCard = styled.div`
     .link-wrapper {
       display: flex;
       align-items: center;
-      transition: all 0.1s ease;
+      /* transition: all 5s ease; */
       cursor: pointer;
       &:hover {
-        color: white;
+        /* color: white; */
         .link {
           color: white;
           transition: all 0.1s ease;
@@ -152,8 +151,8 @@ const Skills = styled.section`
 
     & > * {
       padding: 1rem;
-      margin: 1rem 1.5rem;
-      font-size: 1.6rem;
+      margin: 1rem 1rem;
+      font-size: 1.3rem;
     }
   }
 `;
@@ -161,16 +160,16 @@ const Tools = styled.section`
   margin-block: 8rem;
 
   .tools-container {
-    max-width: 60%;
+    max-width: 50%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-inline: auto;
 
     & > * {
       padding: 1rem;
-      margin: 1rem 1.5rem;
-      font-size: 1.6rem;
+      margin: 1rem 1rem;
+      font-size: 1.3rem;
     }
   }
 `;
@@ -219,12 +218,15 @@ export default function Resume() {
             <ResumeCard>
               <div className="card-row">
                 <span>Civil Engineering</span>
+                <span className="link-wrapper">
                 <span className="link">Link</span>
                 <img
                   src="arrow4-up-right.svg"
                   alt="arrow type 4"
                   className="arrow arrow-type4"
                 />
+
+                </span>
               </div>
               <div className="card-row">University of Shiraz</div>
               <div className="card-row">
@@ -237,12 +239,14 @@ export default function Resume() {
             <ResumeCard>
               <div className="card-row">
                 <span>Tömer, Turkish Language Program</span>
+                <span className="link-wrapper">
                 <span className="link">Link</span>
                 <img
                   src="arrow4-up-right.svg"
                   alt="arrow type 4"
                   className="arrow arrow-type4"
                 />
+                </span>
               </div>
               <div className="card-row">Akdeniz University</div>
               <div className="card-row">
@@ -279,12 +283,12 @@ export default function Resume() {
         <Tools>
           <Title2>Tools {"{"}</Title2>
           <div className="tools-container">
-            <div>Visual Studio Code</div>
-            <div>Rider</div>
-            <div>Unity</div>
-            <div>Vi Editor</div>
-            <div>Framer</div>
-            <div>Figma</div>
+            <Tag color="rgb(43,158,237)">Visual Studio Code</Tag>
+            <Tag color="rgb(133,47,136)">Rider</Tag>
+            <Tag color="rgb(247,247,247)">Unity</Tag>
+            <Tag color="rgb(1,147,49)">Vi Editor</Tag>
+            <Tag color="rgb(1,222,247)">Framer</Tag>
+            <Tag color="rgb(235,76,29)">Figma</Tag>
           </div>
           <Title2>{"}"}</Title2>
         </Tools>
