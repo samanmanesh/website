@@ -67,8 +67,8 @@ export default function About() {
       <AboutGrid>
         <div className="intro">
           <p>
-            My name is Saman Manesh and I am a full stack developer focused on
-            front end based in Toronto.
+            My name is Saman Manesh and I am a Full-Stack developer focused on
+            Front-End based in Toronto.
           </p>
         </div>
         <div className="left-side">
@@ -84,8 +84,9 @@ export default function About() {
           </Button> */}
         </div>
         <div className="right-side">
-          <section className="person-image-container"></section>
-          <img src="" alt="Samans image" className="person-image" />
+          <section className="person-image-container">
+            <img src="" alt="Samans image" className="person-image" />
+          </section>
         </div>
       </AboutGrid>
     </Container>
