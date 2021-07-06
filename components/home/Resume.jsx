@@ -176,6 +176,7 @@ const Tools = styled.section`
 
 const DownloadResume = styled.button`
   background: #562222;
+
 `;
 
 export default function Resume() {
@@ -294,8 +295,12 @@ export default function Resume() {
         </Tools>
       </Codes>
       <DownloadResume>
+        <Button>
+        
         <span>Download Reśumé</span>
         <img src="" alt="array type 4" className="arrow arrow arrow-type4" />
+
+        </Button>
       </DownloadResume>
     </Container>
   );

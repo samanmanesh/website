@@ -69,7 +69,7 @@ export const Description = styled.p`
 
 export const Container = styled.section`
   min-height: 100vh;
-  width: 70%;
+  width: 75%;
   /* max-width: 1320px; */
   /* width: 100%; */
   /* position: relative; */
