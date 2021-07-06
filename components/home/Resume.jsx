@@ -1,7 +1,27 @@
 import React from "react";
 import { Container, Title1, Title2, Title3 } from "../styles";
-import { tablet, colors, mobile } from "../styles/design";
+import { tablet, colors, mobile, fonts} from "../styles/design";
 import styled from "styled-components";
+
+const Codes = styled.section`
+  position: relative;
+  ::before {
+    position: absolute;
+    content: "<section>";
+    color: ${colors.fontColor.fontColor2};
+    font-family: ${fonts.codes.fontFamily};
+    font-size: ${fonts.codes.size}rem;
+    top: -2rem;
+  }
+  ::after {
+    position: absolute;
+    content: "</section>";
+    color: ${colors.fontColor.fontColor2};
+    font-family: ${fonts.codes.fontFamily};
+    font-size: ${fonts.codes.size}rem;
+    bottom:-2rem;
+  }
+`;
 
 const EducationGrid = styled.section`
   /* background: #5e1d84; */
@@ -26,33 +46,30 @@ const EducationGrid = styled.section`
       grid-area: right;
     }
     /* align-items: center; */
-
   }
 `;
 const ResumeCard = styled.div`
   /* background: #235eb1; */
   font-size: 1.1rem;
-  
-  @media (max-width:${tablet}){
-    margin-block: 5rem;
 
+  @media (max-width: ${tablet}) {
+    margin-block: 5rem;
   }
   .card-row {
     display: flex;
     border-bottom: 2px solid white;
     padding-block: 1rem;
-   
+
     span:nth-child(2) {
       margin-left: auto;
-      /* padding-block: 1rem; */
     }
 
-    .link{
+    .link {
       color: ${colors.button.secondary};
-      padding-inline: .2rem;
+      padding-inline: 0.2rem;
     }
 
-    .arrow-type4{
+    .arrow-type4 {
       /* background: #600e0e; */
       align-self: start;
     }
@@ -60,10 +77,10 @@ const ResumeCard = styled.div`
 `;
 
 const Skills = styled.section`
-  margin-top: 5rem;
+  margin-top: 8rem;
 `;
 const Tools = styled.section`
-  margin-top: 5rem;
+  margin-block: 8rem;
 `;
 
 export default function Resume() {
@@ -78,53 +95,68 @@ export default function Resume() {
         />
       </section>
 
-      <Title2>Education {"{"} </Title2>
-      <EducationGrid>
-        <div className="left-side">
-          <ResumeCard>
-            <div className="card-row">
-              <span>Computer Programming &amp; Analysis</span>
-              <span className="link">Link</span>
-              <img src="arrow4-up-right.svg" alt="arrow type 4" className="arrow-type4" />
-            </div>
-            <div className="card-row">Seneca College</div>
-            <div className="card-row">
-              <span>2020 - Current</span>
-              <span>Toronto, Canada</span>
-            </div>
-          </ResumeCard>
-        </div>
-        <div className="left-side2">
-          <ResumeCard>
-            <div className="card-row">
-              <span>Civil Engineering</span>
-              <span className="link">Link</span>
-              <img src="arrow4-up-right.svg" alt="arrow type 4" className="arrow-type4" />
-            </div>
-            <div className="card-row">University of Shiraz</div>
-            <div className="card-row">
-              <span>2012 - 2016</span>
-              <span>Iran, Shiraz</span>
-            </div>
-          </ResumeCard>
-        </div>
-        <div className="right-side">
-          <ResumeCard>
-            <div className="card-row">
-              <span>Tömer, Turkish Language Program</span>
-              <span className="link">Link</span>
-              <img src="arrow4-up-right.svg" alt="arrow type 4" className="arrow-type4" />
-            </div>
-            <div className="card-row">Akdeniz University</div>
-            <div className="card-row">
-              <span>2018 - 2019</span>
-              <span>Turkey, Antalya</span>
-            </div>
-          </ResumeCard>
-        </div>
-      </EducationGrid>
-      <Title2>{"}"} </Title2>
+      <Codes>
+        <Title2>Education {"{"} </Title2>
 
+        <EducationGrid>
+          <div className="left-side">
+            <ResumeCard>
+              <div className="card-row">
+                <span>Computer Programming &amp; Analysis</span>
+                <span className="link">Link</span>
+                <img
+                  src="arrow4-up-right.svg"
+                  alt="arrow type 4"
+                  className="arrow-type4"
+                />
+              </div>
+              <div className="card-row">Seneca College</div>
+              <div className="card-row">
+                <span>2020 - Current</span>
+                <span>Toronto, Canada</span>
+              </div>
+            </ResumeCard>
+          </div>
+          <div className="left-side2">
+            <ResumeCard>
+              <div className="card-row">
+                <span>Civil Engineering</span>
+                <span className="link">Link</span>
+                <img
+                  src="arrow4-up-right.svg"
+                  alt="arrow type 4"
+                  className="arrow-type4"
+                />
+              </div>
+              <div className="card-row">University of Shiraz</div>
+              <div className="card-row">
+                <span>2012 - 2016</span>
+                <span>Iran, Shiraz</span>
+              </div>
+            </ResumeCard>
+          </div>
+          <div className="right-side">
+            <ResumeCard>
+              <div className="card-row">
+                <span>Tömer, Turkish Language Program</span>
+                <span className="link">Link</span>
+                <img
+                  src="arrow4-up-right.svg"
+                  alt="arrow type 4"
+                  className="arrow-type4"
+                />
+              </div>
+              <div className="card-row">Akdeniz University</div>
+              <div className="card-row">
+                <span>2018 - 2019</span>
+                <span>Turkey, Antalya</span>
+              </div>
+            </ResumeCard>
+          </div>
+        </EducationGrid>
+        <Title2>{"}"} </Title2>
+      </Codes>
+      <Codes>
       <Skills>
         <Title2>Skills {"{"}</Title2>
         <div className="skill-container-grid">
@@ -144,6 +176,8 @@ export default function Resume() {
         </div>
         <Title2> {"}"}</Title2>
       </Skills>
+      </Codes>
+      <Codes>
       <Tools>
         <Title2>Tools {"{"}</Title2>
         <div className="tools-container-grid">
@@ -156,6 +190,7 @@ export default function Resume() {
         </div>
         <Title2>{"}"}</Title2>
       </Tools>
+      </Codes>
       <button className="download-resume">
         <span>Download Reśumé</span>
         <img src="" alt="array type 4" className="arrow-type4" />
