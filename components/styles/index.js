@@ -70,18 +70,6 @@ export const Description = styled.p`
 export const Container = styled.section`
   min-height: 100vh;
   width: 75%;
-  /* max-width: 1320px; */
-  /* width: 100%; */
-  /* position: relative; */
-  /* z-index: 0; */
-  /* overflow-y: overflow; */
-  /* margin-top: 4rem; */
-  /* @media (max-width: 800px) {
-    margin-top: 0rem;
-  } */
-  /* @media (min-height: 800px) {
-    min-height: 800px;
-  } */
   border: 1px solid rgb(51, 136, 255);
 
   .titles-container {
@@ -112,12 +100,20 @@ export const Container = styled.section`
   }
 `;
 
-export const ColumnLayout = styled.div`
-  /* display: grid;
-
-  @media (min-width: ${mobile}) {
-    grid-template-columns: repeat(${(props) => props.columns ?? 2}, 1fr);
-  } */
+export const Button = styled.button`
+  all: unset;
+  margin:2rem 2rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid ${colors.fontColor.fontColor1};
+  border-top: 1px solid ${colors.fontColor.fontColor1};
+  border-radius: .4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  & > *{
+    padding: .5em 1em;
+  } 
+  /* max-width: 25rem; */
 `;
 
 // #endregion

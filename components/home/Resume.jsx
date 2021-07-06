@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Title1, Title2, Title3 } from "../styles";
+import { Container, Title1, Title2, Title3, Button } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
 
+//#region - styling-
 const Tag = styled.div`
   /* padding: 0.5rem .5rem; */
-  border-bottom-left-radius: .3rem;
+  border-bottom-left-radius: 0.3rem;
   border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
   position: relative;
   overflow: hidden;
@@ -110,7 +111,7 @@ const ResumeCard = styled.div`
 
     .arrow {
       /* transition: all 0.1s ease; */
-      animation: ${arrowBounce} linear infinite .6s;
+      animation: ${arrowBounce} linear infinite 0.6s;
       animation-direction: alternate;
       animation-fill-mode: forwards;
       animation-play-state: paused;
@@ -174,11 +175,18 @@ const Tools = styled.section`
   }
 `;
 
-const DownloadResume = styled.button`
+const DownloadResume = styled.div`
   background: #562222;
-
+  display: flex;
+  justify-content: space-between;
+  /* width: 15rem; */
+  /* padding: .5em; */
+  .arrow-type5 {
+    /* padding-left: auto; */
+  }
 `;
 
+//#endregion
 export default function Resume() {
   return (
     <Container>
@@ -220,13 +228,12 @@ export default function Resume() {
               <div className="card-row">
                 <span>Civil Engineering</span>
                 <span className="link-wrapper">
-                <span className="link">Link</span>
-                <img
-                  src="arrow4-up-right.svg"
-                  alt="arrow type 4"
-                  className="arrow arrow-type4"
-                />
-
+                  <span className="link">Link</span>
+                  <img
+                    src="arrow4-up-right.svg"
+                    alt="arrow type 4"
+                    className="arrow arrow-type4"
+                  />
                 </span>
               </div>
               <div className="card-row">University of Shiraz</div>
@@ -241,12 +248,12 @@ export default function Resume() {
               <div className="card-row">
                 <span>Tömer, Turkish Language Program</span>
                 <span className="link-wrapper">
-                <span className="link">Link</span>
-                <img
-                  src="arrow4-up-right.svg"
-                  alt="arrow type 4"
-                  className="arrow arrow-type4"
-                />
+                  <span className="link">Link</span>
+                  <img
+                    src="arrow4-up-right.svg"
+                    alt="arrow type 4"
+                    className="arrow arrow-type4"
+                  />
                 </span>
               </div>
               <div className="card-row">Akdeniz University</div>
@@ -294,14 +301,14 @@ export default function Resume() {
           <Title2>{"}"}</Title2>
         </Tools>
       </Codes>
-      <DownloadResume>
-        <Button>
-        
-        <span>Download Reśumé</span>
-        <img src="" alt="array type 4" className="arrow arrow arrow-type4" />
-
+        <Button >
+          <span>Download Reśumé</span>
+          <img
+            src="arrow5-line-right.svg"
+            alt="array type 5"
+            className=" arrow-type5"
+          />
         </Button>
-      </DownloadResume>
     </Container>
   );
 }
