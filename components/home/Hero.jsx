@@ -38,15 +38,15 @@ const HeroWrapper = styled.section`
     }
 
     .subtitle {
-      font-size: 1.4rem;
-      font-weight: lighter;
+      font-size: ${fonts.paragraph.primary.size}rem;
+      font-weight: ${fonts.paragraph.primary.style};
     }
   }
 
   .hero-paragraph {
     max-width: 22em;
-    font-size: 1.4rem;
-    font-weight: lighter;
+    font-size: ${fonts.paragraph.primary.size}rem;
+    font-weight: ${fonts.paragraph.primary.style};
     padding-block: 4rem;
     position: relative;
     ::before {

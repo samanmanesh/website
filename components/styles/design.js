@@ -53,6 +53,23 @@ export const colors = {
       fontFamily: 'IBM Plex Mono , monospace',
       style:'regular',
       line: '1.2'
+    },
+    paragraph: {
+      primary: {
+        description: "sizes are in rem, the for paragraphs",
+        size: '1.4',
+        fontFamily: 'inter',
+        style: 'lighter',
+        line: '1.4'
+      },
+      secondary:{
+        description: "sizes are in rem, the for paragraphs",
+        size: '2',
+        fontFamily: 'inter',
+        style: 'bold',
+        line: '1.4'
+
+      }
     }
 
  }

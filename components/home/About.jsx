@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, Title3, Button } from "../styles";
 import styled from "styled-components";
-import { tablet, mobile, desktop } from "../styles/design";
-const AboutGrid = styled.section`
-  /* background: #123e68; */
+import { tablet, mobile, desktop, fonts } from "../styles/design";
 
+// #region - styling-
+const AboutGrid = styled.section`
   display: grid;
-  font-size: 1.8rem;
-  line-height: 1.4;
-  font-weight: lighter;
+  font-size: ${fonts.paragraph.primary.size}rem;
+  font-weight: ${fonts.paragraph.primary.style};
+  line-height: ${fonts.paragraph.primary.line};
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   /* gap: 1rem; */
@@ -26,14 +26,15 @@ const AboutGrid = styled.section`
 
     .intro {
       & > p {
-        max-width: 70%;
+        max-width: 80%;
+        font-weight: bold;
       }
     }
   }
 
   .intro {
     grid-area: header;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .left-side {
@@ -44,17 +45,18 @@ const AboutGrid = styled.section`
   }
 
   .body {
-    max-width: 90%;
+    max-width: 80%;
     margin-bottom: 5em;
+    margin-inline: auto;
   }
   .person-image-container {
     border: 1px solid white;
-    height: 35rem;
-    max-width: 100%;
-    /* background: #0e746e; */
+    height: 30rem;
+    max-width: 60%;
+    margin-inline: auto;
   }
 `;
-
+//#endregion
 export default function About() {
   return (
     <Container>
@@ -76,10 +78,10 @@ export default function About() {
             literally change the world. That’s why I love working with diverse
             people who want to make the world a little better.
           </p>
-          <Button className="button-connection-contact">
+          {/* <Button className="button-connection-contact">
             <span>Lets Make Something Special</span>{" "}
             <img src="arrow5-line-right.svg" alt="" className="arrow-type5" />
-          </Button>
+          </Button> */}
         </div>
         <div className="right-side">
           <section className="person-image-container"></section>
