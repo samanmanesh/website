@@ -49,6 +49,9 @@ const Label = styled.label`
 
 const TextArea = styled.textarea`
   all: unset;
+  word-wrap: break-word;
+  word-break: break-all;
+  /* border: none; */
   border-radius: 0.1rem;
   margin-block: 1rem;
   background: ${colors.button.primary};
