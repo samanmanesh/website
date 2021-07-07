@@ -1,3 +1,4 @@
+
 export const mobile = '768px';
 export const tablet = '1000px';
 export const desktop = '1200px';

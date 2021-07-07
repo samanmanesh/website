@@ -1,6 +1,5 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes} from "styled-components";
 import { mobile, tablet, desktop, fonts, colors } from "./design";
-
 // #region -- Typography --
 
 export const Title1 = styled.h1`
@@ -102,3 +101,13 @@ export const Button = styled.button`
 `;
 
 // #endregion
+
+
+export const disappearAnim = keyframes`
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+`

@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { fonts, colors } from "./styles/design";
-// import { v4 as uuidv4 } from 'uuid';
 import { Button } from "./styles";
 const ContactContainer = styled.section`
   margin-top: 2rem;
@@ -85,7 +84,7 @@ export default function Contact() {
     e.preventDefault();
 
     setLock(true);
-
+    
     
 
     const combineMessage = {};
@@ -102,7 +101,6 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          //    inputRef.current.value.reset();
         },
         (error) => {
           console.log(error.text);
@@ -110,7 +108,7 @@ export default function Contact() {
       )
       .then(() =>
         setTimeout(() => {
-          setLock(false) , inputRef.current.reset();
+          setLock(false) , inputRef.current.reset()
         }, 3000)
       );
     
