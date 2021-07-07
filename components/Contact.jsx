@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { fonts, colors } from "./styles/design";
 // import { v4 as uuidv4 } from 'uuid';
-import {Button} from "./styles";
+import { Button } from "./styles";
 const ContactContainer = styled.section`
   margin-top: 2rem;
 `;
@@ -31,12 +31,12 @@ const Input = styled.input`
     opacity: 0.8;
   }
   border: 1px solid transparent;
-    transition: all 0.5s ease;
-    box-shadow: 0px 4px 1rem -10px rgba(154, 147, 147, 0.25);
-    :focus {
-        border-color: rgba(40, 40, 87, 0.58);
-        box-shadow: 0px 4px 1rem rgba(173, 173, 174, 0.25);
-    }
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 1rem -10px rgba(154, 147, 147, 0.25);
+  :focus {
+    border-color: rgba(40, 40, 87, 0.58);
+    box-shadow: 0px 4px 1rem rgba(173, 173, 174, 0.25);
+  }
 `;
 
 const Label = styled.label`
@@ -64,30 +64,36 @@ const TextArea = styled.textarea`
     color: ${colors.button.secondary};
     opacity: 0.8;
   }
-    border: 1px solid transparent;
-    transition: all 0.5s ease;
-    box-shadow: 0px 4px 1rem -10px rgba(154, 147, 147, 0.25);
-    :focus {
-        border-color: rgba(40, 40, 87, 0.58);
-        box-shadow: 0px 4px 1rem rgba(173, 173, 174, 0.25);
-    }
-
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 1rem -10px rgba(154, 147, 147, 0.25);
+  :focus {
+    border-color: rgba(40, 40, 87, 0.58);
+    box-shadow: 0px 4px 1rem rgba(173, 173, 174, 0.25);
+  }
 `;
 
 const ContactButton = styled.button`
-all: unset;
-
+  all: unset;
 `;
 
 export default function Contact() {
+  const [lock, setLock] = useState(false);
+
   function handleSubmit(e) {
     e.preventDefault();
 
+    setLock(true);
+
+    const combineMessage = {};
+    for (let child of e.target.children)
+      if (child.name) combineMessage[child.name] = child.value;
+
     emailjs
-      .sendForm(
+      .send(
         "service_1dgi6wn",
         "template_xz8wurx",
-        e.target,
+        combineMessage,
         "user_qs1RvJin7Sp2sBdWmL8uo"
       )
       .then(
@@ -97,12 +103,12 @@ export default function Contact() {
         (error) => {
           console.log(error.text);
         }
-      );
+      ).then(() => setTimeout(() => { setLock(false); }, 3000));
   }
 
   return (
     <ContactContainer>
-      <ContactForm onSubmit={handleSubmit}>
+      <ContactForm onSubmit={handleSubmit} disabled={lock}>
         {/* <Label>Your Name</Label> */}
         <Input type="text" name="user_name" placeholder="Your Name" />
         {/* <Label>Your Email</Label> */}
@@ -110,9 +116,8 @@ export default function Contact() {
         {/* <Label>Message</Label> */}
         <TextArea type="text" name="message" placeholder="Message" />
         <Button type="submit" id="btnsubmit">
-            <span>Send Message !</span>
-            <img src="arrow5-line-right.svg" alt="arrow type5" /> 
-        
+          <span>Send Message !</span>
+          <img src="arrow5-line-right.svg" alt="arrow type5" />
         </Button>
       </ContactForm>
     </ContactContainer>
