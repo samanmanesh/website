@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Title3 } from "./styles";
 import styled from "styled-components";
 import { colors, fonts, tablet } from "./styles/design";
-
+import Contact from "./contact";
 const ContactGrid = styled.section`
   /* background: #27276a; */
   display: grid;
@@ -89,7 +89,8 @@ export default function Footer() {
               className="arrow-type2"
             />
           </div>
-          <form action="">
+          <Contact />
+          {/* <form action="">
             <input
               type="text"
               value="Your Name"
@@ -102,7 +103,7 @@ export default function Footer() {
           <button className="button submit">
             <span>Sens Message !</span>
             <img src="" alt="arrow type 4" className="arrow-type4" />
-          </button>
+          </button> */}
         </div>
         <div className="right-side">
           <div className="carryout-text-img-container">
