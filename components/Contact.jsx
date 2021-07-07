@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { fonts, colors } from "./styles/design";
@@ -79,11 +79,14 @@ const ContactButton = styled.button`
 
 export default function Contact() {
   const [lock, setLock] = useState(false);
+  const inputRef = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
 
     setLock(true);
+
+    
 
     const combineMessage = {};
     for (let child of e.target.children)
@@ -99,23 +102,35 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          //    inputRef.current.value.reset();
         },
         (error) => {
           console.log(error.text);
         }
-      ).then(() => setTimeout(() => { setLock(false); }, 3000));
+      )
+      .then(() =>
+        setTimeout(() => {
+          setLock(false) , inputRef.current.reset();
+        }, 3000)
+      );
+    
   }
+
 
   return (
     <ContactContainer>
-      <ContactForm onSubmit={handleSubmit} disabled={lock}>
+      <ContactForm onSubmit={handleSubmit} disabled={lock} ref={inputRef}>
         {/* <Label>Your Name</Label> */}
         <Input type="text" name="user_name" placeholder="Your Name" />
         {/* <Label>Your Email</Label> */}
         <Input type="email" name="user_email" placeholder="Your Email" />
         {/* <Label>Message</Label> */}
         <TextArea type="text" name="message" placeholder="Message" />
-        <Button type="submit" id="btnsubmit">
+        <Button
+          type="submit"
+          id="btnsubmit"
+          disabled={lock}
+        >
           <span>Send Message !</span>
           <img src="arrow5-line-right.svg" alt="arrow type5" />
         </Button>
