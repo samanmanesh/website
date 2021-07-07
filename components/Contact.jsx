@@ -109,7 +109,7 @@ export default function Contact() {
         <Input type="email" name="user_email" placeholder="Your Email" />
         {/* <Label>Message</Label> */}
         <TextArea type="text" name="message" placeholder="Message" />
-        <Button type="submit">
+        <Button type="submit" id="btnsubmit">
             <span>Send Message !</span>
             <img src="arrow5-line-right.svg" alt="arrow type5" /> 
         
