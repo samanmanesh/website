@@ -39,7 +39,7 @@ export const Description = styled.p`
 export const Container = styled.section`
   min-height: 100vh;
   width: 75%;
-  border: 1px solid rgb(51, 136, 255);
+  /* border: 1px solid rgb(51, 136, 255); */
 
   .titles-container {
     position: relative;
@@ -66,6 +66,23 @@ export const Container = styled.section`
       color: ${colors.fontColor.fontColor2};
     }
   }
+
+.footer-note-container{
+  margin-top: 5rem;
+  
+  border-top: 1px solid ${colors.fontColor.fontColor1};
+  display:flex;
+  justify-content: flex-end;
+  /* align-items: flex-start; */
+  
+  .footer-note{
+    padding-bottom: 2rem;
+    font-size:1.5rem;
+    font-family: ${fonts.codes.fontFamily};
+    margin-right: 1rem;
+  }
+}
+
 `;
 
 export const Button = styled.button`

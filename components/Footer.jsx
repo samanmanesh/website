@@ -1,24 +1,33 @@
 import React from "react";
 import { Container, Title3 } from "./styles";
 import styled from "styled-components";
+import { colors, fonts, tablet } from "./styles/design";
 
 const ContactGrid = styled.section`
-  background: #27276a;
+  /* background: #27276a; */
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  
   grid-template-areas:
-    "left ."
-    ". right";
+      "left left"
+      "right right";
+    
 
-    .left-side{
-        grid-area: left
-    }
+  @media (min-width: ${tablet}) {
+    grid-template-areas:
+      "left ."
+      ". right";
+  }
 
-    .right-side{
-        grid-area: right;
-    }
+  .left-side {
+    grid-area: left;
+  }
+
+  .right-side {
+    grid-area: right;
+  }
 
   .carryout-text-img-container {
     /* background: #340101; */
@@ -32,12 +41,26 @@ const ContactGrid = styled.section`
       margin: 0;
     }
     .arrow-type2 {
-        margin-left: auto;
-      background: #c08913;
+      margin-left: auto;
+      /* background: #c08913; */
     }
   }
 `;
-const LinkCard = styled.div``;
+const LinkCard = styled.div`
+  /* background: #185a0f; */
+  font-size: ${fonts.paragraph.primary.size}rem;
+  margin-block: 3rem;
+  .link-row {
+    padding-block: 0.7em;
+    border-bottom: 2px solid ${colors.fontColor.fontColor1};
+    display: flex;
+    /* justify-content: space-between; */
+    span:nth-child(2) {
+      margin-left: auto;
+      margin-right: .2rem;
+    }
+  }
+`;
 
 export default function Footer() {
   return (
@@ -84,34 +107,50 @@ export default function Footer() {
         <div className="right-side">
           <div className="carryout-text-img-container">
             <p className="carryout-text">You can also find me heres</p>
-            <img src="arrow2-down-left.svg" alt="arrow type 2" className="arrow-type2" />
+            <img
+              src="arrow2-down-left.svg"
+              alt="arrow type 2"
+              className="arrow-type2"
+            />
           </div>
           <LinkCard>
             <div className="link-row">
               <span>Instagram</span>
               <span>Link</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              <img
+                src="arrow4-up-right.svg"
+                alt="arrow type 3"
+                className="arrow-type3"
+              />
             </div>
             <div className="link-row">
               <span>Linkedin</span>
               <span>Link</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              <img
+                src="arrow4-up-right.svg"
+                alt="arrow type 3"
+                className="arrow-type3"
+              />
             </div>
             <div className="link-row">
               <span>Github</span>
               <span>Link</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              <img
+                src="arrow4-up-right.svg"
+                alt="arrow type 3"
+                className="arrow-type3"
+              />
             </div>
             <div className="link-row">
               <span>Email</span>
               <span>Copy</span>
-              <img src="" alt="arrow type 3" className="arrow-type3" />
+              {/* <img src="arrow4-up-right.svg" alt="arrow type 3" className="arrow-type3" /> */}
             </div>
           </LinkCard>
         </div>
       </ContactGrid>
       <div className="footer-note-container">
-        <p className="footer-note">design &amp; built by me</p>
+        <p className="footer-note">design &amp; built by me :{")"}</p>
       </div>
     </Container>
   );
