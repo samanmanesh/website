@@ -3,17 +3,18 @@ import { Container, Title3 } from "./styles";
 import styled from "styled-components";
 import { colors, fonts, tablet } from "./styles/design";
 import Contact from "./contact";
+
+// #region -styling-
 const ContactGrid = styled.section`
   /* background: #27276a; */
   display: grid;
-  gap: 3rem;
+  gap: 5rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  
+
   grid-template-areas:
-      "left left"
-      "right right";
-    
+    "left left"
+    "right right";
 
   @media (min-width: ${tablet}) {
     grid-template-areas:
@@ -23,10 +24,14 @@ const ContactGrid = styled.section`
 
   .left-side {
     grid-area: left;
+    /* max-width:80%; */
+    /* margin-inline: auto; */
   }
 
   .right-side {
     grid-area: right;
+    /* max-width:80%; */
+    /* margin-inline: auto; */
   }
 
   .carryout-text-img-container {
@@ -57,10 +62,11 @@ const LinkCard = styled.div`
     /* justify-content: space-between; */
     span:nth-child(2) {
       margin-left: auto;
-      margin-right: .2rem;
+      margin-right: 0.2rem;
     }
   }
 `;
+ //#endregion
 
 export default function Footer() {
   return (

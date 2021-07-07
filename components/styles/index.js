@@ -39,7 +39,7 @@ export const Description = styled.p`
 export const Container = styled.section`
   min-height: 100vh;
   width: 75%;
-  /* border: 1px solid rgb(51, 136, 255);  */
+  border: 1px solid rgb(51, 136, 255);
 
   .titles-container {
     position: relative;
@@ -77,7 +77,7 @@ export const Container = styled.section`
   
   .footer-note{
     padding-bottom: 2rem;
-    font-size:1.5rem;
+    font-size:1.2rem;
     font-family: ${fonts.codes.fontFamily};
     margin-right: 1rem;
   }

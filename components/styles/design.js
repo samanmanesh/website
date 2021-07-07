@@ -12,7 +12,7 @@ export const colors = {
     fontColor2: "rgba(255, 255, 255, 0.25)",
   },
   button: {
-    primary: "rgba(118, 116, 116, 0.21)",
+    primary: "rgba(118, 116, 116, 0.12)",
     secondary: "rgb(179, 179, 179)"
   }
 };
