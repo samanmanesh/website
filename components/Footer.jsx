@@ -66,9 +66,9 @@ const LinkCard = styled.div`
     }
   }
 `;
- //#endregion
+//#endregion
 
-export default function Footer() {
+export default function Footer({ setAlert }) {
   return (
     <Container>
       <div className="titles-container">
@@ -95,7 +95,7 @@ export default function Footer() {
               className="arrow-type2"
             />
           </div>
-          <Contact />
+          <Contact setAlert={setAlert} />
           {/* <form action="">
             <input
               type="text"
