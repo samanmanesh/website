@@ -143,9 +143,8 @@ const ResumeCard = styled.div`
 
 const Skills = styled.section`
   margin-top: 8rem;
-  section{
+  section {
     display: flex;
-
     flex-direction: column;
     align-items: center;
     .skill-container {
@@ -153,9 +152,7 @@ const Skills = styled.section`
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-  
-      /* margin-inline: auto; */
-  
+
       & > * {
         padding: 1rem;
         margin: 1rem 1rem;
@@ -167,17 +164,21 @@ const Skills = styled.section`
 const Tools = styled.section`
   margin-block: 8rem;
 
-  .tools-container {
-    max-width: 50%;
+  section {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    .tools-container {
+      max-width: 50%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
 
-    & > * {
-      padding: 1rem;
-      margin: 1rem 1rem;
-      font-size: 1.3rem;
+      & > * {
+        padding: 1rem;
+        margin: 1rem 1rem;
+        font-size: 1.3rem;
+      }
     }
   }
 `;
@@ -277,22 +278,21 @@ export default function Resume() {
         <Skills>
           <Title2>Skills {"{"}</Title2>
           <section>
-          <div className="skill-container">
-            <Tag color="#FA6705">HTML5</Tag>
-            <Tag color="lightblue">CSS3</Tag>
-            <Tag color="pink">SASS / SCSS</Tag>
-            <Tag color="turquoise">TailwindCSS</Tag>
-            <Tag color="rgb(255,202,40)">JavaScript</Tag>
-            <Tag color="rgb(0,188,212)">ReactJS</Tag>
-            <Tag color="forestgreen">VueJS</Tag>
-            <Tag color="whitesmoke">NextJS</Tag>
-            <Tag color="#2BE3AC">UI / UX Design</Tag>
-            <Tag color="rgb(2,119,189)">C</Tag>
-            <Tag color="orange">Linux &amp; Unix</Tag>
-            <Tag color="#0AFF33">C#</Tag>
-            <Tag color="#DE05FF">Styled Components</Tag>
-          </div>
-
+            <div className="skill-container">
+              <Tag color="#FA6705">HTML5</Tag>
+              <Tag color="lightblue">CSS3</Tag>
+              <Tag color="pink">SASS / SCSS</Tag>
+              <Tag color="turquoise">TailwindCSS</Tag>
+              <Tag color="rgb(255,202,40)">JavaScript</Tag>
+              <Tag color="rgb(0,188,212)">ReactJS</Tag>
+              <Tag color="forestgreen">VueJS</Tag>
+              <Tag color="whitesmoke">NextJS</Tag>
+              <Tag color="#2BE3AC">UI / UX Design</Tag>
+              <Tag color="rgb(2,119,189)">C</Tag>
+              <Tag color="orange">Linux &amp; Unix</Tag>
+              <Tag color="#0AFF33">C#</Tag>
+              <Tag color="#DE05FF">Styled Components</Tag>
+            </div>
           </section>
           <Title2> {"}"}</Title2>
         </Skills>
@@ -300,25 +300,27 @@ export default function Resume() {
       <Codes>
         <Tools>
           <Title2>Tools {"{"}</Title2>
-          <div className="tools-container">
-            <Tag color="rgb(43,158,237)">Visual Studio Code</Tag>
-            <Tag color="rgb(133,47,136)">Rider</Tag>
-            <Tag color="rgb(247,247,247)">Unity</Tag>
-            <Tag color="rgb(1,147,49)">Vi Editor</Tag>
-            <Tag color="rgb(1,222,247)">Framer</Tag>
-            <Tag color="rgb(235,76,29)">Figma</Tag>
-          </div>
+          <section>
+            <div className="tools-container">
+              <Tag color="rgb(43,158,237)">Visual Studio Code</Tag>
+              <Tag color="rgb(133,47,136)">Rider</Tag>
+              <Tag color="rgb(247,247,247)">Unity</Tag>
+              <Tag color="rgb(1,147,49)">Vi Editor</Tag>
+              <Tag color="rgb(1,222,247)">Framer</Tag>
+              <Tag color="rgb(235,76,29)">Figma</Tag>
+            </div>
+          </section>
           <Title2>{"}"}</Title2>
         </Tools>
       </Codes>
-        <Button >
-          <span>Download Reśumé</span>
-          <img
-            src="arrow5-line-right.svg"
-            alt="array type 5"
-            className=" arrow-type5"
-          />
-        </Button>
+      <Button>
+        <span>Download Reśumé</span>
+        <img
+          src="arrow5-line-right.svg"
+          alt="array type 5"
+          className=" arrow-type5"
+        />
+      </Button>
     </Container>
   );
 }
