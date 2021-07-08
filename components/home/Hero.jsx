@@ -42,7 +42,7 @@ const HeroWrapper = styled.section`
       
       /* font-size: calc(1rem + 1vw); */
       /* font-size: ${fonts.paragraph.primary.size}rem; */
-      font-weight: ${fonts.paragraph.primary.style};
+      /* font-weight: ${fonts.paragraph.primary.style}; */
 
       /* @media (min-width: ${tablet}) {
         
@@ -53,12 +53,12 @@ const HeroWrapper = styled.section`
   }
 
   .hero-paragraph {
-    max-width: 22em;
+    max-width: 20em;
 
     font-size: calc(${fonts.paragraph.primary.size}rem + .6vw);
     /* font-size: ${fonts.paragraph.primary.size}rem; */
     font-weight: ${fonts.paragraph.primary.style};
-    padding-block: 4rem;
+    margin-block: 2rem;
     position: relative;
     ::before {
       position: absolute;
@@ -103,12 +103,12 @@ export default function Hero() {
             <Title1 className="title1">Hi! &nbsp; I'm </Title1>
             <Title1 className="title2">Saman,</Title1>
           </section>
-          {/* <div className="subtitle"> */}
+          <div className="subtitle">
             <Subtitle>
             <strong> Full Stack Developer </strong> Based in Toronto
 
             </Subtitle>
-          {/* </div> */}
+          </div>
         </div>
         <p className="hero-paragraph">
           I make elegant, efficient, and user-friendly digital experiences

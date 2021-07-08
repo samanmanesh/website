@@ -28,7 +28,8 @@ export const Title2 = styled.h2`
 
 export const Title3 = styled.h3`
   margin: 0;
-  font-size: ${fonts.title3.size}rem;
+  font-size: calc(${fonts.title3.size}rem + .6vw);
+  /* font-size: ${fonts.title3.size}rem; */
   font-weight: ${fonts.title3.style};
 `;
 
