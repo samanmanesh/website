@@ -141,7 +141,8 @@ export default function Footer({ setAlert }) {
             />
           </div>
           <LinkCard>
-            <div className="link-row">
+            <a className="link-row" href="https://instagram.com/samansmanesh" target="_blank">
+              
               <span>Instagram</span>
               <span>Link</span>
               <img
@@ -149,8 +150,9 @@ export default function Footer({ setAlert }) {
                 alt="arrow type 3"
                 className="arrow-type3"
               />
-            </div>
-            <div className="link-row">
+            </a>
+            <a className="link-row"  href="https://www.linkedin.com/in/saman-manesh-96b257213/"
+          target="_blank">
               <span>Linkedin</span>
               <span>Link</span>
               <img
@@ -158,8 +160,8 @@ export default function Footer({ setAlert }) {
                 alt="arrow type 3"
                 className="arrow-type3"
               />
-            </div>
-            <div className="link-row">
+            </a>
+            <a className="link-row" href="https://github.com/samanmanesh" target="_blank">
               <span>Github</span>
               <span>Link</span>
               <img
@@ -167,7 +169,7 @@ export default function Footer({ setAlert }) {
                 alt="arrow type 3"
                 className="arrow-type3"
               />
-            </div>
+            </a>
             <div className="link-row">
               <span>Email</span>
               <span>Copy</span>

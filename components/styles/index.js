@@ -1,4 +1,4 @@
-import styled, { css, keyframes} from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { mobile, tablet, desktop, fonts, colors } from "./design";
 // #region -- Typography --
 
@@ -66,22 +66,21 @@ export const Container = styled.section`
     }
   }
 
-.footer-note-container{
-  margin-top: 5rem;
-  
-  border-top: 1px solid ${colors.fontColor.fontColor1};
-  display:flex;
-  justify-content: flex-end;
-  /* align-items: flex-start; */
-  
-  .footer-note{
-    padding-bottom: 2rem;
-    font-size:1.2rem;
-    font-family: ${fonts.codes.fontFamily};
-    margin-right: 1rem;
-  }
-}
+  .footer-note-container {
+    margin-top: 5rem;
 
+    border-top: 1px solid ${colors.fontColor.fontColor1};
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: flex-start; */
+
+    .footer-note {
+      padding-bottom: 2rem;
+      font-size: 1.2rem;
+      font-family: ${fonts.codes.fontFamily};
+      margin-right: 1rem;
+    }
+  }
 `;
 
 export const Button = styled.button`
@@ -99,29 +98,28 @@ export const Button = styled.button`
   }
 
   position: relative;
-    overflow: hidden;
+  overflow: hidden;
+  ::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: all 1s ease;
+  }
+  &:hover {
+    transition: all 1s ease;
+    padding: 0.3rem;
     ::after {
-      content: " ";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 100% ;
-      background-color: white;
-      mix-blend-mode: difference;
-      transition: all 1s ease;
+      width: 100%;
     }
-    &:hover {
-      transition: all 1s ease;
-      padding: .3rem;
-      ::after {
-        width: 100%;
-      }
-  
+  }
 `;
 
 // #endregion
-
 
 export const disappearAnim = keyframes`
     from {
@@ -130,4 +128,4 @@ export const disappearAnim = keyframes`
     to {
         opacity: 0;
     }
-`
+`;

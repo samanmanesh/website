@@ -6,7 +6,7 @@ import { tablet, mobile, desktop, fonts } from "../styles/design";
 // #region - styling-
 const AboutGrid = styled.section`
   display: grid;
-  font-size: ${fonts.paragraph.primary.size}rem;
+  font-size: ${fonts.paragraph.secondary.size}rem;
   font-weight: ${fonts.paragraph.primary.style};
   line-height: ${fonts.paragraph.primary.line};
   grid-template-columns: 1fr 1fr;
@@ -34,7 +34,7 @@ const AboutGrid = styled.section`
 
   .intro {
     grid-area: header;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .left-side {
