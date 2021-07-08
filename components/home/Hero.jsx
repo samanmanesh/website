@@ -1,5 +1,5 @@
 import React from "react";
-import { Title1, Description, Container, ColumnLayout } from "../styles";
+import { Title1, Description, Container, ColumnLayout, Subtitle } from "../styles";
 import styled from "styled-components";
 import { fonts, colors, tablet } from "../styles/design";
 
@@ -24,34 +24,39 @@ const HeroWrapper = styled.section`
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
         position: absolute;
-        left: 28rem;
-        bottom: 2.6rem;
+        left: 30vw;
+        bottom: 2.6vw;
       }
     }
     .title1 {
     }
 
     .title2 {
-      @media (min-width: 429px) {
+      margin-left: 3em;
+      /* @media (min-width: 429px) {
         margin-left: 3em;
-      }
+      } */
     }
 
     .subtitle {
-      font-size: ${fonts.paragraph.primary.tablet.size}rem;
-      font-weight: ${fonts.paragraph.primary.tablet.style};
+      
+      /* font-size: calc(1rem + 1vw); */
+      /* font-size: ${fonts.paragraph.primary.size}rem; */
+      font-weight: ${fonts.paragraph.primary.style};
 
-      @media (min-width: ${tablet}) {
+      /* @media (min-width: ${tablet}) {
         
-        font-size: ${fonts.paragraph.primary.desktop.size}rem;
+        font-size: ${fonts.paragraph.primary.size}rem;
         font-weight: ${fonts.paragraph.primary.style};
-      }
+      } */
     }
   }
 
   .hero-paragraph {
     max-width: 22em;
-    font-size: ${fonts.paragraph.primary.size}rem;
+
+    font-size: calc(${fonts.paragraph.primary.size}rem + .6vw);
+    /* font-size: ${fonts.paragraph.primary.size}rem; */
     font-weight: ${fonts.paragraph.primary.style};
     padding-block: 4rem;
     position: relative;
@@ -61,7 +66,7 @@ const HeroWrapper = styled.section`
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
-      top: 2rem;
+      top: 2vw;
     }
     ::after {
       content: "</p>";
@@ -69,7 +74,7 @@ const HeroWrapper = styled.section`
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
       position: absolute;
-      bottom: 2rem;
+      bottom: 2vw;
       left: 0rem;
     }
   }
@@ -98,10 +103,12 @@ export default function Hero() {
             <Title1 className="title1">Hi! &nbsp; I'm </Title1>
             <Title1 className="title2">Saman,</Title1>
           </section>
-          <div className="subtitle">
-            {" "}
+          {/* <div className="subtitle"> */}
+            <Subtitle>
             <strong> Full Stack Developer </strong> Based in Toronto
-          </div>
+
+            </Subtitle>
+          {/* </div> */}
         </div>
         <p className="hero-paragraph">
           I make elegant, efficient, and user-friendly digital experiences

@@ -6,10 +6,11 @@ export const Title1 = styled.h1`
   margin: 0;
   padding: 0;
   
-  font-size: calc(1.4rem + 2.6vw);
+  font-size: calc(2rem + 2.2vw);
+
+  letter-spacing: ${fonts.title1.letterSpacing}px;
   
   /* font-size: ${fonts.title1.tablet.size}rem; */
-  letter-spacing: ${fonts.title1.tablet.letterSpacing}px;
   /* @media (min-width: ${tablet}) {
     
     font-size: calc(1rem + 5vw);
@@ -32,7 +33,11 @@ export const Title3 = styled.h3`
 `;
 
 
-
+export const Subtitle  = styled.p`
+  font-size: calc(.8rem + .6vw);
+  margin: 0;
+  padding: 0;
+`;
 
 
 
