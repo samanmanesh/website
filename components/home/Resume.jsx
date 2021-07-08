@@ -190,7 +190,7 @@ const DownloadResume = styled.div`
 export default function Resume() {
   return (
     <Container>
-      <section className="titles-container">
+      <section className="titles-container" id="resume">
         <Title3>Reśumé</Title3>
         <img
           src="arrow3-down-right.svg"

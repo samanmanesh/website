@@ -92,7 +92,7 @@ const LinkCard = styled.div`
 export default function Footer({ setAlert }) {
   return (
     <Container>
-      <div className="titles-container">
+      <div className="titles-container" id="contact">
         <Title3>Contact</Title3>
         <img
           src="arrow3-down-right.svg"

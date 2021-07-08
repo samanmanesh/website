@@ -56,7 +56,7 @@ const ProjectGrid = styled.section`
 export default function Work() {
   return (
     <Container>
-      <section className="titles-container">
+      <section className="titles-container" id="work">
         <Title3>Selected Works</Title3>
         <img
           src="arrow3-down-right.svg"

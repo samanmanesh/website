@@ -26,7 +26,13 @@ const Nav = styled.nav`
     margin-right: 10%;
     margin-left: auto;
     .nav-item {
+      cursor: pointer;
       padding-inline: 1rem;
+      :hover {
+        transition: all 0.5s ease;
+        font-weight: bold;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -59,6 +65,10 @@ const Nav = styled.nav`
 `;
 //#endregion
 export default function NavBar() {
+  const scrollHandler = (id) => {
+    id.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Nav>
       <div className="anime-function-container">
@@ -66,10 +76,18 @@ export default function NavBar() {
       </div>
 
       <div className="nav-items-container">
-        <div className="nav-item">Work ( )</div>
-        <div className="nav-item">Reśumé ( )</div>
-        <div className="nav-item">About ( )</div>
-        <div className="nav-item">Contact ( )</div>
+        <div className="nav-item" onClick={() => scrollHandler(work)}>
+          Work ( )
+        </div>
+        <div className="nav-item" onClick={() => scrollHandler(resume)}>
+          Reśumé ( )
+        </div>
+        <div className="nav-item" onClick={() => scrollHandler(about)}>
+          About ( )
+        </div>
+        <div className="nav-item" onClick={() => scrollHandler(contact)}>
+          Contact ( )
+        </div>
       </div>
     </Nav>
   );

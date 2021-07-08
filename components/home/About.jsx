@@ -60,7 +60,7 @@ const AboutGrid = styled.section`
 export default function About() {
   return (
     <Container>
-      <div className="titles-container">
+      <div className="titles-container" id="about">
         <Title3>Me, Myself &amp; I</Title3>
         <img src="arrow3-down-right.svg" alt="" className="arrow-type3" />
       </div>
