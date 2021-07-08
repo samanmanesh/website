@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Title3 } from "./styles";
 import styled, { css } from "styled-components";
 import { colors, fonts, tablet } from "./styles/design";
-import Contact from "./contact";
+import Contact from "./home/Contact";
+
 
 // #region -styling-
 const ContactGrid = styled.section`
@@ -133,7 +134,7 @@ export default function Footer({ setAlert }) {
         </div>
         <div className="right-side">
           <div className="carryout-text-img-container">
-            <p className="carryout-text">You can also find me heres</p>
+            <p className="carryout-text">You can also find me here</p>
             <img
               src="arrow2-down-left.svg"
               alt="arrow type 2"
@@ -179,7 +180,7 @@ export default function Footer({ setAlert }) {
         </div>
       </ContactGrid>
       <div className="footer-note-container">
-        <p className="footer-note">design &amp; built by me :{")"}</p>
+        <p className="footer-note">designed &amp; built by me :{")"}</p>
       </div>
     </Container>
   );

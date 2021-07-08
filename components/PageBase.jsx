@@ -2,9 +2,10 @@ import React, { useState, useEffect} from "react";
 import Head from "next/head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import AlertBox from "./AlertBox";
+import AlertBox from "./home/AlertBox";
 import styled from "styled-components";
 import colors from "./styles/design";
+
 
 const PageBaseWrapper = styled.div`
   display: flex;

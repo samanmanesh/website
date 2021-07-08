@@ -1,8 +1,12 @@
 import React, { useState, useRef } from "react";
-import styled from "styled-components";
-import { fonts, colors } from "./styles/design";
-import { Button } from "./styles";
 // import emailjs from "emailjs-com";
+import styled from "styled-components";
+import { fonts, colors } from "../styles/design";
+import { Button } from "../styles";
+// import * as emailjs from 'emailjs-com';
+
+
+//#region -styling-
 const ContactContainer = styled.section`
   margin-top: 2rem;
 `;
@@ -71,7 +75,7 @@ const TextArea = styled.textarea`
     box-shadow: 0px 4px 1rem rgba(173, 173, 174, 0.25);
   }
 `;
-
+//#endregion
 
 export default function Contact({ setAlert }) {
   const [lock, setLock] = useState(false);
@@ -86,7 +90,7 @@ export default function Contact({ setAlert }) {
     for (let child of e.target.children)
       if (child.name) combineMessage[child.name] = child.value;
 
-    emailjs.sendForm(
+    emailjs.send(
         "service_1dgi6wn",
         "template_xz8wurx",
         combineMessage,
