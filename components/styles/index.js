@@ -97,7 +97,27 @@ export const Button = styled.button`
   & > * {
     padding: 0.5em 1em;
   }
-  /* max-width: 25rem; */
+
+  position: relative;
+    overflow: hidden;
+    ::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 100% ;
+      background-color: white;
+      mix-blend-mode: difference;
+      transition: all 1s ease;
+    }
+    &:hover {
+      transition: all 1s ease;
+      padding: .3rem;
+      ::after {
+        width: 100%;
+      }
+  
 `;
 
 // #endregion
