@@ -1,10 +1,9 @@
-
 // export const mobile = '768px';
 // export const tablet = '1000px';
 // export const desktop = '1200px';
-export const mobile = '481px';
-export const tablet = '769px';
-export const desktop = '1025px';
+export const mobile = "481px";
+export const tablet = "769px";
+export const desktop = "1025px";
 
 export const colors = {
   background: "rgb(23, 24, 28)",
@@ -14,65 +13,81 @@ export const colors = {
   },
   button: {
     primary: "rgba(118, 116, 116, 0.12)",
-    secondary: "rgb(179, 179, 179)"
-  }
+    secondary: "rgb(179, 179, 179)",
+  },
 };
 
- export const fonts = {
-    title1: {
+export const fonts = {
+  title1: {
+    desktop: {
       description: "sizes are in Em",
-      size: '4.1875',
-      fontFamily: 'inter',
-      style: 'Extra Bold',
-      line: '1.2',
-      letterSpacing: '-2.6',
+      size: "4.1875",
+      fontFamily: "inter",
+      style: "Extra Bold",
+      line: "1.2",
+      letterSpacing: "-2.6",
     },
-    title2: {
+    tablet: {
       description: "sizes are in Em",
-      size: '2.5',
-      fontFamily: 'inter',
-      style: 'Medium',
-      line: '1.4'
+      size: "3.1875",
+      fontFamily: "inter",
+      style: "Extra Bold",
+      line: "1.2",
     },
-    title3: {
-      description: "sizes are in rem",
-      size: '1.7',
-      fontFamily: 'inter',
-      style: 'lighter',
-      line: '1.2'
-    },
-    title4: {
-      description: "sizes are in rem",
-      size: '2.375',
-      fontFamily: 'inter',
-      style: 'thin',
-      line: '1.2'
-    },
-    codes: {
-      description: "sizes are in rem, the size for code styles",
-      size: '.9',
-      fontFamily: 'IBM Plex Mono , monospace',
-      style:'regular',
-      line: '1.2'
-    },
-    paragraph: {
-      primary: {
+  },
+  title2: {
+    description: "sizes are in Em",
+    size: "2.5",
+    fontFamily: "inter",
+    style: "Medium",
+    line: "1.4",
+  },
+  title3: {
+    description: "sizes are in rem",
+    size: "1.7",
+    fontFamily: "inter",
+    style: "lighter",
+    line: "1.2",
+  },
+  title4: {
+    description: "sizes are in rem",
+    size: "2.375",
+    fontFamily: "inter",
+    style: "thin",
+    line: "1.2",
+  },
+  codes: {
+    description: "sizes are in rem, the size for code styles",
+    size: ".9",
+    fontFamily: "IBM Plex Mono , monospace",
+    style: "regular",
+    line: "1.2",
+  },
+  paragraph: {
+    primary: {
+      desktop: {
         description: "sizes are in rem, the for paragraphs",
-        size: '1.4',
-        fontFamily: 'inter',
-        style: 'lighter',
-        line: '1.4'
+        size: "1.4",
+        fontFamily: "inter",
+        style: "lighter",
+        line: "1.4",
       },
-      secondary:{
+      tablet: {
         description: "sizes are in rem, the for paragraphs",
-        size: '2',
-        fontFamily: 'inter',
-        style: 'bold',
-        line: '1.4'
-
-      }
-    }
-
- }
+        size: "1.1",
+        fontFamily: "inter",
+        style: "lighter",
+        line: "1.4",
+      },
+    },
+    secondary: {
+      description: "sizes are in rem, the for paragraphs",
+      size: "2",
+      fontFamily: "inter",
+      style: "bold",
+      line: "1.4",
+    },
+  },
+};
 
 export default colors;

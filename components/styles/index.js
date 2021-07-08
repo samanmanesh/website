@@ -5,8 +5,17 @@ import { mobile, tablet, desktop, fonts, colors } from "./design";
 export const Title1 = styled.h1`
   margin: 0;
   padding: 0;
-  font-size: ${fonts.title1.size}rem;
-  letter-spacing: ${fonts.title1.letterSpacing}px;
+  
+  font-size: calc(1.4rem + 2.6vw);
+  
+  /* font-size: ${fonts.title1.tablet.size}rem; */
+  letter-spacing: ${fonts.title1.tablet.letterSpacing}px;
+  /* @media (min-width: ${tablet}) {
+    
+    font-size: calc(1rem + 5vw);
+    /* font-size: ${fonts.title1.desktop.size}rem; */
+    /* letter-spacing: ${fonts.title1.desktop.letterSpacing}px; */
+  /* }  */
 `;
 
 export const Title2 = styled.h2`
@@ -21,6 +30,11 @@ export const Title3 = styled.h3`
   font-size: ${fonts.title3.size}rem;
   font-weight: ${fonts.title3.style};
 `;
+
+
+
+
+
 
 export const Description = styled.p`
   font-size: ${(props) => (props.smaller ? 1 : 1.2)}rem;
@@ -40,10 +54,9 @@ export const Container = styled.section`
   width: 75%;
   border: 1px solid rgb(51, 136, 255);
 
-  @media (max-width: ${tablet}){
+  @media (max-width: ${tablet}) {
     width: 100%;
   }
-
 
   .titles-container {
     position: relative;

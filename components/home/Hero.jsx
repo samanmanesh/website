@@ -1,7 +1,7 @@
 import React from "react";
 import { Title1, Description, Container, ColumnLayout } from "../styles";
 import styled from "styled-components";
-import { fonts, colors } from "../styles/design";
+import { fonts, colors, tablet } from "../styles/design";
 
 const HeroWrapper = styled.section`
   display: flex;
@@ -38,8 +38,14 @@ const HeroWrapper = styled.section`
     }
 
     .subtitle {
-      font-size: ${fonts.paragraph.primary.size}rem;
-      font-weight: ${fonts.paragraph.primary.style};
+      font-size: ${fonts.paragraph.primary.tablet.size}rem;
+      font-weight: ${fonts.paragraph.primary.tablet.style};
+
+      @media (min-width: ${tablet}) {
+        
+        font-size: ${fonts.paragraph.primary.desktop.size}rem;
+        font-weight: ${fonts.paragraph.primary.style};
+      }
     }
   }
 

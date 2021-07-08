@@ -30,6 +30,7 @@ export default function PageBase({ children }) {
       <Head>
         <title>Saman Website</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
       <NavBar />
       <AlertBox alert={alert} />
