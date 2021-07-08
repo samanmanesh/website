@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Title3 } from "./styles";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { colors, fonts, tablet } from "./styles/design";
 import Contact from "./contact";
 
@@ -56,13 +56,33 @@ const LinkCard = styled.div`
   font-size: ${fonts.paragraph.primary.size}rem;
   margin-block: 3rem;
   .link-row {
+    cursor: pointer;
     padding-block: 0.7em;
     border-bottom: 2px solid ${colors.fontColor.fontColor1};
     display: flex;
-    /* justify-content: space-between; */
     span:nth-child(2) {
       margin-left: auto;
       margin-right: 0.2rem;
+    }
+    position: relative;
+    overflow: hidden;
+    ::after {
+      content: " ";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      mix-blend-mode: difference;
+      transition: all 1s ease;
+    }
+    &:hover {
+      transition: all 1s ease;
+      padding: 1.3rem;
+      ::after {
+        height: 100%;
+      }
     }
   }
 `;
