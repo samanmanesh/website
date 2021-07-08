@@ -40,6 +40,11 @@ export const Container = styled.section`
   width: 75%;
   border: 1px solid rgb(51, 136, 255);
 
+  @media (max-width: ${tablet}){
+    width: 100%;
+  }
+
+
   .titles-container {
     position: relative;
     margin-block: 13rem;
