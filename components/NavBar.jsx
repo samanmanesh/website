@@ -9,10 +9,19 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   font-weight: 100;
-  font-size: clamp(0.9em, 1.1vw, 1.3em);
+  font-size: clamp(0.9rem, 1.1vw, 1.3rem);
   > * {
     padding: 1.5em;
   }
+
+  @media (max-width: ${tablet}) {
+    position: fixed;
+    background: #0000009d;
+    > * {
+      padding: 0.5rem;
+    }
+  }
+
   .anime-function-container {
     font-size: clamp(0.7em, 0.7vw, 1em);
     align-self: center;
