@@ -143,17 +143,24 @@ const ResumeCard = styled.div`
 
 const Skills = styled.section`
   margin-top: 8rem;
-  .skill-container {
-    max-width: 80%;
+  section{
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-inline: auto;
 
-    & > * {
-      padding: 1rem;
-      margin: 1rem 1rem;
-      font-size: 1.3rem;
+    flex-direction: column;
+    align-items: center;
+    .skill-container {
+      max-width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+  
+      /* margin-inline: auto; */
+  
+      & > * {
+        padding: 1rem;
+        margin: 1rem 1rem;
+        font-size: 1.3rem;
+      }
     }
   }
 `;
@@ -269,6 +276,7 @@ export default function Resume() {
       <Codes>
         <Skills>
           <Title2>Skills {"{"}</Title2>
+          <section>
           <div className="skill-container">
             <Tag color="#FA6705">HTML5</Tag>
             <Tag color="lightblue">CSS3</Tag>
@@ -284,6 +292,8 @@ export default function Resume() {
             <Tag color="#0AFF33">C#</Tag>
             <Tag color="#DE05FF">Styled Components</Tag>
           </div>
+
+          </section>
           <Title2> {"}"}</Title2>
         </Skills>
       </Codes>
