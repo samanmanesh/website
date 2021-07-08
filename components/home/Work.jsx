@@ -9,7 +9,7 @@ const ProjectCard = styled.div`
   margin-bottom: 5rem;
   .card-container {
     border: 1px solid #5145fc;
-    max-width: 98%;
+    max-width: 100%;
     height: 16.875rem;
     margin-top: 1rem;
   }

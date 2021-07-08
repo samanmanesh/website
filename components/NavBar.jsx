@@ -16,7 +16,7 @@ const Nav = styled.nav`
 
   @media (max-width: ${tablet}) {
     position: fixed;
-    background: #0000009d;
+    background: #000000;
     > * {
       padding: 0.5rem;
     }

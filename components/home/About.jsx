@@ -42,6 +42,8 @@ const AboutGrid = styled.section`
   }
   .right-side {
     grid-area: right;
+    display: flex;
+    justify-content: center;
   }
 
   .body {
@@ -53,7 +55,7 @@ const AboutGrid = styled.section`
     border: 1px solid white;
     height: 30rem;
     max-width: 60%;
-    margin-inline: auto;
+    /* margin-inline: auto; */
   }
 `;
 //#endregion
