@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
-import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { fonts, colors } from "./styles/design";
 import { Button } from "./styles";
+// import emailjs from "emailjs-com";
 const ContactContainer = styled.section`
   margin-top: 2rem;
 `;
@@ -72,9 +72,6 @@ const TextArea = styled.textarea`
   }
 `;
 
-const ContactButton = styled.button`
-  all: unset;
-`;
 
 export default function Contact({ setAlert }) {
   const [lock, setLock] = useState(false);
@@ -89,7 +86,7 @@ export default function Contact({ setAlert }) {
     for (let child of e.target.children)
       if (child.name) combineMessage[child.name] = child.value;
 
-    emailjs.send(
+    emailjs.sendForm(
         "service_1dgi6wn",
         "template_xz8wurx",
         combineMessage,

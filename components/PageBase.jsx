@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import Head from "next/head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
@@ -22,7 +22,7 @@ export default function PageBase({ children }) {
     setTimeout(() => {
       setAlert(null);
     }, 5000);
-  }, [alert]);
+  }, [alert])
 
   return (
     <PageBaseWrapper>

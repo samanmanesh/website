@@ -12,7 +12,7 @@ const AlertBoxWrapper = styled.div`
 `;
 export default function AlertBox({alert}) {
 
-    if (!alert) return <></>;
+    if (!alert) return  <></>;
 
     return (
         <AlertBoxWrapper error={alert.error}>
