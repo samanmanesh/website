@@ -4,7 +4,7 @@ import { mobile, tablet } from "./styles/design";
 
 //#region -styling-
 const Nav = styled.nav`
-  background: red;
+  /* background: red; */
   width: 100%;
   display: flex;
   justify-content: space-between;
