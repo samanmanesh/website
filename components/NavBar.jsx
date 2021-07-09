@@ -51,6 +51,20 @@ const Nav = styled.nav`
     > * {
       font-size: 1rem;
     }
+
+    top: 0;
+    transition: all 0.9s ease;
+    ${(props) =>
+      props.condition &&
+      `
+      /* Transition effect when sliding down (and up) */
+      transform: translate3d(0, -100px, 0);  
+      
+      // top: -60px; //Stay on top
+    `}
+
+
+
   }
 
   @media (max-width: ${mobile}) {
@@ -64,14 +78,7 @@ const Nav = styled.nav`
     }
     top: 0;
     transition: all 0.9s ease;
-    ${(props) =>
-      props.condition &&
-      `
-      /* Transition effect when sliding down (and up) */
-      transform: translate3d(0, -100px, 0);  
-      
-      // top: -60px; //Stay on top
-    `}
+    
   }
 `;
 //#endregion
@@ -93,14 +100,14 @@ export default function NavBar() {
     // }
   };
 
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
   let lastScroll = 0;
   const controlNavbar = () => {
 
     const currentPosition = window.pageYOffset;
 
-    if (currentPosition > lastScroll) {
+    if (currentPosition >= lastScroll) {
       setShowNav(true);
     } else {
       setShowNav(false);
