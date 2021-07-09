@@ -4,26 +4,31 @@ import { mobile, tablet } from "./styles/design";
 
 //#region -styling-
 const Nav = styled.nav`
-  /* background: red; */
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   font-weight: 100;
-  font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+  border-bottom: 1.5px solid white;
+  /* margin-inline: 1rem; */
+  font-size: calc(.7rem + .4vw);
+  /* font-size: clamp(0.9rem, 1.1vw, 1.3rem); */
   > * {
     padding: 1.5em;
   }
 
   @media (max-width: ${tablet}) {
     position: fixed;
-    background: #000000;
+    /* background: #ffffff48; */
+    border-bottom: 1px solid white;
+    
     > * {
-      padding: 0.5rem;
+      /* padding: 0.5rem; */
     }
   }
 
   .anime-function-container {
-    font-size: clamp(0.7em, 0.7vw, 1em);
+    /* font-size: clamp(0.7em, 0.7vw, 1em); */
+   font-size: calc(.4rem + .7vw);
     align-self: center;
     /* background: #3737a4; */
   }
@@ -64,13 +69,7 @@ const Nav = styled.nav`
       margin: 0;
     }
   }
-
-  //     &:first-child {
-  //       margin-right: auto;
-  //     }
-  //     &:not(:first-child) {
-  //       margin-left: 0.5rem;
-  //     }
+  
 `;
 //#endregion
 export default function NavBar() {
@@ -81,7 +80,8 @@ export default function NavBar() {
   return (
     <Nav>
       <div className="anime-function-container">
-        const {"hero"} = ( ) ={">"} {"{display hero}"}
+        {/* const {"hero"} = ( ) ={">"} {"{display hero}"} */}
+        SAMAN MANESH
       </div>
 
       <div className="nav-items-container">
