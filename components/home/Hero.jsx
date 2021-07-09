@@ -1,15 +1,21 @@
 import React from "react";
-import { Title1, Description, Container, ColumnLayout, Subtitle } from "../styles";
+import {
+  Title1,
+  Container,
+  Subtitle,
+} from "../styles";
 import styled from "styled-components";
 import { fonts, colors, tablet } from "../styles/design";
+
+// #region - styling-
 
 const HeroWrapper = styled.section`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  
   .hero-title-container {
-    /* margin-block: 5em; */
     position: relative;
     ::before {
       /* content: "<h1>"; */
@@ -40,7 +46,6 @@ const HeroWrapper = styled.section`
     }
 
     .subtitle {
-      
       /* font-size: calc(1rem + 1vw); */
       /* font-size: ${fonts.paragraph.primary.size}rem; */
       /* font-weight: ${fonts.paragraph.primary.style}; */
@@ -56,10 +61,8 @@ const HeroWrapper = styled.section`
   .hero-paragraph {
     max-width: 33ch;
     margin-bottom: 4em;
-    font-size: calc(${fonts.paragraph.primary.size}rem + .6vw);
-    /* font-size: ${fonts.paragraph.primary.size}rem; */
+    font-size: calc(${fonts.paragraph.primary.size}rem + 0.6vw);
     font-weight: ${fonts.paragraph.primary.style};
-    /* margin-block: 5em; */
     position: relative;
     ::before {
       position: absolute;
@@ -85,11 +88,11 @@ const CodeDesign = styled.section`
   color: ${colors.fontColor.fontColor2};
   font-family: ${fonts.codes.fontFamily};
   font-size: ${fonts.codes.size}rem;
-  /* padding-top: 4rem; */
   div:nth-child(2) {
     padding-left: 1rem;
   }
 `;
+//#endregion
 
 export default function Hero() {
   return (
@@ -106,8 +109,7 @@ export default function Hero() {
           </section>
           <div className="subtitle">
             <Subtitle>
-            <strong> Full Stack Developer </strong> Based in Toronto
-
+              <strong> Full Stack Developer </strong> Based in Toronto
             </Subtitle>
           </div>
         </div>
