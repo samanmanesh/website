@@ -11,7 +11,7 @@ const HeroWrapper = styled.section`
     margin-block: 5em;
     position: relative;
     ::before {
-      content: "<h1>";
+      /* content: "<h1>"; */
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
@@ -19,7 +19,7 @@ const HeroWrapper = styled.section`
 
     .title1-title2-wrapper {
       ::after {
-        content: "</h1>";
+        /* content: "</h1>"; */
         color: ${colors.fontColor.fontColor2};
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
@@ -62,14 +62,14 @@ const HeroWrapper = styled.section`
     position: relative;
     ::before {
       position: absolute;
-      content: "<p>";
+      /* content: "<p>"; */
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
       top: 2vw;
     }
     ::after {
-      content: "</p>";
+      /* content: "</p>"; */
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
