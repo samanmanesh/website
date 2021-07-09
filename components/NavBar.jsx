@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile, tablet } from "./styles/design";
+import { mobile, tablet, colors } from "./styles/design";
 
 //#region -styling-
 const Nav = styled.nav`
@@ -18,9 +18,10 @@ const Nav = styled.nav`
 
   @media (max-width: ${tablet}) {
     position: fixed;
-    /* background: #ffffff48; */
+    background: ${colors.background};
     border-bottom: 1px solid white;
-    
+    z-index: 100;
+    //Todo adding feature when you scroll up nav disappear 
     > * {
       /* padding: 0.5rem; */
     }
