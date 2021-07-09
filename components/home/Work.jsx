@@ -11,15 +11,23 @@ import {
 import { mobile, tablet, desktop, fonts } from "../styles/design";
 
 // #region -styling-
+
+const WorkWrapper = styled.section`
+  
+`;
+
+
+
+
 const ProjectCard = styled.div`
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  /* margin-top: 3rem; */
+  /* margin-bottom: 5rem; */
   .card-container {
     border: 1px solid #5145fc;
     max-width: 100%;
     /* min-width: calc(10rem + 10vw); */
     min-height: 16.875rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     /* min-width: 40vw; */
     /* min-height: 30vh; */
   }
@@ -77,7 +85,9 @@ const ProjectGrid = styled.section`
 export default function Work() {
   return (
     <Container>
-       
+       <WorkWrapper>
+         
+      
       <section className="titles-container" id="work">
         <Title3>Selected Works</Title3>
         <img
@@ -139,6 +149,7 @@ export default function Work() {
           </ProjectCard>
         </div>
       </ProjectGrid>
+      </WorkWrapper>
     </Container>
   );
 }

@@ -67,7 +67,7 @@ export const Container = styled.section`
 
   .titles-container {
     position: relative;
-    margin-block: 13rem;
+    padding-block: 13rem;
     display: flex;
     .arrow-type3 {
       margin-left: 0.5rem;
