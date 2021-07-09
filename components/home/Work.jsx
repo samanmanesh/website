@@ -17,8 +17,11 @@ const ProjectCard = styled.div`
   .card-container {
     border: 1px solid #5145fc;
     max-width: 100%;
-    height: 16.875rem;
+    /* min-width: calc(10rem + 10vw); */
+    min-height: 16.875rem;
     margin-top: 1rem;
+    /* min-width: 40vw; */
+    /* min-height: 30vh; */
   }
   .subtitle-arrow-container {
     display: flex;
@@ -39,15 +42,26 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectGrid = styled.section`
-  @media (min-width: ${tablet}) {
+ 
+ .left-side {
+      margin-right: 7rem;
+    }
+    .right-side {
+      margin-left: 7rem;
+    }
+ 
+ 
+ @media (min-width: ${tablet}) {
     display: grid;
-    gap: 3rem;
-
+    gap: 5rem;
+    
     .left-side {
       grid-area: left-side;
+      margin-right: 0;
     }
     .right-side {
       grid-area: right-side;
+      margin-left: 0;
     }
 
     grid-template-columns: 1fr 1fr;
@@ -63,6 +77,7 @@ const ProjectGrid = styled.section`
 export default function Work() {
   return (
     <Container>
+       
       <section className="titles-container" id="work">
         <Title3>Selected Works</Title3>
         <img
