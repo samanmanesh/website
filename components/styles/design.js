@@ -29,7 +29,7 @@ export const colors = {
     },
     title2: {
       description: "sizes are in Em",
-      size: '2.5',
+      size: '1.4',
       fontFamily: 'inter',
       style: 'Medium',
       line: '1.4'

@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Title1, Title2, Title3, Container, ColumnLayout } from "../styles";
+import {
+  Title1,
+  Title2,
+  Title3,
+  Container,
+  ColumnLayout,
+  Subtitle,
+} from "../styles";
 import { mobile, tablet, desktop, fonts } from "../styles/design";
 
 // #region -styling-
@@ -19,7 +26,7 @@ const ProjectCard = styled.div`
     justify-content: space-between;
 
     .subtitle {
-      font-size: ${fonts.codes.size}rem;
+      /* font-size: ${fonts.codes.size}rem; */
       font-weight: 200;
       font-family: ${fonts.codes.fontFamily};
     }
@@ -70,7 +77,9 @@ export default function Work() {
           <ProjectCard>
             <Title2>Samitone</Title2>
             <div className="subtitle-arrow-container">
-              <p className="subtitle">let Design &amp; Development = 2021;</p>
+              <Subtitle smaller>
+                <p className="subtitle">let Design &amp; Development = 2021;</p>
+              </Subtitle>
               <img
                 src="arrow2-down-left.svg"
                 alt="arrow of type 2"
@@ -100,7 +109,9 @@ export default function Work() {
           <ProjectCard>
             <Title2>Saman's Website</Title2>
             <div className="subtitle-arrow-container">
-              <p className="subtitle">let Design &amp; Development = 2021;</p>
+              <Subtitle smaller>
+                <p className="subtitle">let Design &amp; Development = 2021;</p>
+              </Subtitle>
               <img
                 src="arrow2-down-left.svg"
                 alt="arrow of type 2"

@@ -21,7 +21,7 @@ export const Title1 = styled.h1`
 
 export const Title2 = styled.h2`
   margin: 0;
-  font-size: ${fonts.title2.size}rem;
+  font-size: calc(${fonts.title2.size}rem + 1.2vw);
   font-weight: medium;
   max-width: 15rem;
 `;
@@ -35,7 +35,8 @@ export const Title3 = styled.h3`
 
 
 export const Subtitle  = styled.p`
-  font-size: calc(.7rem + .7vw);
+  
+  font-size: ${props => props.smaller ? `calc(.5rem + .6vw)` : `calc(.7rem + .7vw)`};
   margin: 0;
   padding: 0;
 `;
