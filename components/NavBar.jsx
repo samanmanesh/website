@@ -39,20 +39,6 @@ const Nav = styled.nav`
       }
     }
 
-    /* @media (max-width: ${mobile}) {
-    .anime-function-container {
-      display: none;
-    }
-    .nav-items-container {
-      flex-grow: 1;
-      margin: 0;
-    }
-  } */
-
-    /* @media (max-width: ${tablet}) {
-    .anime-function-container {
-      /* font-size: calc(.2rem + .5vw); */
-    /* } */
     .nav-items-container {
       margin: 0;
     }
@@ -60,11 +46,8 @@ const Nav = styled.nav`
 
   @media (max-width: ${tablet}) {
     position: fixed;
-    /* background: ${colors.background}; */
     border-bottom: 1px solid white;
     z-index: 100;
-
-    //Todo adding feature when you scroll up nav disappear
     > * {
       font-size: 1rem;
     }
@@ -95,7 +78,6 @@ const Nav = styled.nav`
 
 export default function NavBar() {
   // const [codeState, setCodeState] = useState("Home");
-  const ref = useRef();
   const scrollHandler = (id) => {
     id.scrollIntoView({ behavior: "smooth" });
 
@@ -111,17 +93,12 @@ export default function NavBar() {
     // }
   };
 
-  // const [show, setShow] = useState(true);
-
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [showNav, setShowNav] = useState(true);
 
   let lastScroll = 0;
   const controlNavbar = () => {
-    console.log(lastScroll, "lastScroll B");
-    const currentPosition = window.pageYOffset;
 
-    console.log(currentPosition, "currentPosition");
+    const currentPosition = window.pageYOffset;
 
     if (currentPosition > lastScroll) {
       setShowNav(true);
