@@ -1,4 +1,4 @@
-import React,{ useState} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { mobile, tablet, colors } from "./styles/design";
 
@@ -19,7 +19,7 @@ const Nav = styled.nav`
   .anime-function-container {
     font-size: calc(0.4rem + 0.7vw);
     align-self: center;
-    padding-left:.4rem;
+    padding-left: 0.4rem;
   }
 
   .nav-items-container {
@@ -38,9 +38,8 @@ const Nav = styled.nav`
         font-size: 1rem;
       }
     }
-  
 
-  /* @media (max-width: ${mobile}) {
+    /* @media (max-width: ${mobile}) {
     .anime-function-container {
       display: none;
     }
@@ -50,7 +49,7 @@ const Nav = styled.nav`
     }
   } */
 
-  /* @media (max-width: ${tablet}) {
+    /* @media (max-width: ${tablet}) {
     .anime-function-container {
       /* font-size: calc(.2rem + .5vw); */
     /* } */
@@ -61,19 +60,18 @@ const Nav = styled.nav`
 
   @media (max-width: ${tablet}) {
     position: fixed;
-    background: ${colors.background};
+    /* background: ${colors.background}; */
     border-bottom: 1px solid white;
     z-index: 100;
-   
+
     //Todo adding feature when you scroll up nav disappear
     > * {
       font-size: 1rem;
     }
-    
   }
 
-  @media (max-width: ${mobile}){
-    width:98%;
+  @media (max-width: ${mobile}) {
+    width: 98%;
     .anime-function-container {
       display: none;
     }
@@ -81,19 +79,26 @@ const Nav = styled.nav`
       flex-grow: 1;
       margin: 0;
     }
+    top: 0;
+    transition: all 0.9s ease;
+    ${(props) =>
+      props.condition &&
+      `
+      /* Transition effect when sliding down (and up) */
+      transform: translate3d(0, -100px, 0);  
+      
+      // top: -60px; //Stay on top
+    `}
   }
-
-
-
-
 `;
 //#endregion
+
 export default function NavBar() {
   // const [codeState, setCodeState] = useState("Home");
-
+  const ref = useRef();
   const scrollHandler = (id) => {
     id.scrollIntoView({ behavior: "smooth" });
-    
+
     // if (id === work) {
     //   setCodeState("Work");
     // }else if (id === resume){
@@ -104,11 +109,38 @@ export default function NavBar() {
     // else if (id === contact){
     //   setCodeState("Contact");
     // }
-
   };
 
+  // const [show, setShow] = useState(true);
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showNav, setShowNav] = useState(true);
+
+  let lastScroll = 0;
+  const controlNavbar = () => {
+    console.log(lastScroll, "lastScroll B");
+    const currentPosition = window.pageYOffset;
+
+    console.log(currentPosition, "currentPosition");
+
+    if (currentPosition > lastScroll) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+    lastScroll = currentPosition;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
+
   return (
-    <Nav>
+    <Nav condition={showNav}>
       <div className="anime-function-container">
         {/* const {codeState} = ( ) ={">"} {"{display"} {codeState}}
         {"}"}; */}
