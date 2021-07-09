@@ -13,7 +13,7 @@ const Nav = styled.nav`
   font-size: calc(0.7rem + 0.4vw);
   /* font-size: clamp(0.9rem, 1.1vw, 1.3rem); */
   > * {
-    padding-block: 1.5em;
+    padding: 1.5em;
   }
 
   .anime-function-container {
