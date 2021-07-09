@@ -19,7 +19,7 @@ const WorkWrapper = styled.section`
   justify-content: space-around;
   min-height: 100vh;
   & > * {
-    margin-block: 5rem;
+    margin-bottom: 13rem;
   }
 
 `;

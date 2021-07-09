@@ -36,6 +36,7 @@ const Tag = styled.div`
 
 const Codes = styled.section`
   position: relative;
+  margin-bottom: 5rem;
   ::before {
     position: absolute;
     content: "<section>";
@@ -67,7 +68,7 @@ const arrowBounce = keyframes`
 `;
 
 const EducationGrid = styled.section`
-  margin-block: 3rem;
+  margin-bottom: 5rem;
   @media (min-width: ${tablet}) {
     display: grid;
     gap: 3rem;
@@ -93,7 +94,7 @@ const ResumeCard = styled.div`
   font-size: 1.1rem;
 
   @media (max-width: ${tablet}) {
-    margin-block: 5rem;
+    margin-bottom: 5rem;
   }
   .card-row {
     display: flex;
@@ -162,7 +163,7 @@ const Skills = styled.section`
   }
 `;
 const Tools = styled.section`
-  margin-block: 8rem;
+  margin-top: 8rem;
 
   section {
     display: flex;
@@ -184,9 +185,10 @@ const Tools = styled.section`
 `;
 
 const DownloadResume = styled.div`
-  background: #562222;
-  display: flex;
-  justify-content: space-between;
+  /* background: #562222; */
+  margin-bottom : 13rem;
+  /* display: flex; */
+  /* justify-content: space-between; */
   /* width: 15rem; */
   /* padding: .5em; */
   .arrow-type5 {
@@ -313,14 +315,16 @@ export default function Resume() {
           <Title2>{"}"}</Title2>
         </Tools>
       </Codes>
-      <Button>
-        <span>Download Reśumé</span>
-        <img
-          src="arrow5-line-right.svg"
-          alt="array type 5"
-          className=" arrow-type5"
-        />
-      </Button>
+      <DownloadResume>
+        <Button>
+          <span>Download Reśumé</span>
+          <img
+            src="arrow5-line-right.svg"
+            alt="array type 5"
+            className=" arrow-type5"
+          />
+        </Button>
+      </DownloadResume>
     </Container>
   );
 }
