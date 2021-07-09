@@ -4,11 +4,13 @@ import styled from "styled-components";
 import { fonts, colors, tablet } from "../styles/design";
 
 const HeroWrapper = styled.section`
+  background: #455389;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   .hero-title-container {
-    margin-block: 5em;
+    /* margin-block: 5em; */
     position: relative;
     ::before {
       /* content: "<h1>"; */
@@ -54,11 +56,12 @@ const HeroWrapper = styled.section`
 
   .hero-paragraph {
     max-width: 20em;
-
+    margin-bottom: 4em;
+    background: #621c1c;
     font-size: calc(${fonts.paragraph.primary.size}rem + .6vw);
     /* font-size: ${fonts.paragraph.primary.size}rem; */
     font-weight: ${fonts.paragraph.primary.style};
-    margin-block: 5em;
+    /* margin-block: 5em; */
     position: relative;
     ::before {
       position: absolute;
@@ -84,7 +87,7 @@ const CodeDesign = styled.section`
   color: ${colors.fontColor.fontColor2};
   font-family: ${fonts.codes.fontFamily};
   font-size: ${fonts.codes.size}rem;
-  padding-top: 4rem;
+  /* padding-top: 4rem; */
   div:nth-child(2) {
     padding-left: 1rem;
   }
