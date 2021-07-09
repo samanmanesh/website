@@ -8,7 +8,7 @@ const HeroWrapper = styled.section`
   flex-direction: column;
   justify-content: space-around;
   .hero-title-container {
-    margin-block: 5vh;
+    margin-block: 5em;
     position: relative;
     ::before {
       content: "<h1>";
@@ -58,7 +58,7 @@ const HeroWrapper = styled.section`
     font-size: calc(${fonts.paragraph.primary.size}rem + .6vw);
     /* font-size: ${fonts.paragraph.primary.size}rem; */
     font-weight: ${fonts.paragraph.primary.style};
-    margin-block: 10vh;
+    margin-block: 5em;
     position: relative;
     ::before {
       position: absolute;
