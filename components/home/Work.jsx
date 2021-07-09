@@ -13,7 +13,15 @@ import { mobile, tablet, desktop, fonts } from "../styles/design";
 // #region -styling-
 
 const WorkWrapper = styled.section`
-  
+  background: #1e336e;
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  & > * {
+    margin-block: 5rem;
+  }
+
 `;
 
 
