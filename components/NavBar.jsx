@@ -23,8 +23,14 @@ const Nav = styled.nav`
     z-index: 100;
     //Todo adding feature when you scroll up nav disappear 
     > * {
-      /* padding: 0.5rem; */
+      font-size:1rem;
+      /* padding-inline: 5em; */
     }
+    .nav-item{
+      padding-inline: 2rem;
+      background: #8d2323;
+    }
+
   }
 
   .anime-function-container {
@@ -81,8 +87,8 @@ export default function NavBar() {
   return (
     <Nav>
       <div className="anime-function-container">
-        {/* const {"hero"} = ( ) ={">"} {"{display hero}"} */}
-        SAMAN MANESH
+        const {"hero"} = ( ) ={">"} {"{display hero}"}
+        {/* SAMAN MANESH */}
       </div>
 
       <div className="nav-items-container">
