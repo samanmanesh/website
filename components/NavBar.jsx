@@ -107,7 +107,7 @@ export default function NavBar() {
 
     const currentPosition = window.pageYOffset;
 
-    if (currentPosition >= lastScroll) {
+    if (currentPosition > lastScroll) {
       setShowNav(true);
     } else {
       setShowNav(false);
