@@ -35,7 +35,7 @@ export const Title3 = styled.h3`
 
 
 export const Subtitle  = styled.p`
-  font-size: calc(.8rem + .6vw);
+  font-size: calc(.7rem + .7vw);
   margin: 0;
   padding: 0;
 `;

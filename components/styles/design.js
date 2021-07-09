@@ -58,7 +58,7 @@ export const colors = {
     paragraph: {
       primary: {
         description: "sizes are in rem, the for paragraphs",
-        size: '.8',
+        size: '.7',
         fontFamily: 'inter',
         style: 'lighter',
         line: '1.4'

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { fonts, colors, tablet } from "../styles/design";
 
 const HeroWrapper = styled.section`
-  background: #455389;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,9 +54,8 @@ const HeroWrapper = styled.section`
   }
 
   .hero-paragraph {
-    max-width: 20em;
+    max-width: 33ch;
     margin-bottom: 4em;
-    background: #621c1c;
     font-size: calc(${fonts.paragraph.primary.size}rem + .6vw);
     /* font-size: ${fonts.paragraph.primary.size}rem; */
     font-weight: ${fonts.paragraph.primary.style};
