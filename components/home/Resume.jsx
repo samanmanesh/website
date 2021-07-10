@@ -93,7 +93,7 @@ const EducationGrid = styled.section`
 `;
 const ResumeCard = styled.div`
   /* font-size: 1.1rem; */
-  font-size: calc(.5rem + .5vw);
+  font-size: 1rem;
 
 
   @media (max-width: ${tablet}) {

@@ -5,8 +5,10 @@ import { mobile, tablet, desktop, fonts, colors } from "./design";
 export const Title1 = styled.h1`
   margin: 0;
   padding: 0;
-  
-  font-size: calc(2rem + 2.2vw);
+  font-size: 2.7rem;
+  @media (min-width: ${mobile}){
+    font-size: calc(2rem + 2.2vw);
+  }
 
   letter-spacing: ${fonts.title1.letterSpacing}px;
   
@@ -21,22 +23,33 @@ export const Title1 = styled.h1`
 
 export const Title2 = styled.h2`
   margin: 0;
+  font-size: 2rem;
+  @media (min-width: ${mobile}){
   font-size: calc(${fonts.title2.size}rem + 1.2vw);
+
+  }
   font-weight: medium;
   max-width: 15rem;
 `;
 
 export const Title3 = styled.h3`
   margin: 0;
+  font-size:1.5rem;
+  @media (min-width: ${mobile}) {
   font-size: calc(${fonts.title3.size}rem + .6vw);
+
+  }
   /* font-size: ${fonts.title3.size}rem; */
   font-weight: ${fonts.title3.style};
 `;
 
 
 export const Subtitle  = styled.p`
-  
+
+font-size: ${props => props.smaller ? `.7rem ` : `.9rem `};
+  @media (min-width: ${mobile}){
   font-size: ${props => props.smaller ? `calc(.5rem + .6vw)` : `calc(.7rem + .7vw)`};
+  }
   margin: 0;
   padding: 0;
 `;
