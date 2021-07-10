@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Title1, Title2, Title3, Button } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
+import Education from "./Education"
 
 //#region - styling-
 const Tag = styled.div`
@@ -94,10 +95,10 @@ const EducationGrid = styled.section`
 `;
 const ResumeCard = styled.div`
   /* font-size: 1.1rem; */
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 
   @media (min-width: ${mobile}) {
-    font-size: calc(${fonts.paragraph.primary.size}rem + 0.7vw);
+    font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
   }
 
   @media (max-width: ${tablet}) {
@@ -218,8 +219,9 @@ export default function Resume() {
           className="arrow arrow-type3"
         />
       </section>
+      <Education />
 
-      <Codes>
+      {/* <Codes>
         <Title2>Education {"{"} </Title2>
 
         <EducationGrid>
@@ -285,7 +287,7 @@ export default function Resume() {
           </div>
         </EducationGrid>
         <Title2>{"}"} </Title2>
-      </Codes>
+      </Codes> */}
       <Codes>
         <Skills>
           <Title2>Skills {"{"}</Title2>

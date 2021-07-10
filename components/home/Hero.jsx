@@ -5,7 +5,7 @@ import {
   Subtitle,
 } from "../styles";
 import styled from "styled-components";
-import { fonts, colors, tablet } from "../styles/design";
+import { fonts, colors, tablet,mobile } from "../styles/design";
 
 // #region - styling-
 
@@ -61,7 +61,12 @@ const HeroWrapper = styled.section`
   .hero-paragraph {
     max-width: 33ch;
     margin-bottom: 4em;
+    font-size: 1.2em;
+
+    @media (min-width: ${mobile}){
     font-size: calc(${fonts.paragraph.primary.size}rem + 0.6vw);
+
+    }
     font-weight: ${fonts.paragraph.primary.style};
     position: relative;
     ::before {

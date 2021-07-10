@@ -5,7 +5,7 @@ import { mobile, tablet, desktop, fonts, colors } from "./design";
 export const Title1 = styled.h1`
   margin: 0;
   padding: 0;
-  font-size: 2.7rem;
+  font-size: 3rem;
   @media (min-width: ${mobile}){
     font-size: calc(2rem + 2.2vw);
   }
@@ -46,7 +46,7 @@ export const Title3 = styled.h3`
 
 export const Subtitle  = styled.p`
 
-font-size: ${props => props.smaller ? `.7rem ` : `.9rem `};
+font-size: ${props => props.smaller ? `.7rem ` : `1rem `};
   @media (min-width: ${mobile}){
   font-size: ${props => props.smaller ? `calc(.5rem + .6vw)` : `calc(.7rem + .7vw)`};
   }
