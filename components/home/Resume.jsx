@@ -68,10 +68,11 @@ const arrowBounce = keyframes`
 `;
 
 const EducationGrid = styled.section`
-  margin-bottom: 5rem;
-  @media (min-width: ${tablet}) {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  @media (min-width: ${mobile}) {
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -79,7 +80,7 @@ const EducationGrid = styled.section`
       ". right"
       "leftB .";
 
-    .left-side1 {
+    .left-side{
       grid-area: leftA;
     }
     .left-side2 {
@@ -91,10 +92,16 @@ const EducationGrid = styled.section`
   }
 `;
 const ResumeCard = styled.div`
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
+  font-size: calc(.5rem + .5vw);
+
 
   @media (max-width: ${tablet}) {
     margin-bottom: 5rem;
+    .left-side1{
+      margin-left: 5em;
+
+    }
   }
   .card-row {
     display: flex;
