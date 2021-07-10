@@ -24,7 +24,7 @@ const Nav = styled.nav`
 
   .nav-items-container {
     display: flex;
-    background: #167b16;
+    /* background: #167b16; */
     justify-content: space-between;
     margin-right: 10%;
     margin-left: auto;
@@ -32,19 +32,30 @@ const Nav = styled.nav`
       cursor: pointer;
       /* padding-inline: 1rem; */
       margin-inline: 1rem;
-      ::before{
+      
+      //*temporary animation
+      position: relative;
+      overflow: hidden;
+      ::after {
+        content: " ";
         position: absolute;
-        content:" "
-        }
-
-      :hover {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.1rem;
+        background-color: white;
+        mix-blend-mode: difference;
         transition: all 1s ease;
-        /* font-weight: bold; */
-        /* font-size: 1rem; */
-        /* padding: 1rem; */
-        /* border-bottom: .1rem solid ${colors.fontColor.fontColor1}; */
-    }
+      }
 
+      &:hover {
+        transition: all 1s ease;
+        /* padding: 0.3rem; */
+        ::after {
+          width: 100%;
+        }
+      }
+    }
     .nav-items-container {
       margin: 0;
     }
@@ -68,9 +79,6 @@ const Nav = styled.nav`
       
       // top: -60px; //Stay on top
     `}
-
-
-
   }
 
   @media (max-width: ${mobile}) {
@@ -84,7 +92,6 @@ const Nav = styled.nav`
     }
     top: 0;
     transition: all 0.9s ease;
-    
   }
 `;
 //#endregion
@@ -110,7 +117,6 @@ export default function NavBar() {
 
   let lastScroll = 0;
   const controlNavbar = () => {
-
     const currentPosition = window.pageYOffset;
 
     if (currentPosition > 0 && currentPosition > lastScroll) {
