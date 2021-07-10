@@ -24,19 +24,25 @@ const Nav = styled.nav`
 
   .nav-items-container {
     display: flex;
-    /* background: #167b16; */
+    background: #167b16;
     justify-content: space-between;
     margin-right: 10%;
     margin-left: auto;
     .nav-item {
       cursor: pointer;
-      padding-inline: 1rem;
+      /* padding-inline: 1rem; */
+      margin-inline: 1rem;
+      ::before{
+        position: absolute;
+        content:" "
+        }
 
       :hover {
-        transition: all 0.5s ease;
-        font-weight: bold;
-        font-size: 1rem;
-      }
+        transition: all 1s ease;
+        /* font-weight: bold; */
+        /* font-size: 1rem; */
+        /* padding: 1rem; */
+        /* border-bottom: .1rem solid ${colors.fontColor.fontColor1}; */
     }
 
     .nav-items-container {
