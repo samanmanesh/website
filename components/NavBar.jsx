@@ -33,7 +33,7 @@ const Nav = styled.nav`
       /* padding-inline: 1rem; */
       margin-inline: 1rem;
       
-      //*temporary animation
+      //temporary animation for nav items
       position: relative;
       overflow: hidden;
       ::after {
