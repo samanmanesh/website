@@ -70,6 +70,7 @@ const arrowBounce = keyframes`
 const EducationGrid = styled.section`
   margin-top: 3rem;
   margin-bottom: 3rem;
+
   @media (min-width: ${mobile}) {
     display: grid;
     gap: 2rem;
@@ -80,7 +81,7 @@ const EducationGrid = styled.section`
       ". right"
       "leftB .";
 
-    .left-side{
+    .left-side {
       grid-area: leftA;
     }
     .left-side2 {
@@ -93,14 +94,16 @@ const EducationGrid = styled.section`
 `;
 const ResumeCard = styled.div`
   /* font-size: 1.1rem; */
-  font-size: 1rem;
+  font-size: 1.3rem;
 
+  @media (min-width: ${mobile}) {
+    font-size: calc(${fonts.paragraph.primary.size}rem + 0.7vw);
+  }
 
   @media (max-width: ${tablet}) {
     margin-bottom: 5rem;
-    .left-side1{
+    .left-side1 {
       margin-left: 5em;
-
     }
   }
   .card-row {
@@ -193,7 +196,7 @@ const Tools = styled.section`
 
 const DownloadResume = styled.div`
   /* background: #562222; */
-  margin-bottom : 13rem;
+  margin-bottom: 13rem;
   /* display: flex; */
   /* justify-content: space-between; */
   /* width: 15rem; */
