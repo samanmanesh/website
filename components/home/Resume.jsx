@@ -3,7 +3,7 @@ import { Container, Title1, Title2, Title3, Button } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
 import Education from "./Education"
-
+import Skills from "./Skills";
 //#region - styling-
 const Tag = styled.div`
   /* padding: 0.5rem .5rem; */
@@ -56,123 +56,123 @@ const Codes = styled.section`
   }
 `;
 
-const arrowBounce = keyframes`
-  0% {
-    transform: translate(0,0);
-  }
-  50% {
-    transform: translate(3px,-3px);
-  }
-  100% {
-    transform: translate(0,0);
-  }
-`;
+// const arrowBounce = keyframes`
+//   0% {
+//     transform: translate(0,0);
+//   }
+//   50% {
+//     transform: translate(3px,-3px);
+//   }
+//   100% {
+//     transform: translate(0,0);
+//   }
+// `;
 
-const EducationGrid = styled.section`
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+// const EducationGrid = styled.section`
+//   margin-top: 3rem;
+//   margin-bottom: 3rem;
 
-  @media (min-width: ${mobile}) {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "leftA ."
-      ". right"
-      "leftB .";
+//   @media (min-width: ${mobile}) {
+//     display: grid;
+//     gap: 2rem;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//       "leftA ."
+//       ". right"
+//       "leftB .";
 
-    .left-side {
-      grid-area: leftA;
-    }
-    .left-side2 {
-      grid-area: leftB;
-    }
-    .right-side {
-      grid-area: right;
-    }
-  }
-`;
-const ResumeCard = styled.div`
-  /* font-size: 1.1rem; */
-  font-size: 1.1rem;
+//     .left-side {
+//       grid-area: leftA;
+//     }
+//     .left-side2 {
+//       grid-area: leftB;
+//     }
+//     .right-side {
+//       grid-area: right;
+//     }
+//   }
+// `;
+// const ResumeCard = styled.div`
+//   /* font-size: 1.1rem; */
+//   font-size: 1.1rem;
 
-  @media (min-width: ${mobile}) {
-    font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
-  }
+//   @media (min-width: ${mobile}) {
+//     font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
+//   }
 
-  @media (max-width: ${tablet}) {
-    margin-bottom: 5rem;
-    .left-side1 {
-      margin-left: 5em;
-    }
-  }
-  .card-row {
-    display: flex;
-    border-bottom: 2px solid white;
-    padding-block: 1rem;
+//   @media (max-width: ${tablet}) {
+//     margin-bottom: 5rem;
+//     .left-side1 {
+//       margin-left: 5em;
+//     }
+//   }
+//   .card-row {
+//     display: flex;
+//     border-bottom: 2px solid white;
+//     padding-block: 1rem;
 
-    span:nth-child(2) {
-      margin-left: auto;
-    }
+//     span:nth-child(2) {
+//       margin-left: auto;
+//     }
 
-    .link {
-      color: ${colors.button.secondary};
-      padding-inline: 0.2rem;
-    }
+//     .link {
+//       color: ${colors.button.secondary};
+//       padding-inline: 0.2rem;
+//     }
 
-    .arrow {
-      /* transition: all 0.1s ease; */
-      animation: ${arrowBounce} linear infinite 0.6s;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      animation-play-state: paused;
-    }
-    .link-wrapper {
-      display: flex;
-      align-items: center;
-      /* transition: all 5s ease; */
-      cursor: pointer;
-      &:hover {
-        /* color: white; */
-        .link {
-          color: white;
-          transition: all 0.1s ease;
-        }
+//     .arrow {
+//       /* transition: all 0.1s ease; */
+//       animation: ${arrowBounce} linear infinite 0.6s;
+//       animation-direction: alternate;
+//       animation-fill-mode: forwards;
+//       animation-play-state: paused;
+//     }
+//     .link-wrapper {
+//       display: flex;
+//       align-items: center;
+//       /* transition: all 5s ease; */
+//       cursor: pointer;
+//       &:hover {
+//         /* color: white; */
+//         .link {
+//           color: white;
+//           transition: all 0.1s ease;
+//         }
 
-        .arrow {
-          color: white;
-          animation-play-state: running;
-        }
-      }
-    }
+//         .arrow {
+//           color: white;
+//           animation-play-state: running;
+//         }
+//       }
+//     }
 
-    .arrow-type4 {
-      align-self: start;
-    }
-  }
-`;
+//     .arrow-type4 {
+//       align-self: start;
+//     }
+//   }
+// `;
 
-const Skills = styled.section`
-  margin-top: 8rem;
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .skill-container {
-      max-width: 80%;
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+// const Skills = styled.section`
+//   margin-top: 8rem;
+//   section {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .skill-container {
+//       max-width: 80%;
+//       display: flex;
+//       justify-content: space-evenly;
+//       flex-wrap: wrap;
 
-      & > * {
-        padding: 1rem;
-        margin: 1rem 1rem;
-        font-size: 1.3rem;
-      }
-    }
-  }
-`;
+//       & > * {
+//         padding: 1rem;
+//         margin: 1rem 1rem;
+//         font-size: 1.3rem;
+//       }
+//     }
+//   }
+// `;
 const Tools = styled.section`
   margin-top: 8rem;
 
@@ -220,7 +220,7 @@ export default function Resume() {
         />
       </section>
       <Education />
-
+      <Skills />
       {/* <Codes>
         <Title2>Education {"{"} </Title2>
 
@@ -288,7 +288,7 @@ export default function Resume() {
         </EducationGrid>
         <Title2>{"}"} </Title2>
       </Codes> */}
-      <Codes>
+      {/* <Codes>
         <Skills>
           <Title2>Skills {"{"}</Title2>
           <section>
@@ -310,7 +310,7 @@ export default function Resume() {
           </section>
           <Title2> {"}"}</Title2>
         </Skills>
-      </Codes>
+      </Codes> */}
       <Codes>
         <Tools>
           <Title2>Tools {"{"}</Title2>

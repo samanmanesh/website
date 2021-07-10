@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
-import { Container, Title1, Title2, Title3, Button } from "../styles";
+import { Title2, Codes } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 
 const arrowBounce = keyframes`
@@ -48,7 +48,7 @@ const ResumeCard = styled.div`
   @media (min-width: ${mobile}) {
     font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
     .card-row{
-        padding: 1rem 0;
+        padding: .8rem 0;
     }
   }
 
