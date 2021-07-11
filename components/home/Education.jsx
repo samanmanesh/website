@@ -104,26 +104,26 @@ const ResumeCard = styled.div`
   }
 `;
 
-const Codes = styled.section`
-  position: relative;
-  margin-bottom: 5rem;
-  ::before {
-    position: absolute;
-    content: "<section>";
-    color: ${colors.fontColor.fontColor2};
-    font-family: ${fonts.codes.fontFamily};
-    font-size: ${fonts.codes.size}rem;
-    top: -2rem;
-  }
-  ::after {
-    position: absolute;
-    content: "</section>";
-    color: ${colors.fontColor.fontColor2};
-    font-family: ${fonts.codes.fontFamily};
-    font-size: ${fonts.codes.size}rem;
-    bottom: -2rem;
-  }
-`;
+// const Codes = styled.section`
+//   position: relative;
+//   margin-bottom: 5rem;
+//   ::before {
+//     position: absolute;
+//     content: "<section>";
+//     color: ${colors.fontColor.fontColor2};
+//     font-family: ${fonts.codes.fontFamily};
+//     font-size: ${fonts.codes.size}rem;
+//     top: -2rem;
+//   }
+//   ::after {
+//     position: absolute;
+//     content: "</section>";
+//     color: ${colors.fontColor.fontColor2};
+//     font-family: ${fonts.codes.fontFamily};
+//     font-size: ${fonts.codes.size}rem;
+//     bottom: -2rem;
+//   }
+// `;
 
 export default function Education() {
   return (

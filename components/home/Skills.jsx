@@ -1,10 +1,10 @@
 import React from "react";
 import {Title2, Codes } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
-
+import styled from "styled-components";
 const SkillsWrapper = styled.div``;
 
-const Skills = styled.section`
+const SkillsContainer = styled.section`
   margin-top: 8rem;
   section {
     display: flex;
@@ -21,6 +21,37 @@ const Skills = styled.section`
         margin: 1rem 1rem;
         font-size: 1.3rem;
       }
+    }
+  }
+`;
+
+
+const Tag = styled.div`
+  /* padding: 0.5rem .5rem; */
+  border-bottom-left-radius: 0.3rem;
+  border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  ::before {
+    content: "| ";
+    color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+  }
+  ::after {
+    content: " ";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+    mix-blend-mode: difference;
+    transition: all 0.5s ease;
+  }
+  &:hover {
+    ::after {
+      /* color: #000000; */
+      height: 100%;
     }
   }
 `;
@@ -50,7 +81,7 @@ export default function Skills() {
   return (
     <SkillsWrapper>
       <Codes>
-        <Skills>
+        <SkillsContainer>
           <Title2>Skills {"{"}</Title2>
           <section>
             <div className="skill-container">
@@ -70,7 +101,7 @@ export default function Skills() {
             </div>
           </section>
           <Title2> {"}"}</Title2>
-        </Skills>
+        </SkillsContainer>
       </Codes>
     </SkillsWrapper>
   );
