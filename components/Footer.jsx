@@ -60,7 +60,7 @@ const LinkCard = styled.div`
   margin-block: 3rem;
   .link-row {
     cursor: pointer;
-    padding-block: 0.7em;
+    padding-block: 1rem;
     border-bottom: 2px solid ${colors.fontColor.fontColor1};
     display: flex;
     span:nth-child(2) {
@@ -82,7 +82,7 @@ const LinkCard = styled.div`
     }
     &:hover {
       transition: all 1s ease;
-      padding: 1.3rem;
+      padding: 1rem;
       ::after {
         height: 100%;
       }
