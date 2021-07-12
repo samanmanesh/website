@@ -64,6 +64,7 @@ const Nav = styled.nav`
   // applying moving nav for just mobile and tablet
   @media (max-width: ${tablet}) {
     position: fixed;
+    width: 100%;
     border-bottom: 1px solid white;
     background: #030304d7;
     z-index: 100;
