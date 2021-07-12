@@ -60,6 +60,25 @@ export const Description = styled.p`
   } ;
 `;
 
+export const Arrow2 = styled.section`
+  width: 2.5rem;
+  height: 2.5rem;
+  
+  @media (min-width: ${mobile}) {
+    width: calc(1.5rem + 1.5vw);
+    height:calc(1.5rem + 1.5vh); 
+  }
+`;
+export const Arrow3 = styled.section`
+  width: 2.2rem;
+  height: 2.2rem;
+  
+  @media (min-width: ${mobile}) {
+    width: calc(1.5rem + .8vw);
+    height:calc(1.5rem + .8vh); 
+  }
+`;
+
 // #endregion
 
 // #region -- Layout --
@@ -110,10 +129,9 @@ export const Container = styled.section`
 
     .footer-note {
       padding-bottom: 2rem;
-     @media (min-width: ${mobile}) {
-       font-size: calc(.7rem + .5vw);
-
-     }
+      @media (min-width: ${mobile}) {
+        font-size: calc(0.7rem + 0.5vw);
+      }
       font-family: ${fonts.codes.fontFamily};
       margin-right: 1rem;
     }

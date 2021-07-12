@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Title1, Title2, Title3, Button } from "../styles";
+import { Container, Title1, Title2, Title3, Button ,Arrow3} from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
 
@@ -220,11 +220,13 @@ export default function Resume() {
     <Container>
       <section className="titles-container" id="resume">
         <Title3>Reśumé</Title3>
+        <Arrow3>
         <img
           src="arrow3-down-right.svg"
           alt="arrow type3"
           className="arrow arrow-type3"
         />
+        </Arrow3>
       </section>
 
       <Codes>

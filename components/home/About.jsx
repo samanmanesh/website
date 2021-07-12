@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Title3, Button, Description } from "../styles";
+import { Container, Title3, Button, Description, Arrow3 } from "../styles";
 import styled from "styled-components";
 import { tablet, mobile, desktop, fonts } from "../styles/design";
 
@@ -50,8 +50,8 @@ const AboutGrid = styled.section`
   }
 
   .body {
-    @media (max-width: ${mobile}){
-     max-width: 80%;
+    @media (max-width: ${mobile}) {
+      max-width: 80%;
     }
     margin-bottom: 5rem;
     margin-inline: auto;
@@ -69,7 +69,9 @@ export default function About() {
     <Container>
       <div className="titles-container" id="about">
         <Title3>Me, Myself &amp; I</Title3>
-        <img src="arrow3-down-right.svg" alt="" className="arrow-type3" />
+        <Arrow3>
+          <img src="arrow3-down-right.svg" alt="" className="arrow-type3" />
+        </Arrow3>
       </div>
       <AboutGrid>
         <div className="intro">

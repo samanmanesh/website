@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Title3, Description } from "./styles";
+import { Container, Title3, Description, Arrow3, Arrow2 } from "./styles";
 import styled, { css } from "styled-components";
 import { colors, fonts, tablet ,mobile} from "./styles/design";
 import Contact from "./home/Contact";
@@ -35,20 +35,23 @@ const ContactGrid = styled.section`
   }
 
   .carryout-text-img-container {
-    /* background: #340101; */
+    background: #340101;
     display: flex;
     align-items: flex-end;
     margin-bottom: 2rem;
-
+    justify-content: space-between;
     .carryout-text {
       /* background: #056450; */
       /* font-size: 2rem; */
       line-height: 1.8;
+      
       margin: 0;
     }
     .arrow-type2 {
-      margin-left: auto;
-      /* background: #c08913; */
+      /* margin-left: auto; */
+      background: #c08913;
+      /* margin-top : auto; */
+      /* margin-bottom: auto; */
     }
   }
 `;
@@ -56,7 +59,6 @@ const LinkCard = styled.div`
   /* background: #185a0f; */
   @media (min-width: ${mobile}){
   font-size: calc(${fonts.paragraph.primary.size}rem + .5vw);
-
   }
   margin-bottom: 4rem;
   .link-row {
@@ -97,11 +99,13 @@ export default function Footer({ setAlert }) {
     <Container>
       <div className="titles-container" id="contact">
         <Title3>Contact</Title3>
+        <Arrow3>
         <img
           src="arrow3-down-right.svg"
           alt="arrow type 3"
           className="arrow-type3"
         />
+        </Arrow3>
       </div>
       <ContactGrid>
         <div className="left-side">
@@ -115,11 +119,13 @@ export default function Footer({ setAlert }) {
                 Drop me a line here
               </p>
             </Description>
+            <Arrow2>
             <img
               src="arrow2-down-left.svg"
               alt="arrow type 2"
               className="arrow-type2"
             />
+            </Arrow2>
           </div>
           <Contact setAlert={setAlert} />
           {/* <form action="">
@@ -142,11 +148,13 @@ export default function Footer({ setAlert }) {
             <Description>
               <p className="carryout-text">You can also find me here</p>
             </Description>
+            <Arrow2>
             <img
               src="arrow2-down-left.svg"
               alt="arrow type 2"
               className="arrow-type2"
             />
+            </Arrow2>
           </div>
           <LinkCard>
             <a

@@ -1,13 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Title1,
-  Title2,
-  Title3,
-  Container,
-  ColumnLayout,
-  Subtitle,
-} from "../styles";
+import { Title2, Title3, Container, Subtitle, Arrow3, Arrow2 } from "../styles";
 import { mobile, tablet, desktop, fonts } from "../styles/design";
 
 // #region -styling-
@@ -54,10 +47,9 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectGrid = styled.section`
- 
- .left-side {
-   margin-right: 7rem;
-   margin-bottom: 3rem;
+  .left-side {
+    margin-right: 7rem;
+    margin-bottom: 3rem;
   }
   .right-side {
     margin-left: 7rem;
@@ -93,11 +85,13 @@ export default function Work() {
       <WorkWrapper>
         <section className="titles-container" id="work">
           <Title3>Selected Works</Title3>
-          <img
-            src="arrow3-down-right.svg"
-            alt="arrow type3"
-            className="arrow-type3"
-          />
+          <Arrow3>
+            <img
+              src="arrow3-down-right.svg"
+              alt="arrow type3"
+              className="arrow-type3"
+            />
+          </Arrow3>
         </section>
 
         <ProjectGrid>
@@ -110,30 +104,34 @@ export default function Work() {
                     let Design &amp; Development = 2021;
                   </p>
                 </Subtitle>
-                <img
-                  src="arrow2-down-left.svg"
-                  alt="arrow of type 2"
-                  className="arrow-type2"
-                />
+                <Arrow2>
+                  <img
+                    src="arrow2-down-left.svg"
+                    alt="arrow of type 2"
+                    className="arrow-type2"
+                  />
+                </Arrow2>
               </div>
               <div className="card-container">
                 <img src="#" alt="image of Samitone" />
               </div>
             </ProjectCard>
             {/* <ProjectCard>
-            <Title2> What's up Coins</Title2>
-            <div className="subtitle-arrow-container">
-              <p className="subtitle">let Design &amp; Development = 2021;</p>
-              <img
-                src="arrow2-down-left.svg"
-                alt="arrow of type 2"
-                className="arrow-type2"
-              />
-            </div>
-            <div className="card-container">
-              <img src="#" alt="image of What's up Coins" />
-            </div>
-          </ProjectCard> */}
+              <Title2> What's up Coins</Title2>
+              <div className="subtitle-arrow-container">
+                <p className="subtitle">let Design &amp; Development = 2021;</p>
+                <Arrow2>
+                  <img
+                    src="arrow2-down-left.svg"
+                    alt="arrow of type 2"
+                    className="arrow-type2"
+                  />  
+                </Arrow2>
+              </div>
+              <div className="card-container">
+                <img src="#" alt="image of What's up Coins" />
+              </div>
+            </ProjectCard> */}
           </div>
           <div class="right-side">
             <ProjectCard>
@@ -144,11 +142,13 @@ export default function Work() {
                     let Design &amp; Development = 2021;
                   </p>
                 </Subtitle>
-                <img
-                  src="arrow2-down-left.svg"
-                  alt="arrow of type 2"
-                  className="arrow-type2"
-                />
+                <Arrow2>
+                  <img
+                    src="arrow2-down-left.svg"
+                    alt="arrow of type 2"
+                    className="arrow-type2"
+                  />
+                </Arrow2>
               </div>
               <div className="card-container">
                 <img src="#" alt="image of Saman's Website" />
