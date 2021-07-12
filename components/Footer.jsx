@@ -38,6 +38,7 @@ const ContactGrid = styled.section`
     /* background: #340101; */
     display: flex;
     align-items: flex-end;
+    margin-bottom: 2rem;
 
     .carryout-text {
       /* background: #056450; */
@@ -57,7 +58,7 @@ const LinkCard = styled.div`
   font-size: calc(${fonts.paragraph.primary.size}rem + .5vw);
 
   }
-  margin-block: 3rem;
+  margin-bottom: 4rem;
   .link-row {
     cursor: pointer;
     padding-block: 1rem;
