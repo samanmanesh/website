@@ -40,6 +40,7 @@ const ContactGrid = styled.section`
     align-items: flex-end;
     margin-bottom: 2rem;
     justify-content: space-between;
+    
     .carryout-text {
       /* background: #056450; */
       /* font-size: 2rem; */
@@ -49,7 +50,7 @@ const ContactGrid = styled.section`
     }
     .arrow-type2 {
       /* margin-left: auto; */
-      background: #c08913;
+      /* background: #c08913; */
       /* margin-top : auto; */
       /* margin-bottom: auto; */
     }

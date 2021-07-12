@@ -53,6 +53,8 @@ export const Subtitle = styled.p`
 
 export const Description = styled.p`
   font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
 
   @media (min-width: ${mobile}) {
     font-size: ${(props) =>
@@ -63,19 +65,18 @@ export const Description = styled.p`
 export const Arrow2 = styled.section`
   width: 2.5rem;
   height: 2.5rem;
-  
   @media (min-width: ${mobile}) {
     width: calc(1.5rem + 1.5vw);
-    height:calc(1.5rem + 1.5vh); 
+    height: calc(1.5rem + 1.5vh);
   }
 `;
 export const Arrow3 = styled.section`
   width: 2.2rem;
   height: 2.2rem;
-  
+
   @media (min-width: ${mobile}) {
-    width: calc(1.5rem + .8vw);
-    height:calc(1.5rem + .8vh); 
+    width: calc(1.5rem + 0.8vw);
+    height: calc(1.5rem + 0.8vh);
   }
 `;
 
