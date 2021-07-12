@@ -54,7 +54,9 @@ const AboutGrid = styled.section`
       max-width: 80%;
     }
     margin-bottom: 5rem;
-    margin-inline: auto;
+    /* margin-inline: auto; */
+    margin-left: auto;
+    margin-right: auto;
   }
   .person-image-container {
     border: 1px solid white;
