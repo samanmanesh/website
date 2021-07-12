@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Title3, Button } from "../styles";
+import { Container, Title3, Button, Description } from "../styles";
 import styled from "styled-components";
 import { tablet, mobile, desktop, fonts } from "../styles/design";
 
@@ -34,7 +34,10 @@ const AboutGrid = styled.section`
 
   .intro {
     grid-area: header;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    @media (min-width: ${mobile}) {
+      font-size: calc(1rem + 1vw);
+    }
   }
 
   .left-side {
@@ -48,12 +51,12 @@ const AboutGrid = styled.section`
 
   .body {
     max-width: 80%;
-    margin-bottom: 5em;
+    margin-bottom: 5rem;
     margin-inline: auto;
   }
   .person-image-container {
     border: 1px solid white;
-    height: 30rem;
+    max-height: 30rem;
     max-width: 60%;
     /* margin-inline: auto; */
   }
@@ -74,12 +77,14 @@ export default function About() {
           </p>
         </div>
         <div className="left-side">
-          <p className="body">
-            &nbsp; &nbsp; I enjoy using my obsessive attention to detail, my
-            pure love for making things, and my mission-driven work ethic to
-            literally change the world. That’s why I love working with diverse
-            people who want to make the world a little better.
-          </p>
+          <Description smaller>
+            <p className="body">
+              &nbsp; &nbsp; I enjoy using my obsessive attention to detail, my
+              pure love for making things, and my mission-driven work ethic to
+              literally change the world. That’s why I love working with diverse
+              people who want to make the world a little better.
+            </p>
+          </Description>
           {/* <Button className="button-connection-contact">
             <span>Lets Make Something Special</span>{" "}
             <img src="arrow5-line-right.svg" alt="" className="arrow-type5" />

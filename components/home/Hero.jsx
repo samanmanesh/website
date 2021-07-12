@@ -1,11 +1,7 @@
 import React from "react";
-import {
-  Title1,
-  Container,
-  Subtitle,
-} from "../styles";
+import { Title1, Container, Subtitle, Description } from "../styles";
 import styled from "styled-components";
-import { fonts, colors, tablet,mobile } from "../styles/design";
+import { fonts, colors, tablet, mobile } from "../styles/design";
 
 // #region - styling-
 
@@ -61,12 +57,12 @@ const HeroWrapper = styled.section`
   .hero-paragraph {
     max-width: 33ch;
     margin-bottom: 4em;
-    font-size: 1.2em;
+    /* font-size: 1.2em;
 
     @media (min-width: ${mobile}){
-    font-size: calc(${fonts.paragraph.primary.size}rem + 0.6vw);
+    font-size: calc(${fonts.paragraph.primary.size}rem + 0.6vw); */
 
-    }
+    /* } */
     font-weight: ${fonts.paragraph.primary.style};
     position: relative;
     ::before {
@@ -118,9 +114,11 @@ export default function Hero() {
             </Subtitle>
           </div>
         </div>
-        <p className="hero-paragraph">
-          I make elegant, efficient, and user-friendly digital experiences
-        </p>
+        <Description smaller>
+          <p className="hero-paragraph">
+            I make elegant, efficient, and user-friendly digital experiences
+          </p>
+        </Description>
       </HeroWrapper>
     </Container>
   );

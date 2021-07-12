@@ -93,10 +93,9 @@ const EducationGrid = styled.section`
   }
 `;
 const ResumeCard = styled.div`
-  /* font-size: 1.1rem; */
-  font-size: 1.1rem;
- 
+  
   @media (max-width: ${mobile}) {
+    font-size: 1.1rem;
     margin-left: ${(props) => props.left && "2.5rem"};
     margin-right: ${(props) => props.right && "2.5rem"};
   }
@@ -107,9 +106,9 @@ const ResumeCard = styled.div`
 
   @media (max-width: ${tablet}) {
     margin-bottom: 5rem;
-    .left-side1 {
-      /* margin-left: 5em; */
-    }
+    /* .left-side1 {
+      margin-left: 5em;
+    } */
   }
   .card-row {
     display: flex;
@@ -168,11 +167,15 @@ const Skills = styled.section`
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      font-size: 1.1rem;
+
+      @media (min-width: ${mobile}){
+        font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
+      }
 
       & > * {
         padding: 1rem;
         margin: 1rem 1rem;
-        font-size: 1.3rem;
       }
     }
   }
@@ -226,7 +229,7 @@ export default function Resume() {
 
       <Codes>
         <Title2>Education {"{"} </Title2>
-
+    
         <EducationGrid>
           <div className="left-side">
             <ResumeCard left>
