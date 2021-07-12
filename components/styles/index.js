@@ -110,7 +110,10 @@ export const Container = styled.section`
 
     .footer-note {
       padding-bottom: 2rem;
-      font-size: 1.2rem;
+     @media (min-width: ${mobile}) {
+       font-size: calc(.7rem + .5vw);
+
+     }
       font-family: ${fonts.codes.fontFamily};
       margin-right: 1rem;
     }

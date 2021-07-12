@@ -24,7 +24,7 @@ const Input = styled.input`
   all: unset;
   border-radius: 0.1rem;
   padding: 1rem;
-  margin-block: 1rem;
+  margin-bottom: 1.5rem;
   font-size: ${fonts.paragraph.primary.size}rem;
   background: ${colors.button.primary};
   color: ${colors.fontColor.fontColor1};
@@ -56,7 +56,7 @@ const TextArea = styled.textarea`
   word-break: break-all;
   /* border: none; */
   border-radius: 0.1rem;
-  margin-block: 1rem;
+  margin-bottom: 1.5rem;
   background: ${colors.button.primary};
   min-height: 15ch;
   font-size: ${fonts.paragraph.primary.size}rem;

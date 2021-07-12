@@ -1,9 +1,8 @@
 import React from "react";
-import { Container, Title3 } from "./styles";
+import { Container, Title3, Description } from "./styles";
 import styled, { css } from "styled-components";
-import { colors, fonts, tablet } from "./styles/design";
+import { colors, fonts, tablet ,mobile} from "./styles/design";
 import Contact from "./home/Contact";
-
 
 // #region -styling-
 const ContactGrid = styled.section`
@@ -42,8 +41,8 @@ const ContactGrid = styled.section`
 
     .carryout-text {
       /* background: #056450; */
-      font-size: 2rem;
-      line-height: 1.4;
+      /* font-size: 2rem; */
+      line-height: 1.8;
       margin: 0;
     }
     .arrow-type2 {
@@ -54,7 +53,10 @@ const ContactGrid = styled.section`
 `;
 const LinkCard = styled.div`
   /* background: #185a0f; */
-  font-size: ${fonts.paragraph.primary.size}rem;
+  @media (min-width: ${mobile}){
+  font-size: calc(${fonts.paragraph.primary.size}rem + .5vw);
+
+  }
   margin-block: 3rem;
   .link-row {
     cursor: pointer;
@@ -103,13 +105,15 @@ export default function Footer({ setAlert }) {
       <ContactGrid>
         <div className="left-side">
           <div className="carryout-text-img-container">
-            <p className="carryout-text">
-              Want to work together?
-              <br />
-              Just want to say hi?
-              <br />
-              Drop me a line here
-            </p>
+            <Description>
+              <p className="carryout-text">
+                Want to work together?
+                <br />
+                Just want to say hi?
+                <br />
+                Drop me a line here
+              </p>
+            </Description>
             <img
               src="arrow2-down-left.svg"
               alt="arrow type 2"
@@ -134,7 +138,9 @@ export default function Footer({ setAlert }) {
         </div>
         <div className="right-side">
           <div className="carryout-text-img-container">
-            <p className="carryout-text">You can also find me here</p>
+            <Description>
+              <p className="carryout-text">You can also find me here</p>
+            </Description>
             <img
               src="arrow2-down-left.svg"
               alt="arrow type 2"
@@ -142,8 +148,11 @@ export default function Footer({ setAlert }) {
             />
           </div>
           <LinkCard>
-            <a className="link-row" href="https://instagram.com/samansmanesh" target="_blank">
-              
+            <a
+              className="link-row"
+              href="https://instagram.com/samansmanesh"
+              target="_blank"
+            >
               <span>Instagram</span>
               <span>Link</span>
               <img
@@ -152,8 +161,11 @@ export default function Footer({ setAlert }) {
                 className="arrow-type3"
               />
             </a>
-            <a className="link-row"  href="https://www.linkedin.com/in/saman-manesh-96b257213/"
-          target="_blank">
+            <a
+              className="link-row"
+              href="https://www.linkedin.com/in/saman-manesh-96b257213/"
+              target="_blank"
+            >
               <span>Linkedin</span>
               <span>Link</span>
               <img
@@ -162,7 +174,11 @@ export default function Footer({ setAlert }) {
                 className="arrow-type3"
               />
             </a>
-            <a className="link-row" href="https://github.com/samanmanesh" target="_blank">
+            <a
+              className="link-row"
+              href="https://github.com/samanmanesh"
+              target="_blank"
+            >
               <span>Github</span>
               <span>Link</span>
               <img
