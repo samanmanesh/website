@@ -61,9 +61,11 @@ const Nav = styled.nav`
     }
   }
 
+  // applying moving nav for just mobile and tablet
   @media (max-width: ${tablet}) {
     position: fixed;
     border-bottom: 1px solid white;
+    background: #030304d7;
     z-index: 100;
     > * {
       font-size: 1rem;
@@ -83,6 +85,7 @@ const Nav = styled.nav`
 
   @media (max-width: ${mobile}) {
     width: 98%;
+    
     .anime-function-container {
       display: none;
     }
