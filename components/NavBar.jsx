@@ -85,7 +85,7 @@ const Nav = styled.nav`
   }
 
   @media (max-width: ${mobile}) {
-    width: 98%;
+    width: 100%;
     
     .anime-function-container {
       display: none;
