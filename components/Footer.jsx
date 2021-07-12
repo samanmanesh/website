@@ -1,17 +1,23 @@
 import React from "react";
-import { Container, Title3, Description, Arrow3, Arrow2 } from "./styles";
+import {
+  Container,
+  Title3,
+  Description,
+  Arrow3,
+  Arrow2,
+  Codes,
+} from "./styles";
 import styled, { css } from "styled-components";
-import { colors, fonts, tablet ,mobile} from "./styles/design";
+import { colors, fonts, tablet, mobile } from "./styles/design";
 import Contact from "./home/Contact";
 
 // #region -styling-
 const ContactGrid = styled.section`
-  /* background: #27276a; */
   display: grid;
   gap: 5rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-
+  margin-bottom: 5rem;
   grid-template-areas:
     "left left"
     "right right";
@@ -38,14 +44,14 @@ const ContactGrid = styled.section`
     /* background: #340101; */
     display: flex;
     align-items: flex-end;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     justify-content: space-between;
-    
+
     .carryout-text {
       /* background: #056450; */
       /* font-size: 2rem; */
       line-height: 1.8;
-      
+
       margin: 0;
     }
     .arrow-type2 {
@@ -58,13 +64,13 @@ const ContactGrid = styled.section`
 `;
 const LinkCard = styled.div`
   /* background: #185a0f; */
-  @media (min-width: ${mobile}){
-  font-size: calc(${fonts.paragraph.primary.size}rem + .5vw);
+  @media (min-width: ${mobile}) {
+    font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
   }
   margin-bottom: 4rem;
   .link-row {
     cursor: pointer;
-    padding: 1rem 0 ;
+    padding: 1rem 0;
     border-bottom: 2px solid ${colors.fontColor.fontColor1};
     display: flex;
     span:nth-child(2) {
@@ -93,6 +99,17 @@ const LinkCard = styled.div`
     }
   }
 `;
+
+const CodeDesign = styled.section`
+  color: ${colors.fontColor.fontColor2};
+  font-family: ${fonts.codes.fontFamily};
+  font-size: ${fonts.codes.size}rem;
+  margin-bottom: 1rem;
+  div:nth-child(2) {
+    padding-left: 1rem;
+  }
+`;
+
 //#endregion
 
 export default function Footer({ setAlert }) {
@@ -101,11 +118,11 @@ export default function Footer({ setAlert }) {
       <div className="titles-container" id="contact">
         <Title3>Contact</Title3>
         <Arrow3>
-        <img
-          src="arrow3-down-right.svg"
-          alt="arrow type 3"
-          className="arrow-type3"
-        />
+          <img
+            src="arrow3-down-right.svg"
+            alt="arrow type 3"
+            className="arrow-type3"
+          />
         </Arrow3>
       </div>
       <ContactGrid>
@@ -121,11 +138,11 @@ export default function Footer({ setAlert }) {
               </p>
             </Description>
             <Arrow2>
-            <img
-              src="arrow2-down-left.svg"
-              alt="arrow type 2"
-              className="arrow-type2"
-            />
+              <img
+                src="arrow2-down-left.svg"
+                alt="arrow type 2"
+                className="arrow-type2"
+              />
             </Arrow2>
           </div>
           <Contact setAlert={setAlert} />
@@ -150,61 +167,67 @@ export default function Footer({ setAlert }) {
               <p className="carryout-text">You can also find me here</p>
             </Description>
             <Arrow2>
-            <img
-              src="arrow2-down-left.svg"
-              alt="arrow type 2"
-              className="arrow-type2"
-            />
+              <img
+                src="arrow2-down-left.svg"
+                alt="arrow type 2"
+                className="arrow-type2"
+              />
             </Arrow2>
           </div>
-          <LinkCard>
-            <a
-              className="link-row"
-              href="https://instagram.com/samansmanesh"
-              target="_blank"
-            >
-              <span>Instagram</span>
-              <span>Link</span>
-              <img
-                src="arrow4-up-right.svg"
-                alt="arrow type 3"
-                className="arrow-type3"
-              />
-            </a>
-            <a
-              className="link-row"
-              href="https://www.linkedin.com/in/saman-manesh-96b257213/"
-              target="_blank"
-            >
-              <span>Linkedin</span>
-              <span>Link</span>
-              <img
-                src="arrow4-up-right.svg"
-                alt="arrow type 3"
-                className="arrow-type3"
-              />
-            </a>
-            <a
-              className="link-row"
-              href="https://github.com/samanmanesh"
-              target="_blank"
-            >
-              <span>Github</span>
-              <span>Link</span>
-              <img
-                src="arrow4-up-right.svg"
-                alt="arrow type 3"
-                className="arrow-type3"
-              />
-            </a>
-            <div className="link-row">
-              <span>Email</span>
-              <span>Copy</span>
-              {/* <img src="arrow4-up-right.svg" alt="arrow type 3" className="arrow-type3" /> */}
-            </div>
-          </LinkCard>
+          <Codes content="a">
+            <LinkCard>
+              <a
+                className="link-row"
+                href="https://instagram.com/samansmanesh"
+                target="_blank"
+              >
+                <span>Instagram</span>
+                <span>Link</span>
+                <img
+                  src="arrow4-up-right.svg"
+                  alt="arrow type 3"
+                  className="arrow-type3"
+                />
+              </a>
+              <a
+                className="link-row"
+                href="https://www.linkedin.com/in/saman-manesh-96b257213/"
+                target="_blank"
+              >
+                <span>Linkedin</span>
+                <span>Link</span>
+                <img
+                  src="arrow4-up-right.svg"
+                  alt="arrow type 3"
+                  className="arrow-type3"
+                />
+              </a>
+              <a
+                className="link-row"
+                href="https://github.com/samanmanesh"
+                target="_blank"
+              >
+                <span>Github</span>
+                <span>Link</span>
+                <img
+                  src="arrow4-up-right.svg"
+                  alt="arrow type 3"
+                  className="arrow-type3"
+                />
+              </a>
+              <div className="link-row">
+                <span>Email</span>
+                <span>Copy</span>
+                {/* <img src="arrow4-up-right.svg" alt="arrow type 3" className="arrow-type3" /> */}
+              </div>
+            </LinkCard>
+          </Codes>
         </div>
       </ContactGrid>
+      <CodeDesign>
+        <div> {"</body>"}</div>
+        <div> {"</htm>"}</div>
+      </CodeDesign>
       <div className="footer-note-container">
         <p className="footer-note">designed &amp; built by me :{")"}</p>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Title3, Button, Description, Arrow3 } from "../styles";
+import { Container, Title3, Button, Description, Arrow3, Codes } from "../styles";
 import styled from "styled-components";
 import { tablet, mobile, desktop, fonts } from "../styles/design";
 
@@ -75,6 +75,7 @@ export default function About() {
           <img src="arrow3-down-right.svg" alt="" className="arrow-type3" />
         </Arrow3>
       </div>
+      <Codes content="article">
       <AboutGrid>
         <div className="intro">
           <p>
@@ -102,6 +103,7 @@ export default function About() {
           </section>
         </div>
       </AboutGrid>
+      </Codes>
     </Container>
   );
 }

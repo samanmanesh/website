@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Title2, Title3, Container, Subtitle, Arrow3, Arrow2 } from "../styles";
+import {
+  Title2,
+  Title3,
+  Container,
+  Subtitle,
+  Arrow3,
+  Arrow2,
+  Codes,
+} from "../styles";
 import { mobile, tablet, desktop, fonts } from "../styles/design";
 
 // #region -styling-
@@ -12,7 +20,7 @@ const WorkWrapper = styled.section`
   justify-content: space-around;
   min-height: 100vh;
   & > * {
-    margin-bottom: 13rem;
+    /* margin-bottom: 13rem; */
   }
 `;
 
@@ -93,30 +101,30 @@ export default function Work() {
             />
           </Arrow3>
         </section>
-
-        <ProjectGrid>
-          <div class="left-side">
-            <ProjectCard>
-              <Title2>Samitone</Title2>
-              <div className="subtitle-arrow-container">
-                <Subtitle smaller>
-                  <p className="subtitle">
-                    let Design &amp; Development = 2021;
-                  </p>
-                </Subtitle>
-                <Arrow2>
-                  <img
-                    src="arrow2-down-left.svg"
-                    alt="arrow of type 2"
-                    className="arrow-type2"
-                  />
-                </Arrow2>
-              </div>
-              <div className="card-container">
-                <img src="#" alt="image of Samitone" />
-              </div>
-            </ProjectCard>
-            {/* <ProjectCard>
+        <Codes content="section">
+          <ProjectGrid>
+            <div class="left-side">
+              <ProjectCard>
+                <Title2>Samitone</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div className="card-container">
+                  <img src="#" alt="image of Samitone" />
+                </div>
+              </ProjectCard>
+              {/* <ProjectCard>
               <Title2> What's up Coins</Title2>
               <div className="subtitle-arrow-container">
                 <p className="subtitle">let Design &amp; Development = 2021;</p>
@@ -132,30 +140,31 @@ export default function Work() {
                 <img src="#" alt="image of What's up Coins" />
               </div>
             </ProjectCard> */}
-          </div>
-          <div class="right-side">
-            <ProjectCard>
-              <Title2>Saman's Website</Title2>
-              <div className="subtitle-arrow-container">
-                <Subtitle smaller>
-                  <p className="subtitle">
-                    let Design &amp; Development = 2021;
-                  </p>
-                </Subtitle>
-                <Arrow2>
-                  <img
-                    src="arrow2-down-left.svg"
-                    alt="arrow of type 2"
-                    className="arrow-type2"
-                  />
-                </Arrow2>
-              </div>
-              <div className="card-container">
-                <img src="#" alt="image of Saman's Website" />
-              </div>
-            </ProjectCard>
-          </div>
-        </ProjectGrid>
+            </div>
+            <div class="right-side">
+              <ProjectCard>
+                <Title2>Saman's Website</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div className="card-container">
+                  <img src="#" alt="image of Saman's Website" />
+                </div>
+              </ProjectCard>
+            </div>
+          </ProjectGrid>
+        </Codes>
       </WorkWrapper>
     </Container>
   );

@@ -14,21 +14,22 @@ const HeroWrapper = styled.section`
   .hero-title-container {
     position: relative;
     ::before {
-      /* content: "<h1>"; */
+      content: "<h1>";
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
     }
 
     .title1-title2-wrapper {
+      position: relative;
       ::after {
-        /* content: "</h1>"; */
+        content: "</h1>";
         color: ${colors.fontColor.fontColor2};
         font-family: ${fonts.codes.fontFamily};
         font-size: ${fonts.codes.size}rem;
         position: absolute;
-        left: 30vw;
-        bottom: 2.6vw;
+        /* left: 30rem; */
+        bottom: .4rem;
       }
     }
     .title1 {
@@ -67,19 +68,19 @@ const HeroWrapper = styled.section`
     position: relative;
     ::before {
       position: absolute;
-      /* content: "<p>"; */
+      content: "<p>";
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
-      top: 2vw;
+      bottom: 4rem;
     }
     ::after {
-      /* content: "</p>"; */
+      content: "</p>";
       color: ${colors.fontColor.fontColor2};
       font-family: ${fonts.codes.fontFamily};
       font-size: ${fonts.codes.size}rem;
       position: absolute;
-      bottom: 2vw;
+      top: 4rem;
       left: 0rem;
     }
   }
@@ -103,6 +104,7 @@ export default function Hero() {
           <div> {"<htm>"}</div>
           <div> {"<body>"}</div>
         </CodeDesign>
+
         <div className="hero-title-container">
           <section className="title1-title2-wrapper">
             <Title1 className="title1">Hi! &nbsp; I'm </Title1>

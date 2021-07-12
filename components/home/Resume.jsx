@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Title1, Title2, Title3, Button ,Arrow3} from "../styles";
+import { Container, Title1, Title2, Title3, Button ,Arrow3, Codes} from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
 
@@ -34,26 +34,26 @@ const Tag = styled.div`
   }
 `;
 
-const Codes = styled.section`
-  position: relative;
-  margin-bottom: 5rem;
-  ::before {
-    position: absolute;
-    content: "<section>";
-    color: ${colors.fontColor.fontColor2};
-    font-family: ${fonts.codes.fontFamily};
-    font-size: ${fonts.codes.size}rem;
-    top: -2rem;
-  }
-  ::after {
-    position: absolute;
-    content: "</section>";
-    color: ${colors.fontColor.fontColor2};
-    font-family: ${fonts.codes.fontFamily};
-    font-size: ${fonts.codes.size}rem;
-    bottom: -2rem;
-  }
-`;
+// const Codes = styled.section`
+//   position: relative;
+//   margin-bottom: 5rem;
+//   ::before {
+//     position: absolute;
+//     content: "<section>";
+//     color: ${colors.fontColor.fontColor2};
+//     font-family: ${fonts.codes.fontFamily};
+//     font-size: ${fonts.codes.size}rem;
+//     top: -2rem;
+//   }
+//   ::after {
+//     position: absolute;
+//     content: "</section>";
+//     color: ${colors.fontColor.fontColor2};
+//     font-family: ${fonts.codes.fontFamily};
+//     font-size: ${fonts.codes.size}rem;
+//     bottom: -2rem;
+//   }
+// `;
 
 const arrowBounce = keyframes`
   0% {
@@ -106,9 +106,7 @@ const ResumeCard = styled.div`
 
   @media (max-width: ${tablet}) {
     margin-bottom: 5rem;
-    /* .left-side1 {
-      margin-left: 5em;
-    } */
+    
   }
   .card-row {
     display: flex;
@@ -229,7 +227,7 @@ export default function Resume() {
         </Arrow3>
       </section>
 
-      <Codes>
+      <Codes content="section">
         <Title2>Education {"{"} </Title2>
     
         <EducationGrid>
@@ -295,8 +293,8 @@ export default function Resume() {
           </div>
         </EducationGrid>
         <Title2>{"}"} </Title2>
-      </Codes>
-      <Codes>
+      </Codes >
+      <Codes content="section">
         <Skills>
           <Title2>Skills {"{"}</Title2>
           <section>
@@ -319,7 +317,7 @@ export default function Resume() {
           <Title2> {"}"}</Title2>
         </Skills>
       </Codes>
-      <Codes>
+      <Codes content="section">
         <Tools>
           <Title2>Tools {"{"}</Title2>
           <section>

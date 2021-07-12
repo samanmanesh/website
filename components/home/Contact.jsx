@@ -2,22 +2,18 @@ import React, { useState, useRef } from "react";
 // import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { fonts, colors } from "../styles/design";
-import { Button } from "../styles";
+import { Button, Codes } from "../styles";
 // import * as emailjs from 'emailjs-com';
-
 
 //#region -styling-
 const ContactContainer = styled.section`
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 `;
 
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* & > * {
-    border-radius: 0.1rem;
-  } */
 `;
 
 const Input = styled.input`
@@ -90,7 +86,8 @@ export default function Contact({ setAlert }) {
     for (let child of e.target.children)
       if (child.name) combineMessage[child.name] = child.value;
 
-    emailjs.send(
+    emailjs
+      .send(
         "service_1dgi6wn",
         "template_xz8wurx",
         combineMessage,
@@ -115,18 +112,20 @@ export default function Contact({ setAlert }) {
 
   return (
     <ContactContainer>
-      <ContactForm onSubmit={handleSubmit} disabled={lock} ref={inputRef}>
-        {/* <Label>Your Name</Label> */}
-        <Input type="text" name="user_name" placeholder="Your Name" />
-        {/* <Label>Your Email</Label> */}
-        <Input type="email" name="user_email" placeholder="Your Email" />
-        {/* <Label>Message</Label> */}
-        <TextArea type="text" name="message" placeholder="Message" />
-        <Button type="submit" id="btnsubmit" disabled={lock}>
-          <span>Send Message !</span>
-          <img src="arrow5-line-right.svg" alt="arrow type5" />
-        </Button>
-      </ContactForm>
+      <Codes content="form">
+        <ContactForm onSubmit={handleSubmit} disabled={lock} ref={inputRef}>
+          {/* <Label>Your Name</Label> */}
+          <Input type="text" name="user_name" placeholder="Your Name" />
+          {/* <Label>Your Email</Label> */}
+          <Input type="email" name="user_email" placeholder="Your Email" />
+          {/* <Label>Message</Label> */}
+          <TextArea type="text" name="message" placeholder="Message" />
+          <Button type="submit" id="btnsubmit" disabled={lock}>
+            <span>Send Message !</span>
+            <img src="arrow5-line-right.svg" alt="arrow type5" />
+          </Button>
+        </ContactForm>
+      </Codes>
     </ContactContainer>
   );
 }

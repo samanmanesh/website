@@ -90,6 +90,10 @@ export const Container = styled.section`
   /* border: 1px solid rgb(51, 136, 255); */
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+  margin-bottom: 15rem;
+  :last-child{
+    margin-bottom: 0;
+  }
 
   @media (max-width: ${tablet}) {
     width: 100%;
@@ -122,8 +126,7 @@ export const Container = styled.section`
   }
 
   .footer-note-container {
-    margin-top: 5rem;
-
+    /* margin-top: 5rem; */
     border-top: 1px solid ${colors.fontColor.fontColor1};
     display: flex;
     justify-content: flex-end;
@@ -181,12 +184,12 @@ export const Button = styled.button`
   }
 `;
 
-const Codes = styled.section`
+export const Codes = styled.section`
   position: relative;
   margin-bottom: 5rem;
   ::before {
     position: absolute;
-    content: "<section>";
+    content: "  <${props => props.content}> " ;
     color: ${colors.fontColor.fontColor2};
     font-family: ${fonts.codes.fontFamily};
     font-size: ${fonts.codes.size}rem;
@@ -194,7 +197,7 @@ const Codes = styled.section`
   }
   ::after {
     position: absolute;
-    content: "</section>";
+    content: "</${props => props.content}>";
     color: ${colors.fontColor.fontColor2};
     font-family: ${fonts.codes.fontFamily};
     font-size: ${fonts.codes.size}rem;
