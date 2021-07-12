@@ -68,7 +68,7 @@ export const Container = styled.section`
   min-height: 100vh;
   width: 75%;
   border: 1px solid rgb(51, 136, 255);
-  padding-inline: 0.5rem;
+  padding-inline: 0.8rem;
 
   @media (max-width: ${tablet}) {
     width: 100%;

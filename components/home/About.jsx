@@ -50,13 +50,15 @@ const AboutGrid = styled.section`
   }
 
   .body {
-    max-width: 80%;
+    @media (max-width: ${mobile}){
+     max-width: 80%;
+    }
     margin-bottom: 5rem;
     margin-inline: auto;
   }
   .person-image-container {
     border: 1px solid white;
-    max-height: 30rem;
+    min-height: 30rem;
     max-width: 60%;
     /* margin-inline: auto; */
   }
