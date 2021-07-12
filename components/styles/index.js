@@ -87,7 +87,7 @@ export const Arrow3 = styled.section`
 export const Container = styled.section`
   min-height: 100vh;
   width: 75%;
-  border: 1px solid rgb(51, 136, 255);
+  /* border: 1px solid rgb(51, 136, 255); */
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 

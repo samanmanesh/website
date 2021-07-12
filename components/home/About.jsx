@@ -50,9 +50,9 @@ const AboutGrid = styled.section`
   }
 
   .body {
-    @media (max-width: ${mobile}) {
-      max-width: 80%;
-    }
+    max-width: 80%;
+    /* @media (min-width: ${mobile}) {
+    } */
     margin-bottom: 5rem;
     /* margin-inline: auto; */
     margin-left: auto;
