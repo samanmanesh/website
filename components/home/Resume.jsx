@@ -113,7 +113,7 @@ const ResumeCard = styled.div`
   .card-row {
     display: flex;
     border-bottom: 2px solid white;
-    padding-block: 1rem;
+    padding: 1rem 0;
 
     span:nth-child(2) {
       margin-left: auto;
