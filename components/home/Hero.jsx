@@ -102,7 +102,16 @@ const easing = [0.6, -0.05, 0.01, 0.99];
 
 const fadeInUp = {
   initial: { y: 60, opacity: 0 },
-  animate: { y: 0, opacity: 1, transition: { duration: 1, ease: easing, delay:1 } },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: easing, delay: 1 },
+  }
+};
+
+const fadeInLeft = {
+  initial: { x: 1000, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
 };
 
 const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
@@ -120,17 +129,15 @@ export default function Hero() {
           <motion.section variants={stagger} className="title1-title2-wrapper">
             <Title1
               className="title1"
-              initial={{ x: 1000, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: .5 }}
+              variants ={fadeInLeft}
+              transition={{ delay: 0.5 }}
             >
               Hi! &nbsp; I'm{" "}
             </Title1>
             <Title1
               className="title2"
-              className="title1"
-              initial={{ x: 1000, opacity: 0 }}
-              animate={{ x: 250, opacity: 1 }}
+              initial={{x: 1000, opacity: 0}}
+              animate={{x: "calc(1rem + .5vw )", opacity: 1}}
               transition={{ delay: 1 }}
             >
               Saman,

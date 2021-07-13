@@ -11,6 +11,8 @@ import {
 } from "../styles";
 import { mobile, tablet, desktop, fonts } from "../styles/design";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 // import SamitoneImage from "./Samitone.png";
 
 // #region -styling-
@@ -89,11 +91,17 @@ const ProjectGrid = styled.section`
 `;
 //#endregion
 
+
+const fadeInLeft = {
+  initial: { x: 1000, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+};
+
 export default function Work() {
   return (
-    <Container>
+    <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
       <WorkWrapper>
-        <section className="titles-container" id="work">
+        <motion.section variants={fadeInLeft} className="titles-container" id="work">
           <Title3>Selected Works</Title3>
           <Arrow3>
             <img
@@ -102,7 +110,7 @@ export default function Work() {
               className="arrow-type3"
             />
           </Arrow3>
-        </section>
+        </motion.section>
         <Codes content="section">
           <ProjectGrid>
             <div class="left-side">
