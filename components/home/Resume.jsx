@@ -4,36 +4,37 @@ import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
 import Education from "./Education";
 import Skills from "./Skills"
+import Tools from "./Tools";
 //#region - styling-
-const Tag = styled.div`
-  /* padding: 0.5rem .5rem; */
-  border-bottom-left-radius: 0.3rem;
-  border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
-  position: relative;
-  overflow: hidden;
-  transition: all 0.2s ease;
-  ::before {
-    content: "| ";
-    color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
-  }
-  ::after {
-    content: " ";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
-    mix-blend-mode: difference;
-    transition: all 0.5s ease;
-  }
-  &:hover {
-    ::after {
-      /* color: #000000; */
-      height: 100%;
-    }
-  }
-`;
+// const Tag = styled.div`
+//   /* padding: 0.5rem .5rem; */
+//   border-bottom-left-radius: 0.3rem;
+//   border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+//   position: relative;
+//   overflow: hidden;
+//   transition: all 0.2s ease;
+//   ::before {
+//     content: "| ";
+//     color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+//   }
+//   ::after {
+//     content: " ";
+//     position: absolute;
+//     bottom: -2px;
+//     left: 0;
+//     width: 100%;
+//     height: 2px;
+//     background-color: ${(props) => props.color ?? css`rgb(20, 63, 191)`};
+//     mix-blend-mode: difference;
+//     transition: all 0.5s ease;
+//   }
+//   &:hover {
+//     ::after {
+//       /* color: #000000; */
+//       height: 100%;
+//     }
+//   }
+// `;
 
 // const Codes = styled.section`
 //   position: relative;
@@ -56,104 +57,104 @@ const Tag = styled.div`
 //   }
 // `;
 
-const arrowBounce = keyframes`
-  0% {
-    transform: translate(0,0);
-  }
-  50% {
-    transform: translate(3px,-3px);
-  }
-  100% {
-    transform: translate(0,0);
-  }
-`;
+// const arrowBounce = keyframes
+//   0% {
+//     transform: translate(0,0);
+//   }
+//   50% {
+//     transform: translate(3px,-3px);
+//   }
+//   100% {
+//     transform: translate(0,0);
+//   }
+// `;
 
-const EducationGrid = styled.section`
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+// const EducationGrid = styled.section`
+//   margin-top: 3rem;
+//   margin-bottom: 3rem;
 
-  @media (min-width: ${mobile}) {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "leftA ."
-      ". right"
-      "leftB .";
+//   @media (min-width: ${mobile}) {
+//     display: grid;
+//     gap: 2rem;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//       "leftA ."
+//       ". right"
+//       "leftB .";
 
-    .left-side {
-      grid-area: leftA;
-    }
-    .left-side2 {
-      grid-area: leftB;
-    }
-    .right-side {
-      grid-area: right;
-    }
-  }
-`;
-const ResumeCard = styled.div`
+//     .left-side {
+//       grid-area: leftA;
+//     }
+//     .left-side2 {
+//       grid-area: leftB;
+//     }
+//     .right-side {
+//       grid-area: right;
+//     }
+//   }
+// `;
+// const ResumeCard = styled.div`
   
-  @media (max-width: ${mobile}) {
-    font-size: 1.1rem;
-    margin-left: ${(props) => props.left && "2.5rem"};
-    margin-right: ${(props) => props.right && "2.5rem"};
-  }
+//   @media (max-width: ${mobile}) {
+//     font-size: 1.1rem;
+//     margin-left: ${(props) => props.left && "2.5rem"};
+//     margin-right: ${(props) => props.right && "2.5rem"};
+//   }
 
-  @media (min-width: ${mobile}) {
-    font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
-  }
+//   @media (min-width: ${mobile}) {
+//     font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
+//   }
 
-  @media (max-width: ${tablet}) {
-    margin-bottom: 5rem;
+//   @media (max-width: ${tablet}) {
+//     margin-bottom: 5rem;
     
-  }
-  .card-row {
-    display: flex;
-    border-bottom: 2px solid white;
-    padding: 1rem 0;
+//   }
+//   .card-row {
+//     display: flex;
+//     border-bottom: 2px solid white;
+//     padding: 1rem 0;
 
-    span:nth-child(2) {
-      margin-left: auto;
-    }
+//     span:nth-child(2) {
+//       margin-left: auto;
+//     }
 
-    .link {
-      color: ${colors.button.secondary};
-      padding-inline: 0.2rem;
-    }
+//     .link {
+//       color: ${colors.button.secondary};
+//       padding-inline: 0.2rem;
+//     }
 
-    .arrow {
-      /* transition: all 0.1s ease; */
-      animation: ${arrowBounce} linear infinite 0.6s;
-      animation-direction: alternate;
-      animation-fill-mode: forwards;
-      animation-play-state: paused;
-    }
-    .link-wrapper {
-      display: flex;
-      align-items: center;
-      /* transition: all 5s ease; */
-      cursor: pointer;
-      &:hover {
-        /* color: white; */
-        .link {
-          color: white;
-          transition: all 0.1s ease;
-        }
+//     .arrow {
+//       /* transition: all 0.1s ease; */
+//       animation: ${arrowBounce} linear infinite 0.6s;
+//       animation-direction: alternate;
+//       animation-fill-mode: forwards;
+//       animation-play-state: paused;
+//     }
+//     .link-wrapper {
+//       display: flex;
+//       align-items: center;
+//       /* transition: all 5s ease; */
+//       cursor: pointer;
+//       &:hover {
+//         /* color: white; */
+//         .link {
+//           color: white;
+//           transition: all 0.1s ease;
+//         }
 
-        .arrow {
-          color: white;
-          animation-play-state: running;
-        }
-      }
-    }
+//         .arrow {
+//           color: white;
+//           animation-play-state: running;
+//         }
+//       }
+//     }
 
-    .arrow-type4 {
-      align-self: start;
-    }
-  }
-`;
+//     .arrow-type4 {
+//       align-self: start;
+//     }
+//   }
+// `;
 
 // const Skills = styled.section`
 //   margin-top: 8rem;
@@ -179,27 +180,27 @@ const ResumeCard = styled.div`
 //     }
 //   }
 // `;
-const Tools = styled.section`
-  margin-top: 8rem;
+// const Tools = styled.section`
+//   margin-top: 8rem;
 
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .tools-container {
-      max-width: 50%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+//   section {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .tools-container {
+//       max-width: 50%;
+//       display: flex;
+//       justify-content: space-between;
+//       flex-wrap: wrap;
 
-      & > * {
-        padding: 1rem;
-        margin: 1rem 1rem;
-        font-size: 1.3rem;
-      }
-    }
-  }
-`;
+//       & > * {
+//         padding: 1rem;
+//         margin: 1rem 1rem;
+//         font-size: 1.3rem;
+//       }
+//     }
+//   }
+// `;
 
 const DownloadResume = styled.div`
   /* background: #562222; */
@@ -320,7 +321,7 @@ export default function Resume() {
         </Skills>
       </Codes> */}
       <Skills />  
-      <Codes content="section">
+      {/* <Codes content="section">
         <Tools>
           <Title2>Tools {"{"}</Title2>
           <section>
@@ -335,7 +336,8 @@ export default function Resume() {
           </section>
           <Title2>{"}"}</Title2>
         </Tools>
-      </Codes>
+      </Codes> */}
+      <Tools />
       <DownloadResume>
         <Button>
           <span>Download Reśumé</span>

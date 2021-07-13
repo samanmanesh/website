@@ -2,6 +2,7 @@ import React from "react";
 import {Title2, Codes } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled from "styled-components";
+
 const SkillsWrapper = styled.div``;
 
 // const SkillsContainer = styled.section`
@@ -85,7 +86,7 @@ const Tag = styled.div`
 export default function Skills() {
   return (
     <SkillsWrapper>
-      <Codes>
+      <Codes content="section">
         <SkillsContainer>
           <Title2>Skills {"{"}</Title2>
           <section>
