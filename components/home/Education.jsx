@@ -54,9 +54,13 @@ const ResumeCard = styled.div`
 
   @media (max-width: ${tablet}) {
     margin-bottom: 5rem;
-    .left-side1 {
+    /* .left-side {
       margin-left: 5em;
-    }
+    } */
+   
+    margin-left: ${props => props.left && `2rem` };
+    margin-right: ${props => props.right && `2rem`};
+
   }
   .card-row {
     display: flex;
@@ -112,7 +116,7 @@ export default function Education() {
 
         <EducationGrid>
           <div className="left-side">
-            <ResumeCard>
+            <ResumeCard left>
               <div className="card-row">
                 <span>Computer Programming &amp; Analysis</span>
                 <span className="link-wrapper">
@@ -132,7 +136,7 @@ export default function Education() {
             </ResumeCard>
           </div>
           <div className="left-side2">
-            <ResumeCard>
+            <ResumeCard right>
               <div className="card-row">
                 <span>Civil Engineering</span>
                 <span className="link-wrapper">
@@ -152,7 +156,7 @@ export default function Education() {
             </ResumeCard>
           </div>
           <div className="right-side">
-            <ResumeCard>
+            <ResumeCard left>
               <div className="card-row">
                 <span>Tömer, Turkish Language Program</span>
                 <span className="link-wrapper">

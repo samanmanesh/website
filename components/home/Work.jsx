@@ -33,7 +33,7 @@ const ProjectCard = styled.div`
     border: 1px solid #5145fc;
     max-width: 100%;
     /* min-width: calc(10rem + 10vw); */
-    min-height: 16.875rem;
+    /* min-height: 16.875rem; */
     /* margin-top: 1rem; */
     /* min-width: 40vw; */
     /* min-height: 30vh; */
