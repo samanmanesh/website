@@ -2,7 +2,7 @@ import React from "react";
 import { Title1, Container, Subtitle, Description } from "../styles";
 import styled from "styled-components";
 import { fonts, colors, tablet, mobile } from "../styles/design";
-
+import { motion } from "framer-motion";
 // #region - styling-
 
 const HeroWrapper = styled.section`
@@ -10,7 +10,7 @@ const HeroWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
+
   .hero-title-container {
     position: relative;
     ::before {
@@ -29,7 +29,7 @@ const HeroWrapper = styled.section`
         font-size: ${fonts.codes.size}rem;
         position: absolute;
         /* left: 30rem; */
-        bottom: .4rem;
+        bottom: 0.4rem;
       }
     }
     .title1 {
@@ -95,14 +95,21 @@ const CodeDesign = styled.section`
   }
 `;
 
-const AwesomeCodeDesign = styled(CodeDesign)`
-  
-`;
+const AwesomeCodeDesign = styled(CodeDesign)``;
 //#endregion
+
+const easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: { y: 60, opacity: 0 },
+  animate: { y: 0, opacity: 1, transition: { duration: 1, ease: easing, delay:3 } },
+};
+
+const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
 
 export default function Hero() {
   return (
-    <Container>
+    <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
       <HeroWrapper>
         <CodeDesign>
           <div> {"<htm>"}</div>
@@ -110,20 +117,35 @@ export default function Hero() {
         </CodeDesign>
 
         <div className="hero-title-container">
-          <section className="title1-title2-wrapper">
-            <Title1 className="title1">Hi! &nbsp; I'm </Title1>
-            <Title1 className="title2">Saman,</Title1>
-          </section>
-          <div className="subtitle">
+          <motion.section variants={stagger} className="title1-title2-wrapper">
+            <Title1
+              className="title1"
+              initial={{ x: 1000, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 2 }}
+            >
+              Hi! &nbsp; I'm{" "}
+            </Title1>
+            <Title1
+              className="title2"
+              className="title1"
+              initial={{ x: 1000, opacity: 0 }}
+              animate={{ x: 245, opacity: 1 }}
+              transition={{ delay: 3 }}
+            >
+              Saman,
+            </Title1>
+          </motion.section>
+          <motion.div variants={fadeInUp} className="subtitle">
             <Subtitle>
               <strong> Full Stack Developer </strong> Based in Toronto
             </Subtitle>
-          </div>
+          </motion.div>
         </div>
-        <Description smaller>
-          <p className="hero-paragraph">
+        <Description variants={stagger} smaller>
+          <motion.p variants={fadeInUp} className="hero-paragraph">
             I make elegant, efficient, and user-friendly digital experiences
-          </p>
+          </motion.p>
         </Description>
       </HeroWrapper>
     </Container>

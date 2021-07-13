@@ -1,8 +1,9 @@
 import styled, { css, keyframes } from "styled-components";
 import { mobile, tablet, desktop, fonts, colors } from "./design";
+import { motion } from "framer-motion"
 // #region -- Typography --
 
-export const Title1 = styled.h1`
+export const Title1 = styled(motion.h1)`
   margin: 0;
   padding: 0;
   font-size: 3rem;
@@ -84,7 +85,7 @@ export const Arrow3 = styled.section`
 
 // #region -- Layout --
 
-export const Container = styled.section`
+export const Container = styled(motion.section)`
   min-height: 100vh;
   width: 75%;
   /* border: 1px solid rgb(51, 136, 255); */
