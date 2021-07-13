@@ -73,7 +73,7 @@ const Nav = styled.nav`
     }
 
     top: 0;
-    transition: all 0.9s ease;
+    transition: all 1.5s ease;
     ${(props) =>
       props.condition &&
       `
