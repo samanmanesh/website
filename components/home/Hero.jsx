@@ -102,7 +102,7 @@ const easing = [0.6, -0.05, 0.01, 0.99];
 
 const fadeInUp = {
   initial: { y: 60, opacity: 0 },
-  animate: { y: 0, opacity: 1, transition: { duration: 1, ease: easing, delay:3 } },
+  animate: { y: 0, opacity: 1, transition: { duration: 1, ease: easing, delay:1 } },
 };
 
 const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
@@ -122,7 +122,7 @@ export default function Hero() {
               className="title1"
               initial={{ x: 1000, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 2 }}
+              transition={{ delay: .5 }}
             >
               Hi! &nbsp; I'm{" "}
             </Title1>
@@ -130,8 +130,8 @@ export default function Hero() {
               className="title2"
               className="title1"
               initial={{ x: 1000, opacity: 0 }}
-              animate={{ x: 245, opacity: 1 }}
-              transition={{ delay: 3 }}
+              animate={{ x: 250, opacity: 1 }}
+              transition={{ delay: 1 }}
             >
               Saman,
             </Title1>
