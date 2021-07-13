@@ -106,7 +106,7 @@ const fadeInUp = {
     y: 0,
     opacity: 1,
     transition: { duration: 1, ease: easing, delay: 1 },
-  }
+  },
 };
 
 const fadeInLeft = {
@@ -118,7 +118,7 @@ const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
 
 export default function Hero() {
   return (
-    <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
+    <Container exit={{ opacity: 0 }} initial="initial" animate="animate" >
       <HeroWrapper>
         <CodeDesign>
           <div> {"<htm>"}</div>
@@ -129,15 +129,15 @@ export default function Hero() {
           <motion.section variants={stagger} className="title1-title2-wrapper">
             <Title1
               className="title1"
-              variants ={fadeInLeft}
+              variants={fadeInLeft}
               transition={{ delay: 0.5 }}
             >
               Hi! &nbsp; I'm{" "}
             </Title1>
             <Title1
               className="title2"
-              initial={{x: 1000, opacity: 0}}
-              animate={{x: "calc(1rem + .5vw )", opacity: 1}}
+              initial={{ x: 1000, opacity: 0 }}
+              animate={{ x: "calc(1rem + .5vw )", opacity: 1 }}
               transition={{ delay: 1 }}
             >
               Saman,

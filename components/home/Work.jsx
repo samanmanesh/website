@@ -99,7 +99,7 @@ const fadeInLeft = {
 
 export default function Work() {
   return (
-    <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
+    <Container exit={{ opacity: 0 }} initial="initial" animate="animate" >
       <WorkWrapper>
         <motion.section variants={fadeInLeft} className="titles-container" id="work">
           <Title3>Selected Works</Title3>
