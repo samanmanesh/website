@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import {
   Title2,
@@ -12,7 +12,8 @@ import {
 import { mobile, tablet, desktop, fonts } from "../styles/design";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import { useInView } from 'react-intersection-observer';
+import {useAnimation} from "framer-motion";
 // import SamitoneImage from "./Samitone.png";
 
 // #region -styling-
@@ -28,7 +29,7 @@ const WorkWrapper = styled.section`
   }
 `;
 
-const ProjectCard = styled.div`
+const ProjectCard = styled(motion.div)`
   /* margin-top: 3rem; */
   /* margin-bottom: 5rem; */
   .card-container {
@@ -98,10 +99,37 @@ const fadeInLeft = {
 };
 
 export default function Work() {
+
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.3,
+  });
+
+  const fadeInLeft = useAnimation();
+  const fadeInUp = useAnimation();
+  const fadeInDown = useAnimation();
+
+  useEffect(() => {
+    
+    if(inView){
+
+      fadeInLeft.start({ x: 0, opacity: 1 });
+      fadeInUp.start({ y: 0, opacity: 1, transition:{ duration:1 , delay: .5}});
+      fadeInDown.start({ y: 0, opacity: 1, transition:{ duration:1, delay: .5 }});
+    }
+    if(!inView){
+      fadeInLeft.start({ x: 1000, opacity: 0, transition:{ duration:1 , delay: .5} });
+      fadeInUp.start({ y: 100, opacity: 0, transition:{ duration:1 , delay: .5} });
+      fadeInDown.start({ y: -100, opacity: 1, transition:{ duration:1, delay: .5 }});
+
+    }
+
+  }, [inView])
+
   return (
-    <Container exit={{ opacity: 0 }} initial="initial" animate="animate" >
+    <Container exit={{ opacity: 0 }} initial="initial" animate="animate" ref={ref}>
       <WorkWrapper>
-        <motion.section variants={fadeInLeft} className="titles-container" id="work">
+        <motion.section animate={fadeInLeft} className="titles-container" id="work">
           <Title3>Selected Works</Title3>
           <Arrow3>
             <img
@@ -112,9 +140,9 @@ export default function Work() {
           </Arrow3>
         </motion.section>
         <Codes content="section">
-          <ProjectGrid>
+          <ProjectGrid >
             <div class="left-side">
-              <ProjectCard>
+              <ProjectCard animate={fadeInUp}>
                 <Title2>Samitone</Title2>
                 <div className="subtitle-arrow-container">
                   <Subtitle smaller>
@@ -159,7 +187,7 @@ export default function Work() {
             </ProjectCard> */}
             </div>
             <div class="right-side">
-              <ProjectCard>
+              <ProjectCard animate={fadeInDown}>
                 <Title2>Saman's Website</Title2>
                 <div className="subtitle-arrow-container">
                   <Subtitle smaller>
