@@ -5,27 +5,6 @@ import styled from "styled-components";
 
 const SkillsWrapper = styled.div``;
 
-// const SkillsContainer = styled.section`
-//   margin-top: 8rem;
-//   section {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     .skill-container {
-//       max-width: 80%;
-//       display: flex;
-//       justify-content: space-evenly;
-//       flex-wrap: wrap;
-
-//       & > * {
-//         padding: 1rem;
-//         margin: 1rem 1rem;
-//         font-size: 1.3rem;
-//       }
-//     }
-//   }
-// `;
-
 const SkillsContainer = styled.section`
   margin-top: 8rem;
   section {
