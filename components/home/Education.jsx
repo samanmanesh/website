@@ -128,7 +128,7 @@ const ResumeCard = styled.div`
 export default function Education() {
   return (
     <EducationWrapper>
-      <Codes>
+      <Codes content="section">
         <Title2>Education {"{"} </Title2>
 
         <EducationGrid>

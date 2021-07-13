@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Title1, Title2, Title3, Button ,Arrow3, Codes} from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled, { css, keyframes } from "styled-components";
-
+import Education from "./Education";
+import Skills from "./Skills"
 //#region - styling-
 const Tag = styled.div`
   /* padding: 0.5rem .5rem; */
@@ -154,30 +155,30 @@ const ResumeCard = styled.div`
   }
 `;
 
-const Skills = styled.section`
-  margin-top: 8rem;
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .skill-container {
-      max-width: 80%;
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      font-size: 1.1rem;
+// const Skills = styled.section`
+//   margin-top: 8rem;
+//   section {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .skill-container {
+//       max-width: 80%;
+//       display: flex;
+//       justify-content: space-evenly;
+//       flex-wrap: wrap;
+//       font-size: 1.1rem;
 
-      @media (min-width: ${mobile}){
-        font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
-      }
+//       @media (min-width: ${mobile}){
+//         font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
+//       }
 
-      & > * {
-        padding: 1rem;
-        margin: 1rem 1rem;
-      }
-    }
-  }
-`;
+//       & > * {
+//         padding: 1rem;
+//         margin: 1rem 1rem;
+//       }
+//     }
+//   }
+// `;
 const Tools = styled.section`
   margin-top: 8rem;
 
@@ -227,7 +228,8 @@ export default function Resume() {
         </Arrow3>
       </section>
 
-      <Codes content="section">
+    <Education />
+        {/* <Codes content="section">
         <Title2>Education {"{"} </Title2>
     
         <EducationGrid>
@@ -293,8 +295,8 @@ export default function Resume() {
           </div>
         </EducationGrid>
         <Title2>{"}"} </Title2>
-      </Codes >
-      <Codes content="section">
+      </Codes > */}
+      {/* <Codes content="section">
         <Skills>
           <Title2>Skills {"{"}</Title2>
           <section>
@@ -316,7 +318,8 @@ export default function Resume() {
           </section>
           <Title2> {"}"}</Title2>
         </Skills>
-      </Codes>
+      </Codes> */}
+      <Skills />  
       <Codes content="section">
         <Tools>
           <Title2>Tools {"{"}</Title2>

@@ -94,6 +94,10 @@ const CodeDesign = styled.section`
     padding-left: 1rem;
   }
 `;
+
+const AwesomeCodeDesign = styled(CodeDesign)`
+  
+`;
 //#endregion
 
 export default function Hero() {

@@ -4,6 +4,27 @@ import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled from "styled-components";
 const SkillsWrapper = styled.div``;
 
+// const SkillsContainer = styled.section`
+//   margin-top: 8rem;
+//   section {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .skill-container {
+//       max-width: 80%;
+//       display: flex;
+//       justify-content: space-evenly;
+//       flex-wrap: wrap;
+
+//       & > * {
+//         padding: 1rem;
+//         margin: 1rem 1rem;
+//         font-size: 1.3rem;
+//       }
+//     }
+//   }
+// `;
+
 const SkillsContainer = styled.section`
   margin-top: 8rem;
   section {
@@ -15,16 +36,19 @@ const SkillsContainer = styled.section`
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      font-size: 1.1rem;
+
+      @media (min-width: ${mobile}){
+        font-size: calc(${fonts.paragraph.primary.size}rem + 0.5vw);
+      }
 
       & > * {
         padding: 1rem;
         margin: 1rem 1rem;
-        font-size: 1.3rem;
       }
     }
   }
 `;
-
 
 const Tag = styled.div`
   /* padding: 0.5rem .5rem; */
@@ -56,26 +80,7 @@ const Tag = styled.div`
   }
 `;
 
-// const Codes = styled.section`
-//   position: relative;
-//   margin-bottom: 5rem;
-//   ::before {
-//     position: absolute;
-//     content: "<section>";
-//     color: ${colors.fontColor.fontColor2};
-//     font-family: ${fonts.codes.fontFamily};
-//     font-size: ${fonts.codes.size}rem;
-//     top: -2rem;
-//   }
-//   ::after {
-//     position: absolute;
-//     content: "</section>";
-//     color: ${colors.fontColor.fontColor2};
-//     font-family: ${fonts.codes.fontFamily};
-//     font-size: ${fonts.codes.size}rem;
-//     bottom: -2rem;
-//   }
-// `;
+
 
 export default function Skills() {
   return (
