@@ -3,6 +3,7 @@ import { Title1, Container, Subtitle, Description } from "../styles";
 import styled from "styled-components";
 import { fonts, colors, tablet, mobile } from "../styles/design";
 import { motion } from "framer-motion";
+
 // #region - styling-
 
 const HeroWrapper = styled.section`
@@ -95,9 +96,10 @@ const CodeDesign = styled.section`
   }
 `;
 
-const AwesomeCodeDesign = styled(CodeDesign)``;
+// const AwesomeCodeDesign = styled(CodeDesign)``;
 //#endregion
 
+//#region -Animations-
 const easing = [0.6, -0.05, 0.01, 0.99];
 
 const fadeInUp = {
@@ -115,6 +117,7 @@ const fadeInLeft = {
 };
 
 const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
+//#endregion
 
 export default function Hero() {
   return (

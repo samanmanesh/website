@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { mobile, tablet, colors } from "./styles/design";
+import { motion } from "framer-motion";
 
 //#region -styling-
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -32,7 +33,7 @@ const Nav = styled.nav`
       cursor: pointer;
       /* padding-inline: 1rem; */
       margin-inline: 1rem;
-      
+
       //temporary animation for nav items
       position: relative;
       overflow: hidden;
@@ -66,7 +67,8 @@ const Nav = styled.nav`
     position: fixed;
     width: 100%;
     border-bottom: 1px solid white;
-    background: #030304d7;
+    /* background: #030304d7; */
+    background: rgb(23, 24, 28);
     z-index: 100;
     > * {
       font-size: 1rem;
@@ -86,7 +88,7 @@ const Nav = styled.nav`
 
   @media (max-width: ${mobile}) {
     width: 100%;
-    
+
     .anime-function-container {
       display: none;
     }
@@ -100,8 +102,13 @@ const Nav = styled.nav`
 `;
 //#endregion
 
+// #region -Animation-
+
+//#endregion
 export default function NavBar() {
   // const [codeState, setCodeState] = useState("Home");
+
+  // #region -Scrolling Section-
   const scrollHandler = (id) => {
     id.scrollIntoView({ behavior: "smooth" });
 
@@ -139,8 +146,15 @@ export default function NavBar() {
     };
   }, []);
 
+  //#endregion
+
   return (
-    <Nav condition={showNav}>
+    <Nav
+      condition={showNav}
+      // initial={{ y: -100, opacity: 0 }}
+      // animate={{ y: 0 , opacity: 1 }}
+      // transition={{ delay: 0.5 } }
+    >
       <div className="anime-function-container">
         {/* const {codeState} = ( ) ={">"} {"{display"} {codeState}}
         {"}"}; */}
