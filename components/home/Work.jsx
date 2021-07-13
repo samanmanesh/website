@@ -10,6 +10,8 @@ import {
   Codes,
 } from "../styles";
 import { mobile, tablet, desktop, fonts } from "../styles/design";
+import Image from "next/image";
+// import SamitoneImage from "./Samitone.png";
 
 // #region -styling-
 
@@ -121,7 +123,14 @@ export default function Work() {
                   </Arrow2>
                 </div>
                 <div className="card-container">
-                  <img src="#" alt="image of Samitone" />
+                  <Image
+                    src="/Samitone.png"
+                    alt="image of Samitone"
+                    width={400}
+                    layout="responsive"
+                    placeholder="blur"
+                    height={200}
+                  />
                 </div>
               </ProjectCard>
               {/* <ProjectCard>
