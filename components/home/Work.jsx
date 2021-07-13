@@ -58,11 +58,11 @@ const ProjectCard = styled.div`
 
 const ProjectGrid = styled.section`
   .left-side {
-    margin-right: 7rem;
+    margin-right: 4rem;
     margin-bottom: 3rem;
   }
   .right-side {
-    margin-left: 7rem;
+    margin-left: 4rem;
     margin-bottom: 3rem;
   }
 
