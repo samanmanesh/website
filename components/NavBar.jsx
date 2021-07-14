@@ -140,14 +140,14 @@ export default function NavBar() {
       fadeInDown.start({
         y: 1,
         opacity: 1,
-        transition: { duration: .5, delay: 0.2 },
+        transition: { duration: 0.5, delay: 0.1 },
       });
-    } else {
+    } else if (currentPosition > 0 && currentPosition > lastScroll) {
       // setShowNav(false);
       fadeInDown.start({
         y: -55,
         opacity: 0,
-        transition: { duration: .5,delay: 0.2 },
+        transition: { duration: 0.5, delay: 0.1 },
       });
     }
     lastScroll = currentPosition;
