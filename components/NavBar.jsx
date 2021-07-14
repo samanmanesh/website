@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { mobile, tablet, colors } from "./styles/design";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 //#region -styling-
 const Nav = styled(motion.nav)`
@@ -61,21 +61,23 @@ const Nav = styled(motion.nav)`
       margin: 0;
     }
   }
-
+  position: fixed;
+  background: rgb(23, 24, 28);
+  z-index: 100;
   // applying moving nav for just mobile and tablet
-  @media (max-width: ${tablet}) {
-    position: fixed;
-    width: 100%;
-    border-bottom: 1px solid white;
+  @media (min-width: ${tablet}) {
+    /* position: fixed; */
+    /* width: 100%; */
+    border-bottom: 2px solid white;
     /* background: #030304d7; */
-    background: rgb(23, 24, 28);
-    z-index: 100;
+    /* background: rgb(23, 24, 28); */
+    /* z-index: 100; */
     > * {
       font-size: 1rem;
     }
 
     top: 0;
-    transition: all 1.5s ease;
+    /* transition: all 1.5s ease; */
     ${(props) =>
       props.condition &&
       `
@@ -88,7 +90,9 @@ const Nav = styled(motion.nav)`
 
   @media (max-width: ${mobile}) {
     width: 100%;
-
+    /* position: fixed;
+    z-index: 100;
+    background: rgb(23, 24, 28); */
     .anime-function-container {
       display: none;
     }
@@ -124,16 +128,27 @@ export default function NavBar() {
     // }
   };
 
-  const [showNav, setShowNav] = useState(false);
+  // const [showNav, setShowNav] = useState(false);
+  const fadeInDown = useAnimation();
 
   let lastScroll = 0;
   const controlNavbar = () => {
     const currentPosition = window.pageYOffset;
 
-    if (currentPosition > 0 && currentPosition > lastScroll) {
-      setShowNav(true);
+    if (currentPosition > 0 && currentPosition < lastScroll) {
+      // setShowNav(true);
+      fadeInDown.start({
+        y: 1,
+        opacity: 1,
+        transition: { duration: .5, delay: 0.2 },
+      });
     } else {
-      setShowNav(false);
+      // setShowNav(false);
+      fadeInDown.start({
+        y: -55,
+        opacity: 0,
+        transition: { duration: .5,delay: 0.2 },
+      });
     }
     lastScroll = currentPosition;
   };
@@ -150,10 +165,11 @@ export default function NavBar() {
 
   return (
     <Nav
-      condition={showNav}
+      // condition={showNav}
       // initial={{ y: -100, opacity: 0 }}
       // animate={{ y: 0 , opacity: 1 }}
       // transition={{ delay: 0.5 } }
+      animate={fadeInDown}
     >
       <div className="anime-function-container">
         {/* const {codeState} = ( ) ={">"} {"{display"} {codeState}}
