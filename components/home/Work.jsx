@@ -129,13 +129,13 @@ export default function Work() {
       });
       fadeInUp.start({
         y: 100,
-        opacity: 0,
-        transition: { duration: 1, delay: 0.5 },
+        opacity: .01,
+        transition: { duration: 1, delay: 0.7 },
       });
       fadeInDown.start({
         y: -100,
         opacity: 1,
-        transition: { duration: 1, delay: 0.5 },
+        transition: { duration: 1, delay: 0.7 },
       });
     }
   }, [inView]);
