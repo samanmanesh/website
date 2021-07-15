@@ -2,8 +2,8 @@ import React from "react";
 import {Title2, Codes } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
 import styled from "styled-components";
-
-const SkillsWrapper = styled.div``;
+import { motion } from "framer-motion";
+const SkillsWrapper = styled(motion.div)``;
 
 const SkillsContainer = styled.section`
   margin-top: 8rem;
@@ -62,9 +62,9 @@ const Tag = styled.div`
 
 
 
-export default function Skills() {
+export default function Skills({fadeInUp}) {
   return (
-    <SkillsWrapper>
+    <SkillsWrapper animate={fadeInUp}>
       <Codes content="section">
         <SkillsContainer>
           <Title2>Skills {"{"}</Title2>

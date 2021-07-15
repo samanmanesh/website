@@ -91,7 +91,7 @@ export const Container = styled(motion.section)`
   /* border: 1px solid rgb(51, 136, 255); */
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-  margin-bottom: 15rem;
+  margin-bottom: 16rem;
   :last-child{
     margin-bottom: 0;
   }
@@ -102,7 +102,7 @@ export const Container = styled(motion.section)`
 
   .titles-container {
     position: relative;
-    margin-bottom: 13rem;
+    margin-bottom: 18rem;
     display: flex;
     .arrow-type3 {
       margin-left: 0.5rem;
@@ -144,7 +144,7 @@ export const Container = styled(motion.section)`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   all: unset;
   margin: 2rem 2rem;
   text-align: center;
@@ -160,7 +160,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: space-between;
   & > * {
-    padding: 0.5em 1em;
+    padding: 0.6em 1em;
   }
 
   position: relative;
@@ -178,7 +178,7 @@ export const Button = styled.button`
   }
   &:hover {
     transition: all 1s ease;
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
     ::after {
       width: 100%;
     }

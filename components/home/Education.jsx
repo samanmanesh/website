@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css, keyframes } from "styled-components";
 import { Title2, Codes } from "../styles";
 import { tablet, colors, mobile, fonts } from "../styles/design";
-
+import { motion } from "framer-motion";
 const arrowBounce = keyframes`
   0% {
     transform: translate(0,0);
@@ -15,7 +15,7 @@ const arrowBounce = keyframes`
   }
 `;
 
-const EducationWrapper = styled.div``;
+const EducationWrapper = styled(motion.div)``;
 const EducationGrid = styled.section`
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -108,9 +108,9 @@ const ResumeCard = styled.div`
   }
 `;
 
-export default function Education() {
+export default function Education({fadeInUp}) {
   return (
-    <EducationWrapper>
+    <EducationWrapper animate={fadeInUp}>
       <Codes content="section">
         <Title2>Education {"{"} </Title2>
 

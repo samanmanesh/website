@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Title2, Codes} from "../styles";
-
-const ToolsWrapper = styled.section``;
+import { motion } from "framer-motion";
+const ToolsWrapper = styled(motion.section)``;
 
 const Tag = styled.div`
   /* padding: 0.5rem .5rem; */
@@ -58,9 +58,9 @@ const ToolsContainer = styled.section`
     }
   }
 `;
-export default function Tools() {
+export default function Tools({fadeInUp}) {
   return (
-    <ToolsWrapper>
+    <ToolsWrapper animate={fadeInUp}>
       <Codes content="section">
         <ToolsContainer>
           <Title2>Tools {"{"}</Title2>
