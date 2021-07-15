@@ -145,7 +145,7 @@ export default function NavBar() {
     } else if (currentPosition > 0 && currentPosition > lastScroll) {
       // setShowNav(false);
       fadeInDown.start({
-        y: -55,
+        y: -50,
         opacity: 0,
         transition: { duration: 0.5, delay: 0.1 },
       });

@@ -87,10 +87,11 @@ const HeroWrapper = styled.section`
   }
 `;
 
-const CodeDesign = styled.section`
+const CodeDesign = styled(motion.section)`
   color: ${colors.fontColor.fontColor2};
   font-family: ${fonts.codes.fontFamily};
   font-size: ${fonts.codes.size}rem;
+  margin-top: 1.5rem;
   div:nth-child(2) {
     padding-left: 1rem;
   }
@@ -113,30 +114,38 @@ const fadeInUp = {
 
 const fadeInLeft = {
   initial: { x: 1000, opacity: 0 },
-  animate: { x: 0, opacity: 1  },
+  animate: { x: 0, opacity: 1 },
 };
 
-const stagger = { animate: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } } };
+const stagger = {
+  animate: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } },
+};
 //#endregion
 
 export default function Hero() {
-  const title1 =["H","i","!"," "," ", "I" ,"'","m"]
   return (
-    <Container exit={{ opacity: 0 }} initial="initial" animate="animate" >
+    <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
       <HeroWrapper>
-        <CodeDesign>
+        <CodeDesign variants={fadeInUp} transition={{ delay: 0.5 }}>
           <div> {"<htm>"}</div>
           <div> {"<body>"}</div>
         </CodeDesign>
 
-        <div className="hero-title-container">
-          <motion.section variants={stagger} className="title1-title2-wrapper">
-            <Title1
-              className="title1"
-              variants={fadeInLeft}
-              transition={{ delay: 0.5 }}
-            >
-              {[...title1].map((letter) => (<motion.span variants={fadeInLeft}>{letter}</motion.span>))}
+        <motion.div
+          variants={fadeInLeft}
+          transition={{ delay: 0.5 }}
+          className="hero-title-container"
+        >
+          <motion.section className="title1-title2-wrapper" variants={stagger}>
+            <Title1 className="title1">
+              <motion.span>H</motion.span>
+              <motion.span>i</motion.span>
+              <motion.span>!</motion.span>
+              <motion.span>&nbsp;</motion.span>
+              <motion.span>&nbsp;</motion.span>
+              <motion.span>I</motion.span>
+              <motion.span>'</motion.span>
+              <motion.span>m</motion.span>
               {/* Hi! &nbsp; I'm{" "} */}
             </Title1>
             <Title1
@@ -145,7 +154,13 @@ export default function Hero() {
               animate={{ x: "calc(1rem + .5vw )", opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              Saman,
+              <motion.span>S</motion.span>
+              <motion.span>a</motion.span>
+              <motion.span>m</motion.span>
+              <motion.span>a</motion.span>
+              <motion.span>n</motion.span>
+              <motion.span>,</motion.span>
+              {/* Saman, */}
             </Title1>
           </motion.section>
           <motion.div variants={fadeInUp} className="subtitle">
@@ -153,7 +168,7 @@ export default function Hero() {
               <strong> Full Stack Developer </strong> Based in Toronto
             </Subtitle>
           </motion.div>
-        </div>
+        </motion.div>
         <Description variants={stagger} smaller>
           <motion.p variants={fadeInUp} className="hero-paragraph">
             I make elegant, efficient, and user-friendly digital experiences
