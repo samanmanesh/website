@@ -117,6 +117,11 @@ const stagger = {
 };
 //#endregion
 
+// const title12 = {
+//   whileHover: { color: "#5145FC", scale: 1.2, rotate: 20 },
+//   onTap: { color: "#5145FC", scale: 1.2, rotate: 20 },
+// };
+
 export default function Hero() {
   return (
     <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
@@ -135,16 +140,19 @@ export default function Hero() {
             <Title1 className="title1">
               <motion.div
                 whileHover={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}
               >
                 H
               </motion.div>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 i
               </motion.div>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 180 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 180 }}
               >
                 !
               </motion.div>
@@ -152,12 +160,14 @@ export default function Hero() {
               <motion.span>&nbsp;</motion.span>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 I
               </motion.div>
               <motion.span>'</motion.span>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 m
               </motion.div>
@@ -171,26 +181,31 @@ export default function Hero() {
             >
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 S
               </motion.div>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 a
               </motion.div>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 m
               </motion.div>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 a
               </motion.div>
               <motion.div
                 whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
               >
                 n
               </motion.div>
@@ -205,7 +220,11 @@ export default function Hero() {
           </motion.div>
         </motion.div>
         <Description variants={stagger} smaller>
-          <motion.p variants={fadeInUp} whileHover={{ color: "#5850ce", scale:  1.1, }} className="hero-paragraph">
+          <motion.p
+            variants={fadeInUp}
+            whileHover={{ color: "#5850ce", scale: 1.1 }}
+            className="hero-paragraph"
+          >
             I make elegant, efficient, and user-friendly digital experiences
           </motion.p>
         </Description>
