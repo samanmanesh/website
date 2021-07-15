@@ -70,19 +70,19 @@ export default function Skills() {
           <Title2>Skills {"{"}</Title2>
           <section>
             <div className="skill-container">
-              <Tag color="#FA6705">HTML5</Tag>
+              <Tag color={colors.orange}>HTML5</Tag>
               <Tag color="lightblue">CSS3</Tag>
               <Tag color="pink">SASS / SCSS</Tag>
               <Tag color="turquoise">TailwindCSS</Tag>
-              <Tag color="rgb(255,202,40)">JavaScript</Tag>
-              <Tag color="rgb(0,188,212)">ReactJS</Tag>
+              <Tag color={colors.yellow}>JavaScript</Tag>
+              <Tag color={colors.lightBlue}>ReactJS</Tag>
               <Tag color="forestgreen">VueJS</Tag>
               <Tag color="whitesmoke">NextJS</Tag>
-              <Tag color="#2BE3AC">UI / UX Design</Tag>
-              <Tag color="rgb(2,119,189)">C</Tag>
+              <Tag color={colors.lightGreen}>UI / UX Design</Tag>
+              <Tag color={colors.blue}>C</Tag>
               <Tag color="orange">Linux &amp; Unix</Tag>
-              <Tag color="#0AFF33">C#</Tag>
-              <Tag color="#DE05FF">Styled Components</Tag>
+              <Tag color={colors.green}>C#</Tag>
+              <Tag color={colors.pink}>Styled Components</Tag>
             </div>
           </section>
           <Title2> {"}"}</Title2>

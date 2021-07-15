@@ -172,13 +172,13 @@ export default function Hero() {
               </motion.div>
               <motion.div
                 whileHover={{
-                  color: "#5145FC",
+                  color: "rgb(0,188,212)",
                   scale: 1.2,
                   rotate: 180,
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#5145FC",
+                  color: "rgb(0,188,212)",
                   scale: 1.2,
                   rotate: 180,
                   cursor: "pointer",
@@ -190,13 +190,13 @@ export default function Hero() {
               <motion.span>&nbsp;</motion.span>
               <motion.div
                 whileHover={{
-                  color: "#5145FC",
+                  color: "rgb(2,119,189)",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#5145FC",
+                  color: "rgb(2,119,189)",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
@@ -207,13 +207,13 @@ export default function Hero() {
               <motion.span>'</motion.span>
               <motion.div
                 whileHover={{
-                  color: "#5145FC",
+                  color: "#9A57FF",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#5145FC",
+                  color: "#9A57FF",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
@@ -231,13 +231,13 @@ export default function Hero() {
             >
               <motion.div
                 whileHover={{
-                  color: "#5145FC",
+                  color: "#FA6705",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#5145FC",
+                  color: "#FA6705",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
@@ -263,13 +263,13 @@ export default function Hero() {
               </motion.div>
               <motion.div
                 whileHover={{
-                  color: "#5145FC",
+                  color: "#FF2200",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#5145FC",
+                  color: "#FF2200",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
@@ -295,13 +295,13 @@ export default function Hero() {
               </motion.div>
               <motion.div
                 whileHover={{
-                  color: "#5145FC",
+                  color: "#FF5757",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#5145FC",
+                  color: "#FF5757",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
