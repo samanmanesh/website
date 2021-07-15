@@ -113,13 +113,14 @@ const fadeInUp = {
 
 const fadeInLeft = {
   initial: { x: 1000, opacity: 0 },
-  animate: { x: 0, opacity: 1 },
+  animate: { x: 0, opacity: 1  },
 };
 
-const stagger = { animate: { transition: { staggerChildren: 0.1 } } };
+const stagger = { animate: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } } };
 //#endregion
 
 export default function Hero() {
+  const title1 =["H","i","!"," "," ", "I" ,"'","m"]
   return (
     <Container exit={{ opacity: 0 }} initial="initial" animate="animate" >
       <HeroWrapper>
@@ -135,7 +136,8 @@ export default function Hero() {
               variants={fadeInLeft}
               transition={{ delay: 0.5 }}
             >
-              Hi! &nbsp; I'm{" "}
+              {[...title1].map((letter) => (<motion.span variants={fadeInLeft}>{letter}</motion.span>))}
+              {/* Hi! &nbsp; I'm{" "} */}
             </Title1>
             <Title1
               className="title2"
