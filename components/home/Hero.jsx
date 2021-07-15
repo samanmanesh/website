@@ -127,7 +127,7 @@ export default function Hero() {
     <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
       <HeroWrapper>
         <CodeDesign variants={fadeInUp} transition={{ delay: 0.5 }}>
-          <div> {"<htm>"}</div>
+          <div> {"<html>"}</div>
           <div> {"<body>"}</div>
         </CodeDesign>
 
@@ -139,35 +139,85 @@ export default function Hero() {
           <motion.section className="title1-title2-wrapper">
             <Title1 className="title1">
               <motion.div
-                whileHover={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}
+                whileHover={{
+                  color: "#00FFB7",
+                  scale: 1.2,
+                  rotate: 360,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#00FFB7",
+                  scale: 1.2,
+                  rotate: 360,
+                  cursor: "pointer",
+                }}
               >
                 H
               </motion.div>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 i
               </motion.div>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 180 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 180 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 180,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 180,
+                  cursor: "pointer",
+                }}
               >
                 !
               </motion.div>
               <motion.span>&nbsp;</motion.span>
               <motion.span>&nbsp;</motion.span>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 I
               </motion.div>
               <motion.span>'</motion.span>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#00FFB7",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 m
               </motion.div>
@@ -180,32 +230,82 @@ export default function Hero() {
               transition={{ delay: 1 }}
             >
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 S
               </motion.div>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 a
               </motion.div>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 m
               </motion.div>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 a
               </motion.div>
               <motion.div
-                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
-                whileTap={{ color: "#00FFB7", scale: 1.2, rotate: 20 }}
+                whileHover={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
+                whileTap={{
+                  color: "#5145FC",
+                  scale: 1.2,
+                  rotate: 20,
+                  cursor: "pointer",
+                }}
               >
                 n
               </motion.div>

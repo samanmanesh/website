@@ -226,7 +226,7 @@ export default function Footer({ setAlert }) {
       </ContactGrid>
       <CodeDesign>
         <div> {"</body>"}</div>
-        <div> {"</htm>"}</div>
+        <div> {"</html>"}</div>
       </CodeDesign>
       <div className="footer-note-container">
         <p className="footer-note">designed &amp; built by me :{")"}</p>
