@@ -213,7 +213,7 @@ export default function Hero() {
                   cursor: "pointer",
                 }}
                 whileTap={{
-                  color: "#00FFB7",
+                  color: "#5145FC",
                   scale: 1.2,
                   rotate: 20,
                   cursor: "pointer",
