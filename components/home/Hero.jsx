@@ -34,10 +34,12 @@ const HeroWrapper = styled.section`
       }
     }
     .title1 {
+      display: flex;
     }
 
     .title2 {
       margin-left: 3em;
+      display: flex;
       /* @media (min-width: 429px) {
         margin-left: 3em;
       } */
@@ -59,12 +61,6 @@ const HeroWrapper = styled.section`
   .hero-paragraph {
     max-width: 33ch;
     margin-bottom: 4em;
-    /* font-size: 1.2em;
-
-    @media (min-width: ${mobile}){
-    font-size: calc(${fonts.paragraph.primary.size}rem + 0.6vw); */
-
-    /* } */
     font-weight: ${fonts.paragraph.primary.style};
     position: relative;
     ::before {
@@ -96,7 +92,6 @@ const CodeDesign = styled(motion.section)`
     padding-left: 1rem;
   }
 `;
-
 // const AwesomeCodeDesign = styled(CodeDesign)``;
 //#endregion
 
@@ -136,16 +131,16 @@ export default function Hero() {
           transition={{ delay: 0.5 }}
           className="hero-title-container"
         >
-          <motion.section className="title1-title2-wrapper" variants={stagger}>
+          <motion.section className="title1-title2-wrapper">
             <Title1 className="title1">
-              <motion.span>H</motion.span>
-              <motion.span>i</motion.span>
-              <motion.span>!</motion.span>
+              <motion.div whileHover={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}>H</motion.div>
+              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}>i</motion.div>
+              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 180 }}>!</motion.div>
               <motion.span>&nbsp;</motion.span>
               <motion.span>&nbsp;</motion.span>
-              <motion.span>I</motion.span>
+              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}>I</motion.div>
               <motion.span>'</motion.span>
-              <motion.span>m</motion.span>
+              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}>m</motion.div>
               {/* Hi! &nbsp; I'm{" "} */}
             </Title1>
             <Title1
@@ -154,12 +149,32 @@ export default function Hero() {
               animate={{ x: "calc(1rem + .5vw )", opacity: 1 }}
               transition={{ delay: 1 }}
             >
-              <motion.span>S</motion.span>
-              <motion.span>a</motion.span>
-              <motion.span>m</motion.span>
-              <motion.span>a</motion.span>
-              <motion.span>n</motion.span>
-              <motion.span>,</motion.span>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                S
+              </motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                a
+              </motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                m
+              </motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                a
+              </motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                n
+              </motion.div>
+              <motion.div>,</motion.div>
               {/* Saman, */}
             </Title1>
           </motion.section>
