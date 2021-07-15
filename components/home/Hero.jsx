@@ -133,14 +133,34 @@ export default function Hero() {
         >
           <motion.section className="title1-title2-wrapper">
             <Title1 className="title1">
-              <motion.div whileHover={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}>H</motion.div>
-              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}>i</motion.div>
-              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 180 }}>!</motion.div>
+              <motion.div
+                whileHover={{ color: "#00FFB7", scale: 1.2, rotate: 360 }}
+              >
+                H
+              </motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                i
+              </motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 180 }}
+              >
+                !
+              </motion.div>
               <motion.span>&nbsp;</motion.span>
               <motion.span>&nbsp;</motion.span>
-              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}>I</motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                I
+              </motion.div>
               <motion.span>'</motion.span>
-              <motion.div whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}>m</motion.div>
+              <motion.div
+                whileHover={{ color: "#5145FC", scale: 1.2, rotate: 20 }}
+              >
+                m
+              </motion.div>
               {/* Hi! &nbsp; I'm{" "} */}
             </Title1>
             <Title1
@@ -185,7 +205,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
         <Description variants={stagger} smaller>
-          <motion.p variants={fadeInUp} className="hero-paragraph">
+          <motion.p variants={fadeInUp} whileHover={{ color: "#5850ce", scale:  1.1, }} className="hero-paragraph">
             I make elegant, efficient, and user-friendly digital experiences
           </motion.p>
         </Description>
