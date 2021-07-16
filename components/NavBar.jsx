@@ -171,11 +171,24 @@ export default function NavBar() {
       // transition={{ delay: 0.5 } }
       animate={fadeInDown}
     >
-      <div className="anime-function-container">
+      <motion.div className="anime-function-container"
+      onClick={() => scrollHandler(home)}
+       whileHover={{
+        // color: "#4c60a2",
+        // scale: 1.2,
+        // rotate: 360,
+        cursor: "pointer",
+      }}
+      whileTap={{
+        // color: "rgb(0,188,212)",
+        // scale: 1.2,
+        // rotate: 360,
+        cursor: "pointer",
+      }}>
         {/* const {codeState} = ( ) ={">"} {"{display"} {codeState}}
         {"}"}; */}
         SAMAN MANESH
-      </div>
+      </ motion.div>
 
       <div className="nav-items-container">
         <div className="nav-item" onClick={() => scrollHandler(work)}>

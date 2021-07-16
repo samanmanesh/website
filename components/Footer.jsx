@@ -1,4 +1,4 @@
-import React,{ useEffect} from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Title3,
@@ -115,10 +115,9 @@ const CodeDesign = styled.section`
 //#endregion
 
 export default function Footer({ setAlert }) {
-
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
   const fadeInLeft = useAnimation();
@@ -169,8 +168,17 @@ export default function Footer({ setAlert }) {
   }, [inView]);
 
   return (
-    <Container>
-      <div className="titles-container" id="contact">
+    <Container
+      exit={{ opacity: 0 }}
+      initial="initial"
+      animate="animate"
+      ref={ref}
+    >
+      <motion.div
+        className="titles-container"
+        id="contact"
+        animate={fadeInLeft}
+      >
         <Title3>Contact</Title3>
         <Arrow3>
           <img
@@ -179,9 +187,9 @@ export default function Footer({ setAlert }) {
             className="arrow-type3"
           />
         </Arrow3>
-      </div>
+      </motion.div>
       <ContactGrid>
-        <div className="left-side">
+        <motion.div className="left-side" animate={fadeInUp}>
           <div className="carryout-text-img-container">
             <Description>
               <p className="carryout-text">
@@ -215,8 +223,8 @@ export default function Footer({ setAlert }) {
             <span>Sens Message !</span>
             <img src="" alt="arrow type 4" className="arrow-type4" />
           </button> */}
-        </div>
-        <div className="right-side">
+        </motion.div>
+        <motion.div className="right-side" animate={fadeInUp}>
           <div className="carryout-text-img-container">
             <Description>
               <p className="carryout-text">You can also find me here</p>
@@ -277,7 +285,7 @@ export default function Footer({ setAlert }) {
               </div>
             </LinkCard>
           </Codes>
-        </div>
+        </motion.div>
       </ContactGrid>
       <CodeDesign>
         <div> {"</body>"}</div>

@@ -125,7 +125,7 @@ const stagger = {
 export default function Hero() {
   return (
     <Container exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <HeroWrapper>
+      <HeroWrapper id="home">
         <CodeDesign variants={fadeInUp} transition={{ delay: 0.5 }}>
           <div> {"<html>"}</div>
           <div> {"<body>"}</div>
