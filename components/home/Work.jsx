@@ -33,7 +33,7 @@ const ProjectCard = styled(motion.div)`
   /* margin-top: 3rem; */
   /* margin-bottom: 5rem; */
   .card-container {
-    border: 1px solid #5145fc;
+    /* border: 1px solid #5145fc; */
     max-width: 100%;
     /* min-width: calc(10rem + 10vw); */
     /* min-height: 16.875rem; */
@@ -147,11 +147,11 @@ export default function Work() {
       animate="animate"
       ref={ref}
     >
-      <WorkWrapper>
+      <WorkWrapper id="work">
         <motion.section
           animate={fadeInLeft}
           className="titles-container"
-          id="work"
+        
         >
           <Title3>Selected Works</Title3>
           <Arrow3>

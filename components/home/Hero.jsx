@@ -209,13 +209,13 @@ export default function Hero() {
                 whileHover={{
                   color: "#9A57FF",
                   scale: 1.2,
-                  rotate: 20,
+                  rotate: -20,
                   cursor: "pointer",
                 }}
                 whileTap={{
                   color: "#9A57FF",
                   scale: 1.2,
-                  rotate: 20,
+                  rotate: -20,
                   cursor: "pointer",
                 }}
               >
@@ -323,6 +323,10 @@ export default function Hero() {
           <motion.p
             variants={fadeInUp}
             whileHover={{ color: "#5850ce", scale: 1.1 }}
+            whileTap={{
+              color: "#5850ce",
+              scale: 1.1,
+            }}
             className="hero-paragraph"
           >
             I make elegant, efficient, and user-friendly digital experiences

@@ -123,8 +123,9 @@ export default function About() {
       initial="initial"
       animate="animate"
       ref={ref}
+      id="about"
     >
-      <motion.div className="titles-container" id="about" animate={fadeInLeft}>
+      <motion.div className="titles-container"  animate={fadeInLeft}>
         <Title3>Me, Myself &amp; I</Title3>
         <Arrow3>
           <img src="arrow3-down-right.svg" alt="" className="arrow-type3" />

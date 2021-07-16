@@ -77,10 +77,11 @@ export default function Resume() {
       initial="initial"
       animate="animate"
       ref={ref}
+      id="resume"
     >
       <motion.section
         className="titles-container"
-        id="resume"
+        
         animate={fadeInLeft}
       >
         <Title3>Reśumé</Title3>

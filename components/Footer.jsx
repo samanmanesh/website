@@ -173,10 +173,11 @@ export default function Footer({ setAlert }) {
       initial="initial"
       animate="animate"
       ref={ref}
+      id="contact"
     >
       <motion.div
         className="titles-container"
-        id="contact"
+        
         animate={fadeInLeft}
       >
         <Title3>Contact</Title3>
