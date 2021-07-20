@@ -168,6 +168,12 @@ export default function Footer({ setAlert }) {
     }
   }, [inView]);
 
+
+  const handleAddClipboard = () => {
+    navigator.clipboard.writeText('samansbm7@gmail.com')
+    setAlert({ message: 'Email copied to clipboard 👍🏽', type: 'success' });
+}
+
   return (
     <Container
       exit={{ opacity: 0 }}
@@ -280,7 +286,7 @@ export default function Footer({ setAlert }) {
                   className="arrow-type3"
                 />
               </a>
-              <div className="link-row">
+              <div className="link-row" onClick={handleAddClipboard}>
                 <span>Email</span>
                 <span>Copy</span>
                 {/* <img src="arrow4-up-right.svg" alt="arrow type 3" className="arrow-type3" /> */}

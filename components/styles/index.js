@@ -135,8 +135,9 @@ export const Container = styled(motion.section)`
 
     .footer-note {
       padding-bottom: 2rem;
+      font-size: 0.7rem ;
       @media (min-width: ${mobile}) {
-        font-size: calc(0.7rem + 0.5vw);
+        font-size: calc(0.6rem + 0.4vw);
       }
       font-family: ${fonts.codes.fontFamily};
       margin-right: 1rem;
