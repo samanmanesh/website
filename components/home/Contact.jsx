@@ -92,12 +92,12 @@ export default function Contact({ setAlert }) {
       )
       .then(
         (result) => {
-          setAlert({ message: "Message successfully sent!", error: false });
+          setAlert({ message: "Message Successfully Sent! 😍", error: false });
           console.log(result.text);
         },
         (error) => {
           console.log(error.text);
-          setAlert({ message: "An error occurred.", error: true });
+          setAlert({ message: "An Error Occurred. 🙄 Please try again ", error: true });
         }
       )
       .then(() =>
