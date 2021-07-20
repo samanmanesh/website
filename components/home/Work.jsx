@@ -33,7 +33,7 @@ const ProjectCard = styled(motion.div)`
   /* margin-top: 3rem; */
   /* margin-bottom: 5rem; */
   .card-container {
-    /* border: 1px solid #5145fc; */
+    border: 1px solid #5145fc;
     max-width: 100%;
     /* min-width: calc(10rem + 10vw); */
     /* min-height: 16.875rem; */
@@ -43,7 +43,7 @@ const ProjectCard = styled(motion.div)`
   }
   .subtitle-arrow-container {
     display: flex;
-    align-items: end;
+    align-items: start;
     justify-content: space-between;
 
     .subtitle {
@@ -55,6 +55,7 @@ const ProjectCard = styled(motion.div)`
     .arrow-type2 {
       margin: 0;
       padding: 0;
+
     }
   }
 `;

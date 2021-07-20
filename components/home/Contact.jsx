@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { fonts, colors } from "../styles/design";
 import { Button, Codes } from "../styles";
-// import * as emailjs from 'emailjs-com';
 import emailjs from 'emailjs-com';
 //#region -styling-
 const ContactContainer = styled.section`

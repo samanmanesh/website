@@ -322,10 +322,9 @@ export default function Hero() {
         <Description variants={stagger} smaller>
           <motion.p
             variants={fadeInUp}
-            whileHover={{ color: "#5850ce", scale: 1.1 }}
+            whileHover={{ color: "#b0ace6",  }}
             whileTap={{
-              color: "#5850ce",
-              scale: 1.1,
+              color: "#b0ace6",
             }}
             className="hero-paragraph"
           >
