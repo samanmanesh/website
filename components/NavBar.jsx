@@ -197,7 +197,7 @@ export default function NavBar() {
           Work ( )
         </div>
         <div className="nav-item" onClick={() => scrollHandler(resume)}>
-          Reśumé ( )
+          Résumé ( )
         </div>
         <div className="nav-item" onClick={() => scrollHandler(about)}>
           About ( )

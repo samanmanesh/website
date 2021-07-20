@@ -71,6 +71,7 @@ export default function Tools({fadeInUp}) {
               <Tag color="rgb(247,247,247)">Unity</Tag>
               <Tag color="rgb(1,147,49)">Vi Editor</Tag>
               <Tag color="rgb(1,222,247)">Framer</Tag>
+              <Tag color="#ba6aff">Framer Motion</Tag>
               <Tag color="rgb(235,76,29)">Figma</Tag>
             </div>
           </section>

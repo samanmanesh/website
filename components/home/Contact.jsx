@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { fonts, colors } from "../styles/design";
 import { Button, Codes } from "../styles";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 //#region -styling-
 const ContactContainer = styled.section`
   /* margin-top: 2rem; */
@@ -74,7 +74,9 @@ const TextArea = styled.textarea`
 export default function Contact({ setAlert }) {
   const [lock, setLock] = useState(false);
   const inputRef = useRef();
-
+  const inputText = useRef();
+  const inputEmail = useRef();
+  const inputName = useRef();
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -84,11 +86,16 @@ export default function Contact({ setAlert }) {
     for (let child of e.target.children)
       if (child.name) combineMessage[child.name] = child.value;
 
-    emailjs.send(
-        'service_1dgi6wn',
-        'template_xz8wurx',
+    // if(inputName.current === " "){alert("Please enter your name")};
+    // if(inputEmail.current === " "){alert("Please enter your email")};
+    // if(inputText.current === " "){alert("Please enter your message")};
+
+    emailjs
+      .send(
+        "service_1dgi6wn",
+        "template_xz8wurx",
         combineMessage,
-        'user_qs1RvJin7Sp2sBdWmL8uo'
+        "user_qs1RvJin7Sp2sBdWmL8uo"
       )
       .then(
         (result) => {
@@ -97,7 +104,10 @@ export default function Contact({ setAlert }) {
         },
         (error) => {
           console.log(error.text);
-          setAlert({ message: "An Error Occurred. 🙄 Please try again ", error: true });
+          setAlert({
+            message: "An Error Occurred. 🙄 Please try again ",
+            error: true,
+          });
         }
       )
       .then(() =>
@@ -112,11 +122,23 @@ export default function Contact({ setAlert }) {
       <Codes content="form">
         <ContactForm onSubmit={handleSubmit} disabled={lock} ref={inputRef}>
           {/* <Label>Your Name</Label> */}
-          <Input type="text" name="user_name" placeholder="Your Name" />
+          <Input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+          />
           {/* <Label>Your Email</Label> */}
-          <Input type="email" name="user_email" placeholder="Your Email" />
+          <Input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+          />
           {/* <Label>Message</Label> */}
-          <TextArea type="text" name="message" placeholder="Message" />
+          <TextArea
+            type="text"
+            name="message"
+            placeholder="Message"
+          />
           <Button type="submit" id="btnsubmit" disabled={lock}>
             <span>Send Message !</span>
             <img src="arrow5-line-right.svg" alt="arrow type5" />

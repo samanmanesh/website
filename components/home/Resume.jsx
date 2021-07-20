@@ -84,7 +84,7 @@ export default function Resume() {
         
         animate={fadeInLeft}
       >
-        <Title3>Reśumé</Title3>
+        <Title3>Résumé</Title3>
         <Arrow3>
           <img
             src="arrow3-down-right.svg"
@@ -98,7 +98,7 @@ export default function Resume() {
       <Tools fadeInUp={fadeInUp} />
       <DownloadResume fadeIn={fadeIn}>
         <Button>
-          <span>Download Reśumé</span>
+          <span>Download Résumé</span>
           <img
             src="arrow5-line-right.svg"
             alt="array type 5"
