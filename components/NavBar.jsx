@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { mobile, tablet, colors } from "./styles/design";
 import { motion, useAnimation } from "framer-motion";
 
+
 //#region -styling-
 const Nav = styled(motion.nav)`
   width: 85%;

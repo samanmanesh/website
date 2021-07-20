@@ -12,6 +12,7 @@ import { colors, fonts, tablet, mobile } from "./styles/design";
 import Contact from "./home/Contact";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+// import emailjs from "emailjs-com";
 
 // #region -styling-
 const ContactGrid = styled.section`
