@@ -150,6 +150,7 @@ export default function NavBar() {
         transition: { duration: 0.5, delay: 0.1 },
       });
     }
+    
     lastScroll = currentPosition;
   };
 
@@ -176,7 +177,7 @@ export default function NavBar() {
        whileHover={{
         // color: "#4c60a2",
         // scale: 1.2,
-        // rotate: 360,
+        // rotate: -5,
         cursor: "pointer",
       }}
       whileTap={{

@@ -120,12 +120,14 @@ export default function Education({fadeInUp}) {
               <div className="card-row">
                 <span>Computer Programming &amp; Analysis</span>
                 <span className="link-wrapper">
+                  <a href="https://www.senecacollege.ca/programs/fulltime/CPA.html" target="_blank">
                   <span className="link">Link</span>
                   <img
                     src="arrow4-up-right.svg"
                     alt="arrow type 4"
                     className="arrow arrow-type4"
                   />
+                  </a>
                 </span>
               </div>
               <div className="card-row">Seneca College</div>
@@ -140,12 +142,14 @@ export default function Education({fadeInUp}) {
               <div className="card-row">
                 <span>Civil Engineering</span>
                 <span className="link-wrapper">
+                <a href="http://zariau.ac.ir/index.aspx" target="_blank">
                   <span className="link">Link</span>
                   <img
                     src="arrow4-up-right.svg"
                     alt="arrow type 4"
                     className="arrow arrow-type4"
                   />
+                </a>
                 </span>
               </div>
               <div className="card-row">University of Shiraz</div>
@@ -160,12 +164,14 @@ export default function Education({fadeInUp}) {
               <div className="card-row">
                 <span>Tömer, Turkish Language Program</span>
                 <span className="link-wrapper">
+                <a href="https://eng.akdeniz.edu.tr/" target="_blank">
                   <span className="link">Link</span>
                   <img
                     src="arrow4-up-right.svg"
                     alt="arrow type 4"
                     className="arrow arrow-type4"
                   />
+                  </a>
                 </span>
               </div>
               <div className="card-row">Akdeniz University</div>
