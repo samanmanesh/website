@@ -55,7 +55,6 @@ const ProjectCard = styled(motion.div)`
     .arrow-type2 {
       margin: 0;
       padding: 0;
-
     }
   }
 `;
@@ -130,7 +129,7 @@ export default function Work() {
       });
       fadeInUp.start({
         y: 100,
-        opacity: .01,
+        opacity: 0.01,
         transition: { duration: 1, delay: 0.7 },
       });
       fadeInDown.start({
@@ -149,11 +148,7 @@ export default function Work() {
       ref={ref}
     >
       <WorkWrapper id="work">
-        <motion.section
-          animate={fadeInLeft}
-          className="titles-container"
-        
-        >
+        <motion.section animate={fadeInLeft} className="titles-container">
           <Title3>Selected Works</Title3>
           <Arrow3>
             <img
@@ -182,18 +177,27 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <div className="card-container">
-                  <a href="https://samanmanesh.github.io/samitone/" target="_blank" >
-                  <Image
-                    src="/Samitone.png"
-                    alt="image of Samitone"
-                    width={400}
-                    layout="responsive"
-                    placeholder="blur"
-                    height={200}
-                  />
+                <motion.div
+                  className="card-container"
+                  whileHover={{ 
+                    scale: 1.5
+                     
+                  }}
+                >
+                  <a
+                    href="https://samanmanesh.github.io/samitone/"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/Samitone.png"
+                      alt="image of Samitone"
+                      width={400}
+                      layout="responsive"
+                      placeholder="blur"
+                      height={200}
+                    />
                   </a>
-                </div>
+                </motion.div>
               </ProjectCard>
               {/* <ProjectCard>
               <Title2> What's up Coins</Title2>
