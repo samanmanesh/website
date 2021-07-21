@@ -183,6 +183,7 @@ export default function Work() {
                   </Arrow2>
                 </div>
                 <div className="card-container">
+                  <a href="https://samanmanesh.github.io/samitone/" target="_blank" >
                   <Image
                     src="/Samitone.png"
                     alt="image of Samitone"
@@ -191,6 +192,7 @@ export default function Work() {
                     placeholder="blur"
                     height={200}
                   />
+                  </a>
                 </div>
               </ProjectCard>
               {/* <ProjectCard>
@@ -210,7 +212,7 @@ export default function Work() {
               </div>
             </ProjectCard> */}
             </div>
-            <div class="right-side">
+            <div className="right-side">
               <ProjectCard animate={fadeInDown}>
                 <Title2>Saman's Website</Title2>
                 <div className="subtitle-arrow-container">
