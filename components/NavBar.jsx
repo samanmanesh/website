@@ -116,17 +116,7 @@ export default function NavBar() {
   // #region -Scrolling Section-
   const scrollHandler = (id) => {
     id.scrollIntoView({ behavior: "smooth" });
-
-    // if (id === work) {
-    //   setCodeState("Work");
-    // }else if (id === resume){
-    //   setCodeState("Resume");
-    // }else if (id ===about){
-    //   setCodeState("About");
-    // }
-    // else if (id === contact){
-    //   setCodeState("Contact");
-    // }
+    
   };
 
   // const [showNav, setShowNav] = useState(false);
