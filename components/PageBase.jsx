@@ -31,8 +31,10 @@ export default function PageBase({ children }) {
         <title>Saman Website</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <meta name="description" content="Free Web tutorials">
+        <meta name="description" content="I’m Saman Manesh a Full-Stack Developer located in Toronto...I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences...">
         </meta>
+        <meta property='og:image' content='//www.samanmanesh.com/Samans-website.png' />
+        <meta property="og:title" content="Saman Manesh's personal website/portfolio" key="ogtitle" />
       </Head>
       <NavBar />
       <AlertBox alert={alert} />
