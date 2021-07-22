@@ -131,7 +131,7 @@ const ProjectCard = styled(motion.div)`
   .card-container-animate2 {
     
     position: relative;
-    font-size: 2rem;
+    font-size: 1.5rem;
     @media (min-width: ${mobile}) {
       
       font-size: calc(1.3rem + .8vw);
