@@ -300,6 +300,7 @@ export default function Footer({ setAlert }) {
         <div> {"</html>"}</div>
       </CodeDesign>
       <div className="footer-note-container">
+        <p>&#9400; 2021-Canada</p>
         <p className="footer-note">designed &amp; built by me :{")"}</p>
       </div>
     </Container>

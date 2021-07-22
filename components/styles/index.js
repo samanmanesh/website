@@ -130,7 +130,7 @@ export const Container = styled(motion.section)`
     /* margin-top: 5rem; */
     border-top: 1px solid ${colors.fontColor.fontColor1};
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     /* align-items: flex-start; */
 
     .footer-note {

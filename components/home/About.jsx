@@ -58,7 +58,7 @@ const AboutGrid = styled.section`
   }
 
   .body {
-    max-width: 80%;
+    max-width: 50%;
     /* @media (min-width: ${mobile}) {
     } */
     margin-bottom: 5rem;
@@ -135,7 +135,7 @@ export default function About() {
         <AboutGrid>
           <div className="intro">
             <p>
-              My name is Saman Manesh and I am a Full-Stack developer focused on
+              My name is Saman Manesh &amp; <br/> I am a Full-Stack developer focused on
               Front-End based in Toronto.
             </p>
           </div>
