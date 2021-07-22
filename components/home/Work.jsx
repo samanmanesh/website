@@ -48,13 +48,19 @@ const ProjectCard = styled(motion.div)`
       color: black;
       width: 11rem;
       height: 1.4rem;
-      font-size: ${fonts.title4.size}rem;
-
-      left: 10rem;
-      bottom: 3.5rem;
+      font-size: 2rem;
+      bottom: 1.5rem;
+      @media (min-width: ${mobile}) {
+        width: 10.5vw;
+        height: 2.4vh;
+        font-size: calc(${fonts.title3.size}rem + 1.1vw);
+        left: 10rem;
+        bottom: 3.5rem;
+        z-index: 2;
+      }
       opacity: 0;
       z-index: 2;
-      transition: all 0.6s ease;
+      transition: all 0.8s ease;
     }
 
     ::before {
@@ -63,31 +69,45 @@ const ProjectCard = styled(motion.div)`
       background: #ebebeb;
       display: grid;
       place-items: center;
-
       color: black;
-      width: 10rem;
-      height: 1.3rem;
-      font-size: ${fonts.title4.size}rem;
-      left: 10rem;
+      height: 1.4rem;
+      font-size: 2rem;
       bottom: 2rem;
+
+      @media (min-width: ${mobile}) {
+        width: 9vw;
+        height: 2.3vh;
+        font-size: ${fonts.title4.size}rem;
+        left: 10rem;
+        bottom: 2rem;
+        z-index: 1;
+      }
       z-index: 1;
       opacity: 0;
-      transition: all 0.6s ease;
+      transition: all 0.8s ease;
     }
     &:hover {
       ::after {
-        left: 27rem;
+        left: calc(5rem + 20vw);
         z-index: 2;
         opacity: 1;
       }
       ::before {
-        left: 27.5rem;
-        bottom: 2rem;
+        left: calc(5rem + 20.5vw);
         z-index: 1;
         opacity: 1;
       }
     }
   }
+
+  .img-card {
+    &:hover {
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+      transition: all 0.6s ease;
+    }
+  }
+
   .subtitle-arrow-container {
     display: flex;
     align-items: start;
@@ -246,6 +266,7 @@ export default function Work() {
                       layout="responsive"
                       placeholder="blur"
                       height={200}
+                      className="img-card"
                     />
                   </a>
                 </motion.div>
@@ -285,7 +306,15 @@ export default function Work() {
                   </Arrow2>
                 </div>
                 <div className="card-container">
-                  <img src="#" alt="image of Saman's Website" />
+                  <Image
+                    src="/"
+                    width={400}
+                    layout="responsive"
+                    placeholder="blur"
+                    height={200}
+                    alt="image of Saman's Website"
+                    className="img-card"
+                  />
                 </div>
               </ProjectCard>
             </div>
