@@ -51,9 +51,9 @@ const ProjectCard = styled(motion.div)`
       place-items: center;
       color: black;
       left: 10rem;
-      width: 11rem;
-      height: 1.4rem;
-      font-size: 2rem;
+      width: 9rem;
+      height: 1.2rem;
+      font-size: 1.8rem;
       bottom: 1.5rem;
       opacity: 0;
       z-index: 2;
@@ -76,10 +76,10 @@ const ProjectCard = styled(motion.div)`
       display: grid;
       place-items: center;
       color: black;
-      height: 1.4rem;
-      width: 9rem;
-      font-size: 2rem;
-      bottom: 0;
+      height: 1.2rem;
+      width: 7rem;
+      /* font-size: 2rem; */
+      bottom: 0.1rem;
       z-index: 1;
       opacity: 0;
       transition: all 0.8s ease;
