@@ -33,6 +33,7 @@ const ProjectCard = styled(motion.div)`
   
   .card-container {
     /* border: 1px solid #5145fc; */
+    box-shadow: 0.5px 0.5px .5rem #ffffff , 2px 2px 3rem #0c0b21;
     max-width: 100%;
 
     //when hover on before after (Enter) apply a lil bit blur
@@ -342,7 +343,7 @@ export default function Work() {
                 <a href="">
                 <section className="card-container">
                   <Image
-                    src="/"
+                    src="/Saman's-website.png"
                     width={400}
                     layout="responsive"
                     placeholder="blur"
