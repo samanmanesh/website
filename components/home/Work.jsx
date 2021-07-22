@@ -293,7 +293,7 @@ export default function Work() {
         </motion.section>
         <Codes content="section">
           <ProjectGrid>
-            <div class="left-side">
+            <div className="left-side">
               <ProjectCard animate={fadeInUp}>
                 <Title2>Samitone</Title2>
                 <div className="subtitle-arrow-container">
