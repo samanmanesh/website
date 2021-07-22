@@ -30,8 +30,7 @@ const WorkWrapper = styled.section`
 `;
 
 const ProjectCard = styled(motion.div)`
-  /* margin-top: 3rem; */
-  /* margin-bottom: 5rem; */
+  
   .card-container {
     /* border: 1px solid #5145fc; */
     max-width: 100%;
@@ -41,7 +40,7 @@ const ProjectCard = styled(motion.div)`
     &:hover {
       filter: blur(.9px);
       -webkit-filter: blur(.9px);
-      transition: all 0.6s ease;
+      transition: all 0.8s ease;
     }
 
     ::after {
@@ -51,7 +50,7 @@ const ProjectCard = styled(motion.div)`
       display: grid;
       place-items: center;
       color: black;
-      
+      left: 10rem;
       width: 11rem;
       height: 1.4rem;
       font-size: 2rem;
@@ -60,9 +59,9 @@ const ProjectCard = styled(motion.div)`
       z-index: 2;
       transition: all 0.8s ease;
       @media (min-width: ${mobile}) {
-        width: 10.5rem;
-        height: 1.5rem;
-        font-size: calc(${fonts.title3.size}rem + 1.1vw);
+        width: calc(7rem + 5vw);
+        height: calc(1rem + .5vh);
+        font-size: calc(1.3rem +.9vw);
         left: 10rem;
         bottom: 3.5rem;
         z-index: 2;
@@ -78,43 +77,49 @@ const ProjectCard = styled(motion.div)`
       place-items: center;
       color: black;
       height: 1.4rem;
+      width: 9rem;
       font-size: 2rem;
-      bottom: 2rem;
+      bottom: 0;
       z-index: 1;
       opacity: 0;
       transition: all 0.8s ease;
-      
+      left: 10rem;
       @media (min-width: ${mobile}) {
-        width: 9rem;
-        height: 1.3rem;
-        font-size: ${fonts.title4.size}rem;
+       
+        width: calc(5rem + 5vw);
+        height: calc(.8rem + 1vh);
+        font-size: calc(1rem + 1vw);
         left: 10rem;
         bottom: 2rem;
         z-index: 1;
       }
+      
     }
     &:hover {
       ::after {
-        left: calc(5rem + 20vw);
+        left: 70%;
         z-index: 2;
         opacity: 1;
         cursor: pointer;
+        transition: all 0.8s ease;
+        
       }
       ::before {
-        left: calc(5rem + 20.5vw);
+        left: 73%;
         z-index: 1;
         opacity: 1;
         cursor: pointer;
+        transition: all 0.8s ease;
       }
     }
   }
 
   .img-card {
-    &:hover {
+    /* &:hover {
       filter: blur(3px);
       -webkit-filter: blur(3px);
       transition: all 0.6s ease;
-    }
+    } */
   }
 
   .subtitle-arrow-container {
@@ -316,7 +321,9 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <div className="card-container">
+                <div >
+                <a href="">
+                <section className="card-container">
                   <Image
                     src="/"
                     width={400}
@@ -326,6 +333,8 @@ export default function Work() {
                     alt="image of Saman's Website"
                     className="img-card"
                   />
+                  </section>
+                  </a>
                 </div>
               </ProjectCard>
             </div>
