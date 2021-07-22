@@ -30,104 +30,101 @@ const WorkWrapper = styled.section`
 `;
 
 const ProjectCard = styled(motion.div)`
-  
   .card-container {
     /* border: 1px solid #5145fc; */
-    box-shadow: 0.5px 0.5px .5rem #ffffff , 2px 2px 3rem #0c0b21;
+    box-shadow: 0.5px 0.5px 0.5rem #ffffff, 2px 2px 3rem #100b21;
     max-width: 100%;
 
     //when hover on before after (Enter) apply a lil bit blur
-    position: relative;
-    &:hover {
-      filter: blur(.9px);
-      -webkit-filter: blur(.9px);
-      transition: all 0.8s ease;
-    }
+    .card-container-animate {
+      position: relative;
+      &:hover {
+        filter: blur(0.9px);
+        -webkit-filter: blur(0.9px);
+        transition: all 0.8s ease;
+      }
 
-    ::after {
-      position: absolute;
-      content: " Enter -> ";
-      background: #ebebeb;
-      display: grid;
-      place-items: center;
-      color: black;
-      left: 10rem;
-      width: 9rem;
-      height: 1.2rem;
-      font-size: 1.8rem;
-      bottom: 1.5rem;
-      opacity: 0;
-      z-index: 2;
-      transition: all 0.8s ease;
-      @media (min-width: ${mobile}) {
-        width: calc(7rem + 5vw);
-        height: calc(1rem + .5vh);
-        font-size: calc(1.3rem +.9vw);
+      ::after {
+        position: absolute;
+        content: " Enter -> ";
+        background: #ebebeb;
+        display: grid;
+        place-items: center;
+        color: black;
         left: 10rem;
-        bottom: 3.5rem;
+        width: 9rem;
+        height: 1.2rem;
+        font-size: 1.8rem;
+        bottom: 1.5rem;
+        opacity: 0;
         z-index: 2;
+        transition: all 0.8s ease;
+        @media (min-width: ${mobile}) {
+          width: calc(7rem + 5vw);
+          height: calc(1rem + 0.5vh);
+          font-size: calc(1.3rem +0.9vw);
+          left: 10rem;
+          bottom: 3.5rem;
+          z-index: 2;
+        }
       }
-     
-    }
 
-    ::before {
-      position: absolute;
-      content: " ";
-      background: #ebebeb;
-      display: grid;
-      place-items: center;
-      color: black;
-      height: 1.2rem;
-      width: 7rem;
-      /* font-size: 2rem; */
-      bottom: 0.1rem;
-      z-index: 1;
-      opacity: 0;
-      transition: all 0.8s ease;
-      left: 10rem;
-      @media (min-width: ${mobile}) {
-       
-        width: calc(5rem + 5vw);
-        height: calc(.8rem + 1vh);
-        font-size: calc(1rem + 1vw);
-        left: 10rem;
-        bottom: 2rem;
+      ::before {
+        position: absolute;
+        content: " ";
+        background: #ebebeb;
+        display: grid;
+        place-items: center;
+        color: black;
+        height: 1.2rem;
+        width: 7rem;
+        /* font-size: 2rem; */
+        bottom: 0.1rem;
         z-index: 1;
+        opacity: 0;
+        transition: all 0.8s ease;
+        left: 10rem;
+        @media (min-width: ${mobile}) {
+          width: calc(5rem + 5vw);
+          height: calc(0.8rem + 1vh);
+          font-size: calc(1rem + 1vw);
+          left: 10rem;
+          bottom: 2rem;
+          z-index: 1;
+        }
       }
-      
-    }
-    &:hover {
-       ::after {
+      &:hover {
+        ::after {
           left: 60%;
           z-index: 2;
           opacity: 1;
           cursor: pointer;
-          transition: all 0.8s ease;}
+          transition: all 0.8s ease;
+        }
 
-          ::before {
+        ::before {
           left: 63%;
           z-index: 1;
           opacity: 1;
           cursor: pointer;
           transition: all 0.8s ease;
         }
-      @media (min-width: ${mobile}){
-        ::after {
-          left: 70%;
-          z-index: 2;
-          opacity: 1;
-          cursor: pointer;
-          transition: all 0.8s ease;
-          
+        @media (min-width: ${mobile}) {
+          ::after {
+            left: 70%;
+            z-index: 2;
+            opacity: 1;
+            cursor: pointer;
+            transition: all 0.8s ease;
+          }
+          ::before {
+            left: 73%;
+            z-index: 1;
+            opacity: 1;
+            cursor: pointer;
+            transition: all 0.8s ease;
+          }
         }
-        ::before {
-          left: 73%;
-          z-index: 1;
-          opacity: 1;
-          cursor: pointer;
-          transition: all 0.8s ease;
-        }
-
       }
     }
   }
@@ -276,7 +273,7 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <div>
+                <div className="card-container ">
                   {/* <motion.div
                     className="animate-card-container-wrapper"
                     initial={{ x: -100, opacity: 0 }}
@@ -291,7 +288,8 @@ export default function Work() {
                     href="https://samanmanesh.github.io/samitone/"
                     target="_blank"
                   >
-                    <section className="card-container">
+                    <section className="card-container-animate">
+                      
                       <Image
                         src="/Samitone.png"
                         alt="image of Samitone"
@@ -339,19 +337,19 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <div >
-                <a href="">
-                <section className="card-container">
-                  <Image
-                    src="/Saman's-website.png"
-                    width={400}
-                    layout="responsive"
-                    placeholder="blur"
-                    height={200}
-                    alt="image of Saman's Website"
-                    className="img-card"
-                  />
-                  </section>
+                <div className="card-container"  >
+                  <a href="">
+                    <section className="card-container-animate">
+                      <Image
+                        src="/Saman's-website.png"
+                        width={400}
+                        layout="responsive"
+                        placeholder="blur"
+                        height={200}
+                        alt="image of Saman's Website"
+                        className="img-card"
+                      />
+                    </section>
                   </a>
                 </div>
               </ProjectCard>
