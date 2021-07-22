@@ -36,7 +36,13 @@ const ProjectCard = styled(motion.div)`
     /* border: 1px solid #5145fc; */
     max-width: 100%;
 
+    //when hover on before after (Enter) apply a lil bit blur
     position: relative;
+    &:hover {
+      filter: blur(.9px);
+      -webkit-filter: blur(.9px);
+      transition: all 0.6s ease;
+    }
 
     ::after {
       position: absolute;
@@ -44,12 +50,15 @@ const ProjectCard = styled(motion.div)`
       background: #ebebeb;
       display: grid;
       place-items: center;
-
       color: black;
+      
       width: 11rem;
       height: 1.4rem;
       font-size: 2rem;
       bottom: 1.5rem;
+      opacity: 0;
+      z-index: 2;
+      transition: all 0.8s ease;
       @media (min-width: ${mobile}) {
         width: 10.5rem;
         height: 1.5rem;
@@ -58,9 +67,7 @@ const ProjectCard = styled(motion.div)`
         bottom: 3.5rem;
         z-index: 2;
       }
-      opacity: 0;
-      z-index: 2;
-      transition: all 0.8s ease;
+     
     }
 
     ::before {
@@ -73,29 +80,31 @@ const ProjectCard = styled(motion.div)`
       height: 1.4rem;
       font-size: 2rem;
       bottom: 2rem;
-
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.8s ease;
+      
       @media (min-width: ${mobile}) {
-        width: 9rem ;
-        height: 1.3rem ;
+        width: 9rem;
+        height: 1.3rem;
         font-size: ${fonts.title4.size}rem;
         left: 10rem;
         bottom: 2rem;
         z-index: 1;
       }
-      z-index: 1;
-      opacity: 0;
-      transition: all 0.8s ease;
     }
     &:hover {
       ::after {
         left: calc(5rem + 20vw);
         z-index: 2;
         opacity: 1;
+        cursor: pointer;
       }
       ::before {
         left: calc(5rem + 20.5vw);
         z-index: 1;
         opacity: 1;
+        cursor: pointer;
       }
     }
   }
@@ -244,7 +253,7 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <motion.div className="card-container">
+                <div>
                   {/* <motion.div
                     className="animate-card-container-wrapper"
                     initial={{ x: -100, opacity: 0 }}
@@ -259,22 +268,24 @@ export default function Work() {
                     href="https://samanmanesh.github.io/samitone/"
                     target="_blank"
                   >
-                    <Image
-                      src="/Samitone.png"
-                      alt="image of Samitone"
-                      width={400}
-                      layout="responsive"
-                      placeholder="blur"
-                      height={200}
-                      className="img-card"
-                    />
+                    <section className="card-container">
+                      <Image
+                        src="/Samitone.png"
+                        alt="image of Samitone"
+                        width={400}
+                        layout="responsive"
+                        placeholder="blur"
+                        height={200}
+                        className="img-card"
+                      />
+                    </section>
                   </a>
-                </motion.div>
+                </div>
               </ProjectCard>
               {/* <ProjectCard>
               <Title2> What's up Coins</Title2>
               <div className="subtitle-arrow-container">
-                <p className="subtitle">let Design &amp; Development = 2021;</p>
+                <p className="svubtitle">let Design &amp; Development = 2021;</p>
                 <Arrow2>
                   <img
                     src="arrow2-down-left.svg"
