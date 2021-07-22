@@ -96,20 +96,37 @@ const ProjectCard = styled(motion.div)`
       
     }
     &:hover {
-      ::after {
-        left: 70%;
-        z-index: 2;
-        opacity: 1;
-        cursor: pointer;
-        transition: all 0.8s ease;
-        
-      }
-      ::before {
-        left: 73%;
-        z-index: 1;
-        opacity: 1;
-        cursor: pointer;
-        transition: all 0.8s ease;
+       ::after {
+          left: 60%;
+          z-index: 2;
+          opacity: 1;
+          cursor: pointer;
+          transition: all 0.8s ease;}
+
+          ::before {
+          left: 63%;
+          z-index: 1;
+          opacity: 1;
+          cursor: pointer;
+          transition: all 0.8s ease;
+        }
+      @media (min-width: ${mobile}){
+        ::after {
+          left: 70%;
+          z-index: 2;
+          opacity: 1;
+          cursor: pointer;
+          transition: all 0.8s ease;
+          
+        }
+        ::before {
+          left: 73%;
+          z-index: 1;
+          opacity: 1;
+          cursor: pointer;
+          transition: all 0.8s ease;
+        }
+
       }
     }
   }
