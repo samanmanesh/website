@@ -370,7 +370,7 @@ export default function Work() {
                   <section className="card-container-animate">
                     
                     <Image
-                      src="/Samans-website.png"
+                      src="/hero.png"
                       width={400}
                       layout="responsive"
                       placeholder="blur"
