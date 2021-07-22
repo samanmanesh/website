@@ -33,13 +33,60 @@ const ProjectCard = styled(motion.div)`
   /* margin-top: 3rem; */
   /* margin-bottom: 5rem; */
   .card-container {
-    border: 1px solid #5145fc;
+    /* border: 1px solid #5145fc; */
     max-width: 100%;
-    /* min-width: calc(10rem + 10vw); */
-    /* min-height: 16.875rem; */
-    /* margin-top: 1rem; */
-    /* min-width: 40vw; */
-    /* min-height: 30vh; */
+
+    position: relative;
+
+    ::after {
+      position: absolute;
+      content: " Enter -> ";
+      background: #ebebeb;
+      display: grid;
+      place-items: center;
+
+      color: black;
+      width: 11rem;
+      height: 1.4rem;
+      font-size: ${fonts.title4.size}rem;
+
+      left: 10rem;
+      bottom: 3.5rem;
+      opacity: 0;
+      z-index: 2;
+      transition: all 0.6s ease;
+    }
+
+    ::before {
+      position: absolute;
+      content: " ";
+      background: #ebebeb;
+      display: grid;
+      place-items: center;
+
+      color: black;
+      width: 10rem;
+      height: 1.3rem;
+      font-size: ${fonts.title4.size}rem;
+      left: 10rem;
+      bottom: 2rem;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+    &:hover {
+      ::after {
+        left: 27rem;
+        z-index: 2;
+        opacity: 1;
+      }
+      ::before {
+        left: 27.5rem;
+        bottom: 2rem;
+        z-index: 1;
+        opacity: 1;
+      }
+    }
   }
   .subtitle-arrow-container {
     display: flex;
@@ -177,12 +224,17 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <motion.div
-                  className="card-container"
-                  whileHover={{ 
-                     
-                  }}
-                >
+                <motion.div className="card-container">
+                  {/* <motion.div
+                    className="animate-card-container-wrapper"
+                    initial={{ x: -100, opacity: 0 }}
+                    whileHover={{
+                      x: 0,
+                      opacity: 1,
+                      transition: { duration: 1, delay: 0.5 },
+                    }}
+                    >
+                      </motion.div> */}
                   <a
                     href="https://samanmanesh.github.io/samitone/"
                     target="_blank"
