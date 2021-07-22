@@ -32,6 +32,7 @@ const WorkWrapper = styled.section`
 const ProjectCard = styled(motion.div)`
   .card-container {
     /* border: 1px solid #5145fc; */
+    cursor: pointer;
     box-shadow: 0.5px 0.5px 0.5rem #ffffff, 2px 2px 3rem #100b21;
     max-width: 100%;
     //when hover on before after (Enter) apply a lil bit blur
