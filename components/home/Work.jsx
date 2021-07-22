@@ -180,7 +180,6 @@ export default function Work() {
                 <motion.div
                   className="card-container"
                   whileHover={{ 
-                    scale: 1.5
                      
                   }}
                 >

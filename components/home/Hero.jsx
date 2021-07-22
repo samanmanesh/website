@@ -319,7 +319,7 @@ export default function Hero() {
             </Subtitle>
           </motion.div>
         </motion.div>
-        <Description variants={stagger} smaller>
+        <Description variants={stagger} >
           <motion.p
             variants={fadeInUp}
             whileHover={{ color: "#b0ace6",  }}

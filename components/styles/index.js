@@ -8,7 +8,7 @@ export const Title1 = styled(motion.h1)`
   padding: 0;
   font-size: 3rem;
   @media (min-width: ${mobile}) {
-    font-size: calc(2rem + 2.2vw);
+    font-size: calc(2rem + 4.2vw);
   }
 
   letter-spacing: ${fonts.title1.letterSpacing}px;
@@ -46,14 +46,14 @@ export const Subtitle = styled.p`
   font-size: ${(props) => (props.smaller ? `.7rem ` : `1rem `)};
   @media (min-width: ${mobile}) {
     font-size: ${(props) =>
-      props.smaller ? `calc(.5rem + .6vw)` : `calc(.7rem + .7vw)`};
+      props.smaller ? `calc(.5rem + .6vw)` : `calc(.7rem + 1.5vw)`};
   }
   margin: 0;
   padding: 0;
 `;
 
 export const Description = styled.p`
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0;
   margin: 0;
 
