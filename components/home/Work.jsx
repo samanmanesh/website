@@ -51,8 +51,8 @@ const ProjectCard = styled(motion.div)`
       font-size: 2rem;
       bottom: 1.5rem;
       @media (min-width: ${mobile}) {
-        width: 10.5vw;
-        height: 2.4vh;
+        width: 10.5rem;
+        height: 1.5rem;
         font-size: calc(${fonts.title3.size}rem + 1.1vw);
         left: 10rem;
         bottom: 3.5rem;
@@ -75,8 +75,8 @@ const ProjectCard = styled(motion.div)`
       bottom: 2rem;
 
       @media (min-width: ${mobile}) {
-        width: 9vw;
-        height: 2.3vh;
+        width: 9rem ;
+        height: 1.3rem ;
         font-size: ${fonts.title4.size}rem;
         left: 10rem;
         bottom: 2rem;
