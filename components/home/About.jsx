@@ -58,7 +58,7 @@ const AboutGrid = styled.section`
   }
 
   .body {
-    max-width: 50%;
+    max-width: 65%;
     /* @media (min-width: ${mobile}) {
     } */
     margin-bottom: 5rem;

@@ -128,7 +128,7 @@ const ProjectCard = styled(motion.div)`
     }
   }
 
-  .card-container-animate2 {
+  /* .card-container-animate2 {
     position: relative;
     font-size: 1.5rem;
     @media (min-width: ${mobile}) {
@@ -161,7 +161,7 @@ const ProjectCard = styled(motion.div)`
         place-items: center;
       }
     }
-  }
+  } */
   .img-card {
     /* &:hover {
       filter: blur(3px);
@@ -366,7 +366,8 @@ export default function Work() {
                   className="card-container"
                   onClick={() => scrollHandler(home)}
                 >
-                  <section className="card-container-animate2 ">
+                  <section className="card-container-animate">
+                    
                     <Image
                       src="/Saman's-website.png"
                       width={400}
