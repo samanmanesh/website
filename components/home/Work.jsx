@@ -34,7 +34,6 @@ const ProjectCard = styled(motion.div)`
     /* border: 1px solid #5145fc; */
     box-shadow: 0.5px 0.5px 0.5rem #ffffff, 2px 2px 3rem #100b21;
     max-width: 100%;
-
     //when hover on before after (Enter) apply a lil bit blur
     .card-container-animate {
       position: relative;
@@ -130,8 +129,13 @@ const ProjectCard = styled(motion.div)`
   }
 
   .card-container-animate2 {
+    
     position: relative;
-    font-size: ${fonts.title4.size}rem;
+    font-size: 2rem;
+    @media (min-width: ${mobile}) {
+      
+      font-size: calc(1.3rem + .8vw);
+    }
     cursor: pointer;
     ::after {
       position: absolute;
@@ -144,6 +148,7 @@ const ProjectCard = styled(motion.div)`
       place-items: center;
       opacity: 0;
       transition: all 0.7s ease;
+      
     }
 
     &:hover{
@@ -309,16 +314,7 @@ export default function Work() {
                   </Arrow2>
                 </div>
                 <div className="card-container ">
-                  {/* <motion.div
-                    className="animate-card-container-wrapper"
-                    initial={{ x: -100, opacity: 0 }}
-                    whileHover={{
-                      x: 0,
-                      opacity: 1,
-                      transition: { duration: 1, delay: 0.5 },
-                    }}
-                    >
-                      </motion.div> */}
+                 
                   <a
                     href="https://samanmanesh.github.io/samitone/"
                     target="_blank"
