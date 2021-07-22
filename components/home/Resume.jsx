@@ -96,7 +96,7 @@ export default function Resume() {
       <Education fadeInUp={fadeInUp} />
       <Skills fadeInUp={fadeInUp} />
       <Tools fadeInUp={fadeInUp} />
-      <DownloadResume fadeIn={fadeIn}>
+      {/* <DownloadResume fadeIn={fadeIn}>
         <Button>
           <span>Download Résumé</span>
           <img
@@ -105,7 +105,7 @@ export default function Resume() {
             className=" arrow-type5"
           />
         </Button>
-      </DownloadResume>
+      </DownloadResume> */}
     </Container>
   );
 }
