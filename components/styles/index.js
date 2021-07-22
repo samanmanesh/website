@@ -150,6 +150,7 @@ export const Button = styled(motion.button)`
   margin: 2rem 2rem;
   text-align: center;
   max-width: 50%;
+  white-space: nowrap;
   @media (min-width: ${mobile}) {
     font-size: calc(0.6rem + 0.6vw);
   }

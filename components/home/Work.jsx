@@ -39,8 +39,8 @@ const ProjectCard = styled(motion.div)`
     .card-container-animate {
       position: relative;
       &:hover {
-        filter: blur(0.9px);
-        -webkit-filter: blur(0.9px);
+        filter: blur(0.8px);
+        -webkit-filter: blur(0.8px);
         transition: all 0.8s ease;
       }
 
@@ -129,6 +129,37 @@ const ProjectCard = styled(motion.div)`
     }
   }
 
+  .card-container-animate2 {
+    position: relative;
+    font-size: ${fonts.title4.size}rem;
+    cursor: pointer;
+    ::after {
+      position: absolute;
+      content: " Password Required 🔒";
+      left: 0;
+      bottom: 5%;
+      width: 100%;
+      height: 100%;
+      display:grid;
+      place-items: center;
+      opacity: 0;
+      transition: all 0.7s ease;
+    }
+
+    &:hover{
+
+      transition: all 0.8s ease;
+      ::after {
+        background-color: #000000b4;
+        left:0%;
+        bottom:0;
+        opacity: 1;
+        width:100%;
+        height: 100%;
+      }
+    }
+
+  }
   .img-card {
     /* &:hover {
       filter: blur(3px);
@@ -236,6 +267,10 @@ export default function Work() {
     }
   }, [inView]);
 
+  const scrollHandler = (id) => {
+    id.scrollIntoView({ behavior: "smooth" });
+
+  };
   return (
     <Container
       exit={{ opacity: 0 }}
@@ -289,7 +324,6 @@ export default function Work() {
                     target="_blank"
                   >
                     <section className="card-container-animate">
-                      
                       <Image
                         src="/Samitone.png"
                         alt="image of Samitone"
@@ -337,9 +371,8 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <div className="card-container"  >
-                  <a href="">
-                    <section className="card-container-animate">
+                <div className="card-container" onClick={() => scrollHandler(home)}>                 
+                    <section className="card-container-animate2 ">
                       <Image
                         src="/Saman's-website.png"
                         width={400}
@@ -350,7 +383,6 @@ export default function Work() {
                         className="img-card"
                       />
                     </section>
-                  </a>
                 </div>
               </ProjectCard>
             </div>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const ToolsWrapper = styled(motion.section)``;
 
 const Tag = styled.div`
+white-space: nowrap;
   /* padding: 0.5rem .5rem; */
   border-bottom-left-radius: 0.3rem;
   border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};

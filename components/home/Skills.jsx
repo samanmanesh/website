@@ -32,6 +32,7 @@ const SkillsContainer = styled.section`
 
 const Tag = styled.div`
   /* padding: 0.5rem .5rem; */
+  white-space: nowrap;
   border-bottom-left-radius: 0.3rem;
   border-bottom: 2px solid ${(props) => props.color ?? css`rgb(20, 63, 191)`};
   position: relative;
