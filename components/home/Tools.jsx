@@ -46,7 +46,7 @@ const ToolsContainer = styled.section`
     flex-direction: column;
     align-items: center;
     .tools-container {
-      max-width: 70%;
+      max-width: 75%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;

@@ -129,12 +129,10 @@ const ProjectCard = styled(motion.div)`
   }
 
   .card-container-animate2 {
-    
     position: relative;
     font-size: 1.5rem;
     @media (min-width: ${mobile}) {
-      
-      font-size: calc(1.3rem + .8vw);
+      font-size: calc(1.3rem + 0.8vw);
     }
     cursor: pointer;
     ::after {
@@ -144,26 +142,25 @@ const ProjectCard = styled(motion.div)`
       bottom: 5%;
       width: 100%;
       height: 100%;
-      display:grid;
+      display: grid;
       place-items: center;
       opacity: 0;
       transition: all 0.7s ease;
-      
     }
 
-    &:hover{
-
+    &:hover {
       transition: all 0.8s ease;
       ::after {
         background-color: #000000b4;
-        left:0%;
-        bottom:0;
+        left: 0%;
+        bottom: 0;
         opacity: 1;
-        width:100%;
+        width: 100%;
         height: 100%;
+        display: grid;
+        place-items: center;
       }
     }
-
   }
   .img-card {
     /* &:hover {
@@ -274,7 +271,6 @@ export default function Work() {
 
   const scrollHandler = (id) => {
     id.scrollIntoView({ behavior: "smooth" });
-
   };
   return (
     <Container
@@ -314,7 +310,6 @@ export default function Work() {
                   </Arrow2>
                 </div>
                 <div className="card-container ">
-                 
                   <a
                     href="https://samanmanesh.github.io/samitone/"
                     target="_blank"
@@ -367,18 +362,21 @@ export default function Work() {
                     />
                   </Arrow2>
                 </div>
-                <div className="card-container" onClick={() => scrollHandler(home)}>                 
-                    <section className="card-container-animate2 ">
-                      <Image
-                        src="/Saman's-website.png"
-                        width={400}
-                        layout="responsive"
-                        placeholder="blur"
-                        height={200}
-                        alt="image of Saman's Website"
-                        className="img-card"
-                      />
-                    </section>
+                <div
+                  className="card-container"
+                  onClick={() => scrollHandler(home)}
+                >
+                  <section className="card-container-animate2 ">
+                    <Image
+                      src="/Saman's-website.png"
+                      width={400}
+                      layout="responsive"
+                      placeholder="blur"
+                      height={200}
+                      alt="image of Saman's Website"
+                      className="img-card"
+                    />
+                  </section>
                 </div>
               </ProjectCard>
             </div>
