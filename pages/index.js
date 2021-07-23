@@ -18,7 +18,7 @@ export default function Home() {
           content="Saman Manesh's personal website/portfolio"
           key="title"
         />
-        <meta property="og:image" content="//www.samanmanesh.com/hero2.png" />
+        <meta property="og:image" content="//www.samanmanesh.com/Saman-site-resize.png" />
         <meta
           property="og:description"
           content="I’m Saman Manesh a Full-Stack Developer located in Toronto...I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences..."
