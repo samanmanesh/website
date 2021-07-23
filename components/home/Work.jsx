@@ -39,8 +39,10 @@ const ProjectCard = styled(motion.div)`
     .card-container-animate {
       position: relative;
       &:hover {
-        filter: blur(0.8px);
-        -webkit-filter: blur(0.8px);
+        /* background: #000000af; */
+        box-shadow:  2px 2px 3rem #172637;
+        /* filter: blur(0.8px);
+        -webkit-filter: blur(0.8px); */
         transition: all 0.8s ease;
       }
 
