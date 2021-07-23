@@ -27,7 +27,7 @@ export default function PageBase({ children }) {
   return (
     <PageBaseWrapper>
       <Head>
-        <title>Saman Website</title>
+        <title>Saman Manesh</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="viewport"
@@ -38,15 +38,12 @@ export default function PageBase({ children }) {
           property="og:title"
           content="Saman Manesh's personal website/portfolio"
         />
-        <meta property="og:image" content="//www.samanmanesh.com/ hero.png" />
+        <meta property="og:image" content="//www.samanmanesh.com/hero.png" />
         <meta
           property="og:description"
           content="I’m Saman Manesh a Full-Stack Developer located in Toronto...I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences..."
         />
-        <meta
-          property="og:url"
-          content="//www.example.com/URL of the article"
-        />
+        
       </Head>
       <NavBar />
       <AlertBox alert={alert} />
