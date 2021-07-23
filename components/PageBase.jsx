@@ -29,14 +29,12 @@ export default function PageBase({ children }) {
       <Head>
         <title>Saman Manesh</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta> */}
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <meta
           property="og:title"
           content="Saman Manesh's personal website/portfolio"
+          key="title"
         />
         <meta property="og:image" content="//www.samanmanesh.com/hero.png" />
         <meta
