@@ -208,10 +208,14 @@ const ProjectGrid = styled.section`
 
     .left-side {
       grid-area: left-side;
+      margin-left:auto;
+      margin-right:auto;
       margin-right: 0;
     }
     .right-side {
       grid-area: right-side;
+      margin-left:auto;
+      margin-right:auto;
       margin-left: 0;
     }
 
