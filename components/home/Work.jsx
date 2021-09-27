@@ -203,7 +203,7 @@ const ProjectGrid = styled.section`
 
   @media (min-width: ${tablet}) {
     display: grid;
-    gap: 5rem;
+    gap: 7rem;
 
     .left-side {
       grid-area: left-side;
@@ -345,7 +345,7 @@ export default function Work() {
               </div>
               <div className="card-container">
                 <a href="https://github.com/samanmanesh/coinbot" target="_blank">
-                <Image src="/coinbot1-resize.jpg" alt="image of CoinBot"
+                <Image src="/coinbot2-resize.jpg" alt="image of CoinBot"
                  width={400}
                  layout="responsive"
                  placeholder="blur"
