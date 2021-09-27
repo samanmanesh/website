@@ -215,7 +215,7 @@ const ProjectGrid = styled.section`
     }
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.7fr 1fr;
+    grid-template-rows: 
     grid-template-areas:
       "left-side ."
       "left-side right-side"
