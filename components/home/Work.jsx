@@ -200,7 +200,7 @@ const ProjectGrid = styled.section`
     margin-left: 4rem;
     margin-bottom: 3rem;
   }
-
+  
   @media (min-width: ${tablet}) {
     display: grid;
     gap: 5rem;
@@ -215,7 +215,7 @@ const ProjectGrid = styled.section`
     }
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 
+    grid-template-rows: 0.5fr 0.7fr 1fr;
     grid-template-areas:
       "left-side ."
       "left-side right-side"
@@ -345,7 +345,7 @@ export default function Work() {
               </div>
               <div className="card-container">
                 <a href="https://github.com/samanmanesh/coinbot" target="_blank">
-                <Image src="/coinbot2-resize.jpg" alt="image of CoinBot"
+                <Image src="/coinbot1-resize.jpg" alt="image of CoinBot"
                  width={400}
                  layout="responsive"
                  placeholder="blur"
