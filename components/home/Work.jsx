@@ -194,12 +194,16 @@ const ProjectCard = styled(motion.div)`
 
 const ProjectGrid = styled.section`
   .left-side {
-    /* margin-right: 4rem;
-    margin-bottom: 3rem; */
+    //margin-right: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
   }
   .right-side {
-    /* margin-left: 4rem;
-    margin-bottom: 3rem; */
+    margin-right: auto;
+    margin-left: auto;
+    //margin-left: 4rem;
+    margin-bottom: 3rem;
   }
   
   @media (min-width: ${tablet}) {
