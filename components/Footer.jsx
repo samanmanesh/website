@@ -247,7 +247,7 @@ export default function Footer({ setAlert }) {
           </div>
           <Codes content="a">
             <LinkCard>
-              <a
+              {/* <a
                 className="link-row"
                 href="https://instagram.com/samansmanesh"
                 target="_blank"
@@ -259,7 +259,7 @@ export default function Footer({ setAlert }) {
                   alt="arrow type 3"
                   className="arrow-type3"
                 />
-              </a>
+              </a> */}
               <a
                 className="link-row"
                 href="https://www.linkedin.com/in/saman-manesh-96b257213/"
