@@ -35,6 +35,7 @@ const ProjectCard = styled(motion.div)`
     cursor: pointer;
     box-shadow: 0.5px 0.5px 0.5rem #ffffff, 2px 2px 3rem #100b21;
     max-width: 100%;
+    margin-bottom: 2rem;
     //when hover on before after (Enter) apply a lil bit blur
     .card-container-animate {
       position: relative;
