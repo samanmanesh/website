@@ -84,10 +84,10 @@ export default function Skills({fadeInUp}) {
               <Tag color="orange">Linux &amp; Unix</Tag>
               <Tag color={colors.green}>C#</Tag>
               <Tag color={colors.pink}>Styled Components</Tag>
-              <Tag color={colors.pink}>NodeJS</Tag>
-              <Tag color={colors.pink}>ExpressJs</Tag>
-              <Tag color={colors.pink}>MongoDB</Tag>
-              <Tag color={colors.pink}>SQL</Tag>
+              <Tag color={colors.lightGreen}>NodeJS</Tag>
+              <Tag color={colors.lightWhite}>ExpressJs</Tag>
+              <Tag color={colors.green}>MongoDB</Tag>
+              <Tag color={colors.orange}>SQL</Tag>
             </div>
           </section>
           <Title2> {"}"}</Title2>

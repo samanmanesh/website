@@ -23,6 +23,8 @@ export const colors = {
   blue: "rgb(2,119,189)",
   pink: "#DE05FF",
   green: "#0AFF33",
+  darkGreen: "rgb(115,218,185)",
+  lightWhite: "#FAE5E5",
 };
 
 export const fonts = {
