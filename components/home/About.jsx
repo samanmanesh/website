@@ -17,7 +17,7 @@ const AboutGrid = styled.section`
   font-size: ${fonts.paragraph.primary.size}rem;
   font-weight: ${fonts.paragraph.primary.style};
   line-height: ${fonts.paragraph.primary.line};
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr .5fr;
   grid-template-rows: auto;
   /* gap: 1rem; */
 
@@ -59,8 +59,9 @@ const AboutGrid = styled.section`
 
   .body {
     max-width: 65%;
-    /* @media (min-width: ${mobile}) {
-    } */
+    @media (min-width: ${mobile}) {
+      font-size: ${fonts.paragraph.primary.size}rem;
+    }
     margin-bottom: 5rem;
     /* margin-inline: auto; */
     margin-left: auto;
