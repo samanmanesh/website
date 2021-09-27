@@ -14,10 +14,10 @@ import { useInView } from "react-intersection-observer";
 // #region - styling-
 const AboutGrid = styled.section`
   display: grid;
-  font-size: ${fonts.paragraph.primary.size}rem;
+  font-size: ${fonts.paragraph.secondary.size}rem;
   font-weight: ${fonts.paragraph.primary.style};
   line-height: ${fonts.paragraph.primary.line};
-  grid-template-columns: 1.5fr .5fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   /* gap: 1rem; */
 
@@ -59,9 +59,8 @@ const AboutGrid = styled.section`
 
   .body {
     max-width: 65%;
-    @media (min-width: ${mobile}) {
-      font-size: ${fonts.paragraph.primary.size}rem;
-    }
+    /* @media (min-width: ${mobile}) {
+    } */
     margin-bottom: 5rem;
     /* margin-inline: auto; */
     margin-left: auto;
