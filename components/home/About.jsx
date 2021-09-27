@@ -44,7 +44,7 @@ const AboutGrid = styled.section`
     grid-area: header;
     font-size: 1.5rem;
     @media (min-width: ${mobile}) {
-      font-size: calc(2rem + 1vw);
+      font-size: calc(1rem + 1vw);
     }
   }
 
