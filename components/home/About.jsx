@@ -153,11 +153,11 @@ export default function About() {
             <img src="arrow5-line-right.svg" alt="" className="arrow-type5" />
           </Button> */}
           </div>
-          <div className="right-side">
+          {/* <div className="right-side">
             <section className="person-image-container">
               <img src="" alt="Samans image" className="person-image" />
             </section>
-          </div>
+          </div> */}
         </AboutGrid>
       </Codes>
     </Container>
