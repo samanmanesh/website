@@ -14,7 +14,7 @@ import { useInView } from "react-intersection-observer";
 // #region - styling-
 const AboutGrid = styled.section`
   display: grid;
-  font-size: ${fonts.paragraph.secondary.size}rem;
+  font-size: ${fonts.paragraph.primary.size}rem;
   font-weight: ${fonts.paragraph.primary.style};
   line-height: ${fonts.paragraph.primary.line};
   grid-template-columns: 1fr 1fr;
