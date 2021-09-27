@@ -331,29 +331,42 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
-              <ProjectCard>
-              <Title2>CoinBot</Title2>
-              <div className="subtitle-arrow-container">
-                <p className="svubtitle">let Design &amp; Development = 2021;</p>
-                <Arrow2>
-                  <img
-                    src="arrow2-down-left.svg"
-                    alt="arrow of type 2"
-                    className="arrow-type2"
-                  />  
-                </Arrow2>
-              </div>
-              <div className="card-container">
-                <a href="https://github.com/samanmanesh/coinbot" target="_blank">
-                <Image src="/coinbot1-resize.jpg" alt="image of CoinBot"
-                 width={400}
-                 layout="responsive"
-                 placeholder="blur"
-                 height={200}
-                 className="img-card" />
-                </a>
-              </div>
-            </ProjectCard>
+              <ProjectCard animate={fadeInUp}>
+                <Title2>CoinBot</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div className="card-container ">
+                  <a
+                    href="https://github.com/samanmanesh/coinbot"
+                    target="_blank"
+                  >
+                    <section className="card-container-animate">
+                      <Image
+                        src="/coinbot1-resize.jpg" 
+                        alt="image of CoinBot"
+                        width={400}
+                        layout="responsive"
+                        placeholder="blur"
+                        height={200}
+                        className="img-card"
+                      />
+                    </section>
+                  </a>
+                </div>
+              </ProjectCard>
+              
             </div>
             <div className="right-side">
               <ProjectCard animate={fadeInDown}>
