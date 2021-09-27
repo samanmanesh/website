@@ -344,7 +344,14 @@ export default function Work() {
                 </Arrow2>
               </div>
               <div className="card-container">
-                <img src="#" alt="image of What's up Coins" />
+                <a href="https://github.com/samanmanesh/coinbot" target="_blank">
+                <Image src="/coinbot1-resize" alt="image of CoinBot"
+                 width={400}
+                 layout="responsive"
+                 placeholder="blur"
+                 height={200}
+                 className="img-card" />
+                </a>
               </div>
             </ProjectCard>
             </div>
