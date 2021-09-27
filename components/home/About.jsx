@@ -42,7 +42,7 @@ const AboutGrid = styled.section`
 
   .intro {
     grid-area: header;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     @media (min-width: ${mobile}) {
       font-size: calc(1rem + 1vw);
     }
@@ -143,7 +143,7 @@ export default function About() {
             <Description smaller>
               <p className="body">
                 &nbsp; &nbsp; I enjoy using my obsessive attention to detail, my
-                pure love for making things, and my mission-driven work ethic to
+                 love for making things, and my mission-driven work ethic to
                 literally change the world. That’s why I love working with
                 diverse people who want to make the world a little better.
               </p>
