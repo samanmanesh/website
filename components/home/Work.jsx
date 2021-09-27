@@ -41,7 +41,7 @@ const ProjectCard = styled(motion.div)`
       position: relative;
       &:hover {
         /* background: #000000af; */
-        box-shadow: 2px 2px 3rem #172637;
+        box-shadow:  2px 2px 3rem #172637;
         /* filter: blur(0.8px);
         -webkit-filter: blur(0.8px); */
         transition: all 0.8s ease;
@@ -194,27 +194,15 @@ const ProjectCard = styled(motion.div)`
 
 const ProjectGrid = styled.section`
   .left-side {
-    /* margin-right: 4rem; */
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 4rem;
     margin-bottom: 3rem;
   }
   .right-side {
-    //margin-left: 4rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4rem;
     margin-bottom: 3rem;
   }
-
+  
   @media (min-width: ${tablet}) {
-    .left-side {
-      margin-right: 4rem;
-      margin-bottom: 3rem;
-    }
-    .right-side {
-      margin-left: 4rem;
-      margin-bottom: 3rem;
-    }
     display: grid;
     gap: 5rem;
 
@@ -367,7 +355,7 @@ export default function Work() {
                   >
                     <section className="card-container-animate">
                       <Image
-                        src="/coinbot1-resize.jpg"
+                        src="/coinbot1-resize.jpg" 
                         alt="image of CoinBot"
                         width={400}
                         layout="responsive"
@@ -379,6 +367,7 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
+              
             </div>
             <div className="right-side">
               <ProjectCard animate={fadeInDown}>
@@ -402,6 +391,7 @@ export default function Work() {
                   onClick={() => scrollHandler(home)}
                 >
                   <section className="card-container-animate">
+                    
                     <Image
                       src="/hero.png"
                       width={400}
