@@ -108,7 +108,7 @@ const CodeDesign = styled.section`
   font-family: ${fonts.codes.fontFamily};
   font-size: ${fonts.codes.size}rem;
   margin-bottom: 1rem;
-  div:nth-child(2) {
+  div:nth-child(1) {
     padding-left: 1rem;
   }
 `;
@@ -300,7 +300,7 @@ export default function Footer({ setAlert }) {
         <div> {"</html>"}</div>
       </CodeDesign>
       <div className="footer-note-container">
-        <p className="footer-note">&#9400; 2021-Canada</p>
+        <p className="footer-note">&#9400; 2021</p>
         <p className="footer-note">designed &amp; built by me :{")"}</p>
       </div>
     </Container>
