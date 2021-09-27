@@ -42,9 +42,9 @@ const AboutGrid = styled.section`
 
   .intro {
     grid-area: header;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     @media (min-width: ${mobile}) {
-      font-size: calc(1rem + 1vw);
+      font-size: calc(2rem + 1vw);
     }
   }
 
