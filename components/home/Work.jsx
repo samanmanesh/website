@@ -331,8 +331,8 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
-              {/* <ProjectCard>
-              <Title2> What's up Coins</Title2>
+              <ProjectCard>
+              <Title2>CoinBot</Title2>
               <div className="subtitle-arrow-container">
                 <p className="svubtitle">let Design &amp; Development = 2021;</p>
                 <Arrow2>
@@ -346,7 +346,7 @@ export default function Work() {
               <div className="card-container">
                 <img src="#" alt="image of What's up Coins" />
               </div>
-            </ProjectCard> */}
+            </ProjectCard>
             </div>
             <div className="right-side">
               <ProjectCard animate={fadeInDown}>
