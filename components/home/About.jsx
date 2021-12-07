@@ -68,8 +68,8 @@ const AboutGrid = styled.section`
   }
   .person-image-container {
     //border: 1px solid white;
-    min-height: 30rem;
-    max-width: 100%;
+    min-height: 28rem;
+    max-width: 100vw;
     overflow: hidden;
 
     /* margin-inline: auto; */
