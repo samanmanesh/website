@@ -68,11 +68,21 @@ const AboutGrid = styled.section`
   }
   .person-image-container {
     //border: 1px solid white;
-    min-height: 28rem;
-    max-width: 80vw;
+    //min-height: 28rem;
+    //max-width: 80vw;
+    width: 80%;
+    height: auto;
     overflow: hidden;
 
     /* margin-inline: auto; */
+  }
+
+  .person-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border: 1px solid white; */
   }
 `;
 //#endregion
