@@ -69,7 +69,7 @@ const AboutGrid = styled.section`
   .person-image-container {
     //border: 1px solid white;
     min-height: 28rem;
-    max-width: 100vw;
+    max-width: 80vw;
     overflow: hidden;
 
     /* margin-inline: auto; */
