@@ -126,18 +126,21 @@ export default function Contact({ setAlert }) {
             type="text"
             name="user_name"
             placeholder="Your Name"
+            required
           />
           {/* <Label>Your Email</Label> */}
           <Input
             type="email"
             name="user_email"
             placeholder="Your Email"
+            required
           />
           {/* <Label>Message</Label> */}
           <TextArea
             type="text"
             name="message"
             placeholder="Message"
+            required
           />
           <Button type="submit" id="btnsubmit" disabled={lock}>
             <span>Send Message !</span>
