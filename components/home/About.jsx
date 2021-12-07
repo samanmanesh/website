@@ -67,9 +67,11 @@ const AboutGrid = styled.section`
     margin-right: auto;
   }
   .person-image-container {
-    border: 1px solid white;
+    //border: 1px solid white;
     min-height: 30rem;
-    max-width: 60%;
+    max-width: 100%;
+    overflow: hidden;
+
     /* margin-inline: auto; */
   }
 `;
