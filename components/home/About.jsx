@@ -166,11 +166,11 @@ export default function About() {
           </Button> */}
           </div>
           
-          <div className="right-side">
-            {/* <section className="person-image-container">
+          {/* <div className="right-side">
+            <section className="person-image-container">
               <img src="./Saman's Image2.jpeg" alt="Samans image" className="person-image" />
-            </section> */}
-          </div>
+            </section>
+          </div> */}
         </AboutGrid>
       </Codes>
     </Container>
