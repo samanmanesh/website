@@ -78,7 +78,7 @@ const AboutGrid = styled.section`
   }
 
   .person-image {
-    width: 60%;
+    width: 67%;
     height: 70%;
     object-fit: cover;
     object-position: center;
