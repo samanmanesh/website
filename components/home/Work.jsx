@@ -371,42 +371,7 @@ export default function Work() {
               
             </div>
             <div className="right-side">
-              <ProjectCard animate={fadeInDown}>
-                <Title2>Saman's Website</Title2>
-                <div className="subtitle-arrow-container">
-                  <Subtitle smaller>
-                    <p className="subtitle">
-                      let Design &amp; Development = 2021;
-                    </p>
-                  </Subtitle>
-                  <Arrow2>
-                    <img
-                      src="arrow2-down-left.svg"
-                      alt="arrow of type 2"
-                      className="arrow-type2"
-                    />
-                  </Arrow2>
-                </div>
-                <div
-                  className="card-container"
-                  onClick={() => scrollHandler(home)}
-                >
-                  
-                  <section className="card-container-animate">
-                    
-                    <Image
-                      src="/hero.png"
-                      width={400}
-                      layout="responsive"
-                      placeholder="blur"
-                      height={200}
-                      alt="image of Saman's Website"
-                      className="img-card"
-                    />
-                  </section>
-                </div>
-              </ProjectCard>
-              <ProjectCard animate={fadeInDown}>
+            <ProjectCard animate={fadeInDown}>
                 <Title2>RSS Reader</Title2>
                 <div className="subtitle-arrow-container">
                   <Subtitle smaller>
@@ -445,6 +410,42 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
+              <ProjectCard animate={fadeInDown}>
+                <Title2>Saman's Website</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div
+                  className="card-container"
+                  onClick={() => scrollHandler(home)}
+                >
+                  
+                  <section className="card-container-animate">
+                    
+                    <Image
+                      src="/hero.png"
+                      width={400}
+                      layout="responsive"
+                      placeholder="blur"
+                      height={200}
+                      alt="image of Saman's Website"
+                      className="img-card"
+                    />
+                  </section>
+                </div>
+              </ProjectCard>
+              
             </div>
           </ProjectGrid>
         </Codes>
