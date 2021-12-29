@@ -205,10 +205,11 @@ const ProjectGrid = styled.section`
   @media (min-width: ${tablet}) {
     display: grid;
     gap: 5rem;
-
+    
     .left-side {
       grid-area: left-side;
       margin-right: 0;
+      
     }
     .right-side {
       grid-area: right-side;
@@ -216,11 +217,11 @@ const ProjectGrid = styled.section`
     }
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.7fr 1fr;
+    grid-template-rows: .1fr 1fr 1fr;
     grid-template-areas:
       "left-side ."
       "left-side right-side"
-      "left-side right-side";
+      ". right-side";
   }
 `;
 //#endregion
@@ -390,6 +391,7 @@ export default function Work() {
                   className="card-container"
                   onClick={() => scrollHandler(home)}
                 >
+                  
                   <section className="card-container-animate">
                     
                     <Image
@@ -402,6 +404,45 @@ export default function Work() {
                       className="img-card"
                     />
                   </section>
+                </div>
+              </ProjectCard>
+              <ProjectCard animate={fadeInDown}>
+                <Title2>RSS Reader</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div
+                  className="card-container"
+                  onClick={() => scrollHandler(home)}
+                >
+                   <a
+                    href="http://rss-reader-ten-chi.vercel.app/"
+                    target="_blank"
+                  >
+                  <section className="card-container-animate">
+                    
+                    <Image
+                      src="/RSS-Reader.png"
+                      width={400}
+                      layout="responsive"
+                      placeholder="blur"
+                      height={200}
+                      alt="image of RSS Reader"
+                      className="img-card"
+                    />
+                  </section>
+                  </a>
                 </div>
               </ProjectCard>
             </div>

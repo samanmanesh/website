@@ -78,10 +78,11 @@ const AboutGrid = styled.section`
   }
 
   .person-image {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 70%;
     object-fit: cover;
     object-position: center;
+
     /* border: 1px solid white; */
   }
 `;
@@ -166,11 +167,11 @@ export default function About() {
           </Button> */}
           </div>
           
-          {/* <div className="right-side">
+          <div className="right-side">
             <section className="person-image-container">
-              <img src="./Saman's Image2.jpeg" alt="Samans image" className="person-image" />
+              <img src="./Saman-image.jpg" alt="Samans image" className="person-image" />
             </section>
-          </div> */}
+          </div>
         </AboutGrid>
       </Codes>
     </Container>
