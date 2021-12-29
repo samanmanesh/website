@@ -73,7 +73,7 @@ const AboutGrid = styled.section`
     width: 80%;
     height: auto;
     overflow: hidden;
-
+    margin-left: auto;
     /* margin-inline: auto; */
   }
 
