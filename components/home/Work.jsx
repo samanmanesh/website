@@ -360,7 +360,7 @@ export default function Work() {
                         alt="image of CoinBot"
                         width={400}
                         layout="responsive"
-                        placeholder="blur"
+                        // placeholder="blur"
                         height={200}
                         className="img-card"
                       />
