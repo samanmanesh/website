@@ -168,7 +168,7 @@ const ProjectCard = styled(motion.div)`
   } */
   .img-card {
     /* &:hover {
-      filter: blur(3px);
+      filter: blur(1px);
       -webkit-filter: blur(3px);
       transition: all 0.6s ease;
     } */
