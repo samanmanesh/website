@@ -356,7 +356,7 @@ export default function Work() {
                   >
                     <section className="card-container-animate">
                       <Image
-                        src="/coinbot1-resize.jpg" 
+                        src="/coinbot3-resize.jpg" 
                         alt="image of CoinBot"
                         width={400}
                         layout="responsive"
