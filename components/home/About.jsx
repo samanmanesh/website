@@ -169,7 +169,7 @@ export default function About() {
           
           <div className="right-side">
             <section className="person-image-container">
-              <img src="./Saman-image.jpg" alt="Samans image" className="person-image" />
+              <img src="./Saman-image1.jpg" alt="Samans image" className="person-image" />
             </section>
           </div>
         </AboutGrid>
