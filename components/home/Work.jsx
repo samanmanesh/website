@@ -41,7 +41,7 @@ const ProjectCard = styled(motion.div)`
       position: relative;
       &:hover {
         /* background: #000000af; */
-        box-shadow:  2px 2px 3rem #172637;
+        box-shadow: 2px 2px 3rem #172637;
         /* filter: blur(0.8px);
         -webkit-filter: blur(0.8px); */
         transition: all 0.8s ease;
@@ -190,6 +190,10 @@ const ProjectCard = styled(motion.div)`
       padding: 0;
     }
   }
+
+  .video-container{
+    display:grid;
+  }
 `;
 
 const ProjectGrid = styled.section`
@@ -201,15 +205,14 @@ const ProjectGrid = styled.section`
     margin-left: 4rem;
     margin-bottom: 3rem;
   }
-  
+
   @media (min-width: ${tablet}) {
     display: grid;
     gap: 5rem;
-    
+
     .left-side {
       grid-area: left-side;
       margin-right: 0;
-      
     }
     .right-side {
       grid-area: right-side;
@@ -217,7 +220,7 @@ const ProjectGrid = styled.section`
     }
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
     grid-template-areas:
       "left-side ."
       "left-side right-side"
@@ -226,6 +229,10 @@ const ProjectGrid = styled.section`
 `;
 //#endregion
 
+const Video = styled.video`
+width: 75%;
+justify-self: center;
+`
 // const fadeInLeft = {
 //   initial: { x: 1000, opacity: 0 },
 //   animate: { x: 0, opacity: 1 },
@@ -299,6 +306,35 @@ export default function Work() {
           <ProjectGrid>
             <div className="left-side">
               <ProjectCard animate={fadeInUp}>
+                <Title2>Hilarion</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2022;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div className="card-container ">
+                  <a
+                    href="https://hilarion-socialmedia-client.vercel.app/"
+                    target="_blank"
+                  >
+                    <section className="card-container-animate video-container">
+                      <Video  autoPlay loop>
+                        <source src="/Hilarion2 (video-converter.com).webm" type="video/webm" />
+                      </Video>
+                    </section>
+                  </a>
+                </div>
+              </ProjectCard>
+              <ProjectCard animate={fadeInUp}>
                 <Title2>Samitone</Title2>
                 <div className="subtitle-arrow-container">
                   <Subtitle smaller>
@@ -356,7 +392,7 @@ export default function Work() {
                   >
                     <section className="card-container-animate">
                       <Image
-                        src="/coinbot4.jpg" 
+                        src="/coinbot4.jpg"
                         alt="image of CoinBot"
                         width={400}
                         layout="responsive"
@@ -368,10 +404,9 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
-              
             </div>
             <div className="right-side">
-            <ProjectCard animate={fadeInDown}>
+              <ProjectCard animate={fadeInDown}>
                 <Title2>RSS Reader</Title2>
                 <div className="subtitle-arrow-container">
                   <Subtitle smaller>
@@ -391,22 +426,21 @@ export default function Work() {
                   className="card-container"
                   onClick={() => scrollHandler(home)}
                 >
-                   <a
+                  <a
                     href="http://rss-reader-ten-chi.vercel.app/"
                     target="_blank"
                   >
-                  <section className="card-container-animate">
-                    
-                    <Image
-                      src="/RSS-Reader.png"
-                      width={400}
-                      layout="responsive"
-                      placeholder="blur"
-                      height={200}
-                      alt="image of RSS Reader"
-                      className="img-card"
-                    />
-                  </section>
+                    <section className="card-container-animate">
+                      <Image
+                        src="/RSS-Reader.png"
+                        width={400}
+                        layout="responsive"
+                        placeholder="blur"
+                        height={200}
+                        alt="image of RSS Reader"
+                        className="img-card"
+                      />
+                    </section>
                   </a>
                 </div>
               </ProjectCard>
@@ -430,9 +464,7 @@ export default function Work() {
                   className="card-container"
                   onClick={() => scrollHandler(home)}
                 >
-                  
                   <section className="card-container-animate">
-                    
                     <Image
                       src="/hero.png"
                       width={400}
@@ -445,7 +477,6 @@ export default function Work() {
                   </section>
                 </div>
               </ProjectCard>
-              
             </div>
           </ProjectGrid>
         </Codes>
