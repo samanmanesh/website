@@ -191,6 +191,7 @@ const ProjectCard = styled(motion.div)`
     }
   }
 
+  
   .video-container {
     display: grid;
   }
