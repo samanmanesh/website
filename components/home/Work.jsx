@@ -191,8 +191,8 @@ const ProjectCard = styled(motion.div)`
     }
   }
 
-  .video-container{
-    display:grid;
+  .video-container {
+    display: grid;
   }
 `;
 
@@ -230,9 +230,9 @@ const ProjectGrid = styled.section`
 //#endregion
 
 const Video = styled.video`
-width: 75%;
-justify-self: center;
-`
+  width: 75%;
+  justify-self: center;
+`;
 // const fadeInLeft = {
 //   initial: { x: 1000, opacity: 0 },
 //   animate: { x: 0, opacity: 1 },
@@ -327,8 +327,11 @@ export default function Work() {
                     target="_blank"
                   >
                     <section className="card-container-animate video-container">
-                      <Video  autoPlay loop>
-                        <source src="/Hilarion2 (video-converter.com).webm" type="video/webm" />
+                      <Video autoPlay loop>
+                        <source
+                          src="/Hilarion2 (video-converter.com).webm"
+                          type="video/webm"
+                        />
                       </Video>
                     </section>
                   </a>
