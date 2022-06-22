@@ -191,7 +191,6 @@ const ProjectCard = styled(motion.div)`
     }
   }
 
-  
   .video-container {
     display: grid;
   }
@@ -231,7 +230,7 @@ const ProjectGrid = styled.section`
 //#endregion
 
 const Video = styled.video`
-  width: 75%;
+  width: 70%;
   justify-self: center;
 `;
 // const fadeInLeft = {
@@ -328,11 +327,18 @@ export default function Work() {
                     target="_blank"
                   >
                     <section className="card-container-animate video-container">
-                      <Video autoPlay loop>
+                      <Video autoPlay loop poster>
                         <source
                           src="/Hilarion2 (video-converter.com).webm"
                           type="video/webm"
                         />
+                        <source
+                          src="Hilarion2 (video-converter.com).mp4"
+                          type="video/mp4"
+                        ></source>
+                        <p>
+                          Sorry, your browser doesn't support embedded videos.
+                        </p>
                       </Video>
                     </section>
                   </a>
@@ -367,6 +373,81 @@ export default function Work() {
                         layout="responsive"
                         placeholder="blur"
                         height={200}
+                        className="img-card"
+                      />
+                    </section>
+                  </a>
+                </div>
+              </ProjectCard>
+              {/* <ProjectCard animate={fadeInUp}>
+                <Title2>CoinBot</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div className="card-container ">
+                  <a
+                    href="https://github.com/samanmanesh/coinbot"
+                    target="_blank"
+                  >
+                    <section className="card-container-animate">
+                      <Image
+                        src="/coinbot4.jpg"
+                        alt="image of CoinBot"
+                        width={400}
+                        layout="responsive"
+                        placeholder="blur"
+                        height={200}
+                        className="img-card"
+                      />
+                    </section>
+                  </a>
+                </div>
+              </ProjectCard> */}
+            </div>
+            <div className="right-side">
+              <ProjectCard animate={fadeInDown}>
+                <Title2>RSS Reader</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2021;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div
+                  className="card-container"
+                  onClick={() => scrollHandler(home)}
+                >
+                  <a
+                    href="http://rss-reader-ten-chi.vercel.app/"
+                    target="_blank"
+                  >
+                    <section className="card-container-animate">
+                      <Image
+                        src="/RSS-Reader.png"
+                        width={400}
+                        layout="responsive"
+                        placeholder="blur"
+                        height={200}
+                        alt="image of RSS Reader"
                         className="img-card"
                       />
                     </section>
@@ -408,47 +489,7 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
-            </div>
-            <div className="right-side">
-              <ProjectCard animate={fadeInDown}>
-                <Title2>RSS Reader</Title2>
-                <div className="subtitle-arrow-container">
-                  <Subtitle smaller>
-                    <p className="subtitle">
-                      let Design &amp; Development = 2021;
-                    </p>
-                  </Subtitle>
-                  <Arrow2>
-                    <img
-                      src="arrow2-down-left.svg"
-                      alt="arrow of type 2"
-                      className="arrow-type2"
-                    />
-                  </Arrow2>
-                </div>
-                <div
-                  className="card-container"
-                  onClick={() => scrollHandler(home)}
-                >
-                  <a
-                    href="http://rss-reader-ten-chi.vercel.app/"
-                    target="_blank"
-                  >
-                    <section className="card-container-animate">
-                      <Image
-                        src="/RSS-Reader.png"
-                        width={400}
-                        layout="responsive"
-                        placeholder="blur"
-                        height={200}
-                        alt="image of RSS Reader"
-                        className="img-card"
-                      />
-                    </section>
-                  </a>
-                </div>
-              </ProjectCard>
-              <ProjectCard animate={fadeInDown}>
+              {/* <ProjectCard animate={fadeInDown}>
                 <Title2>Saman's Website</Title2>
                 <div className="subtitle-arrow-container">
                   <Subtitle smaller>
@@ -480,7 +521,7 @@ export default function Work() {
                     />
                   </section>
                 </div>
-              </ProjectCard>
+              </ProjectCard> */}
             </div>
           </ProjectGrid>
         </Codes>

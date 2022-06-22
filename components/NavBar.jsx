@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { mobile, tablet, colors } from "./styles/design";
 import { motion, useAnimation } from "framer-motion";
 
-
 //#region -styling-
 const Nav = styled(motion.nav)`
   width: 85%;
@@ -30,6 +29,7 @@ const Nav = styled(motion.nav)`
     justify-content: space-between;
     margin-right: 10%;
     margin-left: auto;
+
     .nav-item {
       cursor: pointer;
       /* padding-inline: 1rem; */
@@ -56,6 +56,12 @@ const Nav = styled(motion.nav)`
         ::after {
           width: 100%;
         }
+      }
+      
+      @media (max-width: 375px) {
+        font-size: 0.53rem; /* 14px */
+        line-height: 1.28rem; /* 20px */
+        font-weight: 800;
       }
     }
     .nav-items-container {
@@ -116,7 +122,6 @@ export default function NavBar() {
   // #region -Scrolling Section-
   const scrollHandler = (id) => {
     id.scrollIntoView({ behavior: "smooth" });
-    
   };
 
   // const [showNav, setShowNav] = useState(false);
@@ -141,7 +146,7 @@ export default function NavBar() {
         transition: { duration: 0.5, delay: 0.1 },
       });
     }
-    
+
     lastScroll = currentPosition;
   };
 
@@ -163,24 +168,26 @@ export default function NavBar() {
       // transition={{ delay: 0.5 } }
       animate={fadeInDown}
     >
-      <motion.div className="anime-function-container"
-      onClick={() => scrollHandler(home)}
-       whileHover={{
-        // color: "#4c60a2",
-        // scale: 1.2,
-        // rotate: -5,
-        cursor: "pointer",
-      }}
-      whileTap={{
-        // color: "rgb(0,188,212)",
-        // scale: 1.2,
-        // rotate: 360,
-        cursor: "pointer",
-      }}>
+      <motion.div
+        className="anime-function-container"
+        onClick={() => scrollHandler(home)}
+        whileHover={{
+          // color: "#4c60a2",
+          // scale: 1.2,
+          // rotate: -5,
+          cursor: "pointer",
+        }}
+        whileTap={{
+          // color: "rgb(0,188,212)",
+          // scale: 1.2,
+          // rotate: 360,
+          cursor: "pointer",
+        }}
+      >
         {/* const {codeState} = ( ) ={">"} {"{display"} {codeState}}
         {"}"}; */}
         SAMAN MANESH
-      </ motion.div>
+      </motion.div>
 
       <div className="nav-items-container">
         <div className="nav-item" onClick={() => scrollHandler(work)}>
