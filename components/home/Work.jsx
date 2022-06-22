@@ -230,6 +230,7 @@ const ProjectGrid = styled.section`
 //#endregion
 
 const Video = styled.video`
+  object-fit: cover;
   width: 70%;
   justify-self: center;
 `;
@@ -327,7 +328,7 @@ export default function Work() {
                     target="_blank"
                   >
                     <section className="card-container-animate video-container">
-                      <Video autoPlay loop poster>
+                      <Video autoPlay loop poster="/hilarion-cover.png">
                         <source
                           src="/Hilarion2 (video-converter.com).webm"
                           type="video/webm"
