@@ -59,7 +59,7 @@ const Nav = styled(motion.nav)`
       }
       
       @media (max-width: 375px) {
-        font-size: 0.53rem; /* 14px */
+        font-size: 0.50rem; /* 14px */
         line-height: 1.28rem; /* 20px */
         font-weight: 800;
       }

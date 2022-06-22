@@ -214,14 +214,11 @@ const ProjectGrid = styled.section`
     margin-bottom: 3rem;
   }
 
-  .down-side{
+  .down-side {
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 3rem;
   }
-
-  
-
 
   @media (min-width: ${tablet}) {
     display: grid;
@@ -236,16 +233,16 @@ const ProjectGrid = styled.section`
       margin-left: 0;
     }
 
-    .down-side{
-    grid-area: down-side;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 3rem;
-  }
+    .down-side {
+      grid-area: down-side;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-bottom: 3rem;
+    }
 
     grid-template-columns: 1fr 1fr;
     /* grid-template-rows: 0.1fr 1fr 1fr 1fr; */
-    grid-template-rows: 0.1fr .5fr .5fr .5fr;
+    grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
       "left-side ."
       "left-side right-side"
@@ -342,94 +339,8 @@ export default function Work() {
           </Arrow3>
         </motion.section>
         <Codes content="section">
-          {/* <div className="pre-project-card-container">
-            <ProjectCard animate={fadeInUp}>
-              <Title2>Hilarion</Title2>
-              <div className="subtitle-arrow-container">
-                <Subtitle smaller>
-                  <p className="subtitle">
-                    let Design &amp; Development = 2022;
-                  </p>
-                </Subtitle>
-                <Arrow2>
-                  <img
-                    src="arrow2-down-left.svg"
-                    alt="arrow of type 2"
-                    className="arrow-type2"
-                  />
-                </Arrow2>
-              </div>
-              <div className="card-container">
-                <a
-                  href="https://hilarion-socialmedia-client.vercel.app/"
-                  target="_blank"
-                >
-                  <section className="card-container-animate video-container">
-                    <Video
-                      autoPlay
-                      loop
-                      playsinline
-                      muted
-                      poster="/hilarion-cover.png"
-                    >
-                      <source
-                        src="/Hilarion2 (video-converter.com).webm"
-                        type="video/webm"
-                      />
-                      <source
-                        src="/Hilarion2 (video-converter.com).mp4"
-                        type="video/mp4"
-                      />
-                      <p>
-                        Sorry, your browser doesn't support embedded videos.
-                      </p>
-                    </Video>
-                  </section>
-                </a>
-              </div>
-            </ProjectCard>
-          </div> */}
           <ProjectGrid>
             <div className="left-side">
-              {/* <ProjectCard animate={fadeInUp}>
-                <Title2>Hilarion</Title2>
-                <div className="subtitle-arrow-container">
-                  <Subtitle smaller>
-                    <p className="subtitle">
-                      let Design &amp; Development = 2022;
-                    </p>
-                  </Subtitle>
-                  <Arrow2>
-                    <img
-                      src="arrow2-down-left.svg"
-                      alt="arrow of type 2"
-                      className="arrow-type2"
-                    />
-                  </Arrow2>
-                </div>
-                <div className="card-container">
-                  <a
-                    href="https://hilarion-socialmedia-client.vercel.app/"
-                    target="_blank"
-                  >
-                    <section className="card-container-animate video-container">
-                      <Video autoPlay loop playsinline muted poster="/hilarion-cover.png">
-                        <source
-                          src="/Hilarion2 (video-converter.com).webm"
-                          type="video/webm"
-                        />
-                        <source
-                          src="/Hilarion2 (video-converter.com).mp4"
-                          type="video/mp4"
-                        />
-                        <p>
-                          Sorry, your browser doesn't support embedded videos.
-                        </p>
-                      </Video>
-                    </section>
-                  </a>
-                </div>
-              </ProjectCard> */}
               <ProjectCard animate={fadeInUp}>
                 <Title2>Samitone</Title2>
                 <div className="subtitle-arrow-container">
@@ -540,41 +451,6 @@ export default function Work() {
                   </a>
                 </div>
               </ProjectCard>
-              {/* <ProjectCard animate={fadeInUp}>
-                <Title2>CoinBot</Title2>
-                <div className="subtitle-arrow-container">
-                  <Subtitle smaller>
-                    <p className="subtitle">
-                      let Design &amp; Development = 2021;
-                    </p>
-                  </Subtitle>
-                  <Arrow2>
-                    <img
-                      src="arrow2-down-left.svg"
-                      alt="arrow of type 2"
-                      className="arrow-type2"
-                    />
-                  </Arrow2>
-                </div>
-                <div className="card-container ">
-                  <a
-                    href="https://github.com/samanmanesh/coinbot"
-                    target="_blank"
-                  >
-                    <section className="card-container-animate">
-                      <Image
-                        src="/coinbot4.jpg"
-                        alt="image of CoinBot"
-                        width={400}
-                        layout="responsive"
-                        placeholder="blur"
-                        height={200}
-                        className="img-card"
-                      />
-                    </section>
-                  </a>
-                </div>
-              </ProjectCard> */}
               <ProjectCard animate={fadeInDown}>
                 <Title2>Saman's Website</Title2>
                 <div className="subtitle-arrow-container">
@@ -610,101 +486,53 @@ export default function Work() {
               </ProjectCard>
             </div>
             <div className="down-side">
-            <ProjectCard animate={fadeIn}>
-            <Title2>Hilarion</Title2>
-              <div className="subtitle-arrow-container">
-                <Subtitle smaller>
-                  <p className="subtitle">
-                    let Design &amp; Development = 2022;
-                  </p>
-                </Subtitle>
-                <Arrow2>
-                  <img
-                    src="arrow2-down-left.svg"
-                    alt="arrow of type 2"
-                    className="arrow-type2"
-                  />
-                </Arrow2>
-              </div>
-              <div className="card-container">
-                <a
-                  href="https://hilarion-socialmedia-client.vercel.app/"
-                  target="_blank"
-                >
-                  <section className="card-container-animate video-container">
-                    <Video
-                      autoPlay
-                      loop
-                      playsinline
-                      muted
-                      poster="/hilarion-cover.png"
-                    >
-                      <source
-                        src="/Hilarion2 (video-converter.com).webm"
-                        type="video/webm"
-                      />
-                      <source
-                        src="/Hilarion2 (video-converter.com).mp4"
-                        type="video/mp4"
-                      />
-                      <p>
-                        Sorry, your browser doesn't support embedded videos.
-                      </p>
-                    </Video>
-                  </section>
-                </a>
-              </div>
-            </ProjectCard>
+              <ProjectCard animate={fadeIn}>
+                <Title2>Hilarion</Title2>
+                <div className="subtitle-arrow-container">
+                  <Subtitle smaller>
+                    <p className="subtitle">
+                      let Design &amp; Development = 2022;
+                    </p>
+                  </Subtitle>
+                  <Arrow2>
+                    <img
+                      src="arrow2-down-left.svg"
+                      alt="arrow of type 2"
+                      className="arrow-type2"
+                    />
+                  </Arrow2>
+                </div>
+                <div className="card-container">
+                  <a
+                    href="https://hilarion-socialmedia-client.vercel.app/"
+                    target="_blank"
+                  >
+                    <section className="card-container-animate video-container">
+                      <Video
+                        autoPlay
+                        loop
+                        playsinline
+                        muted
+                        poster="/hilarion-cover.png"
+                      >
+                        <source
+                          src="/Hilarion2.webm"
+                          type="video/webm"
+                        />
+                        <source
+                          src="/Hilarion2.mp4"
+                          type="video/mp4"
+                        />
+                        <p>
+                          Sorry, your browser doesn't support embedded videos.
+                        </p>
+                      </Video>
+                    </section>
+                  </a>
+                </div>
+              </ProjectCard>
             </div>
           </ProjectGrid>
-
-          {/* <div className="pre-project-card-container">
-            <ProjectCard animate={fadeIn}>
-              <Title2>Hilarion</Title2>
-              <div className="subtitle-arrow-container">
-                <Subtitle smaller>
-                  <p className="subtitle">
-                    let Design &amp; Development = 2022;
-                  </p>
-                </Subtitle>
-                <Arrow2>
-                  <img
-                    src="arrow2-down-left.svg"
-                    alt="arrow of type 2"
-                    className="arrow-type2"
-                  />
-                </Arrow2>
-              </div>
-              <div className="card-container">
-                <a
-                  href="https://hilarion-socialmedia-client.vercel.app/"
-                  target="_blank"
-                >
-                  <section className="card-container-animate video-container">
-                    <Video
-                      autoPlay
-                      loop
-                      playsinline
-                      muted
-                      poster="/hilarion-cover.png"
-                    >
-                      <source
-                        src="/Hilarion2 (video-converter.com).webm"
-                        type="video/webm"
-                      />
-                      <source
-                        src="/Hilarion2 (video-converter.com).mp4"
-                        type="video/mp4"
-                      />
-                      <p>
-                        Sorry, your browser doesn't support embedded videos.
-                      </p>
-                    </Video>
-                  </section>
-                </a>
-              </div>
-            </ProjectCard>
-          </div> */}
         </Codes>
       </WorkWrapper>
     </Container>

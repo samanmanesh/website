@@ -3,6 +3,7 @@ import { Title1, Container, Subtitle, Description } from "../styles";
 import styled from "styled-components";
 import { fonts, colors, tablet, mobile } from "../styles/design";
 import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 // #region - styling-
 
@@ -319,10 +320,10 @@ export default function Hero() {
             </Subtitle>
           </motion.div>
         </motion.div>
-        <Description variants={stagger} >
+        <Description variants={stagger}>
           <motion.p
             variants={fadeInUp}
-            whileHover={{ color: "#b0ace6",  }}
+            whileHover={{ color: "#b0ace6" }}
             whileTap={{
               color: "#b0ace6",
             }}
@@ -331,6 +332,10 @@ export default function Hero() {
             I make elegant, efficient, and user-friendly digital experiences
           </motion.p>
         </Description>
+        {/* animation from Spline but let it for latter */}
+        {/* <div style={{ height: "35rem; " }}>
+          <Spline scene="https://prod.spline.design/aBdiRiKKNodx6pBa/scene.splinecode" />
+        </div> */}
       </HeroWrapper>
     </Container>
   );
